@@ -1,0 +1,3971 @@
+% ============================================================
+% 50 Years of Data Augmentation — A Curated Bibliography
+% Compiled for the S2-FracMix project page (ECCV 2026)
+% Spanning early pattern-recognition invariance techniques (1990s)
+% through modern saliency-guided mixup augmentation (2026).
+% ============================================================
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Classicial Baselines %%%%%%%%%%%%%%%%%%%%%%%%%%
+@incollection{Bengio+chapter2007,
+author = {Bengio, Yoshua and LeCun, Yann},
+booktitle = {Large Scale Kernel Machines},
+publisher = {MIT Press},
+title = {Scaling Learning Algorithms Towards {AI}},
+year = {2007}
+}
+
+@inproceedings{nips2019pytorch,
+  title={PyTorch: An Imperative Style, High-Performance Deep Learning Library}, 
+  author={Adam Paszke and Sam Gross and Francisco Massa and Adam Lerer and James Bradbury and Gregory Chanan and Trevor Killeen and Zeming Lin and Natalia Gimelshein and Luca Antiga and Alban Desmaison and Andreas Köpf and Edward Yang and Zach DeVito and Martin Raison and Alykhan Tejani and Sasank Chilamkurthy and Benoit Steiner and Lu Fang and Junjie Bai and Soumith Chintala},
+  booktitle = {Advances in Neural Information Processing Systems},
+  volume = {32},
+  year={2019},
+}
+
+@inproceedings{he2016deep,
+  title={Deep residual learning for image recognition},
+  author={He, Kaiming and Zhang, Xiangyu and Ren, Shaoqing and Sun, Jian},
+  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
+  pages={770--778},
+  year={2016}
+}
+
+@inproceedings{zhang2018mixup,
+  title={mixup: Beyond empirical risk minimization},
+  author={Zhang, Hongyi and Cisse, Moustapha and Dauphin, Yann N and Lopez-Paz, David},
+  booktitle={International Conference on Learning Representations (ICLR)},
+  year={2018}
+}
+
+@article{carratino2022mixup,
+  title={On mixup regularization},
+  author={Carratino, Luigi and Ciss{\'e}, Moustapha and Jenatton, Rodolphe and Vert, Jean-Philippe},
+  journal={Journal of Machine Learning Research},
+  volume={23},
+  number={325},
+  pages={1--31},
+  year={2022}
+}
+@article{liu2025randomix,
+  title={RandoMix: A mixed sample data augmentation method with multiple mixed modes},
+  author={Liu, Xiaoliang and Shen, Furao and Zhao, Jian and Nie, Changhai},
+  journal={Multimedia Tools and Applications},
+  volume={84},
+  number={8},
+  pages={4343--4359},
+  year={2025},
+  publisher={Springer}
+}
+
+@inproceedings{hendrycks2022pixmix,
+  title={Pixmix: Dreamlike pictures comprehensively improve safety measures},
+  author={Hendrycks, Dan and Zou, Andy and Mazeika, Mantas and Tang, Leonard and Li, Bo and Song, Dawn and Steinhardt, Jacob},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={16783--16792},
+  year={2022}
+}
+
+@inproceedings{vidivelli2023fractal,
+  title={Fractal Features for Texture Analys{\i}s},
+  author={Vidivelli, S and Sathiya Devi, S and Parthasarathy, G},
+  booktitle={International Conference on Data Science and Communication},
+  pages={247--257},
+  year={2023},
+  organization={Springer}
+}
+
+@article{achille2018information,
+  title={Information dropout: Learning optimal representations through noisy computation},
+  author={Achille, Alessandro and Soatto, Stefano},
+  journal={IEEE transactions on pattern analysis and machine intelligence},
+  volume={40},
+  number={12},
+  pages={2897--2905},
+  year={2018},
+  publisher={IEEE}
+}
+
+@article{jin2025mergemix,
+  title={MergeMix: A Unified Augmentation Paradigm for Visual and Multi-Modal Understanding},
+  author={Jin, Xin and Li, Siyuan and Jian, Siyong and Yu, Kai and Wang, Huan},
+  journal={arXiv preprint arXiv:2510.23479},
+  year={2025}
+}
+
+@article{chapelle2000vicinal,
+  title={Vicinal risk minimization},
+  author={Chapelle, Olivier and Weston, Jason and Bottou, L{\'e}on and Vapnik, Vladimir},
+  journal={Advances in neural information processing systems},
+  volume={13},
+  year={2000}
+}
+
+@article{choi2021salfmix,
+  title={SalfMix: a novel single image-based data augmentation technique using a saliency map},
+  author={Choi, Jaehyeop and Lee, Chaehyeon and Lee, Donggyu and Jung, Heechul},
+  journal={Sensors},
+  volume={21},
+  number={24},
+  pages={8444},
+  year={2021},
+  publisher={MDPI}
+}
+
+
+@article{tishby2000information,
+  title={The information bottleneck method},
+  author={Tishby, Naftali and Pereira, Fernando C and Bialek, William},
+  journal={arXiv preprint physics/0004057},
+  year={2000}
+}
+
+@inproceedings{venkataramanan2022alignmixup,
+  title={Alignmixup: Improving representations by interpolating aligned features},
+  author={Venkataramanan, Shashanka and Kijak, Ewa and Amsaleg, Laurent and Avrithis, Yannis},
+  booktitle={Proceedings of the IEEE/CVF conference on computer vision and pattern recognition},
+  pages={19174--19183},
+  year={2022}
+}
+@article{pinto2022using,
+  title={Using mixup as a regularizer can surprisingly improve accuracy \& out-of-distribution robustness},
+  author={Pinto, Francesco and Yang, Harry and Lim, Ser Nam and Torr, Philip and Dokania, Puneet},
+  journal={Advances in Neural Information Processing Systems},
+  volume={35},
+  pages={14608--14622},
+  year={2022}
+}
+
+@inproceedings{zangdiffaug,
+  title={DiffAug: Enhance Unsupervised Contrastive Learning with Domain-Knowledge-Free Diffusion-based Data Augmentation},
+  author={Zang, Zelin and Luo, Hao and Wang, Kai and Zhang, Panpan and Wang, Fan and Li, Stan Z and You, Yang},
+  booktitle={Forty-first International Conference on Machine Learning},
+    year={2024}
+}
+
+
+
+
+
+
+
+@inproceedings{kang2023guidedmixup,
+  title={GuidedMixup: an efficient mixup strategy guided by saliency maps},
+  author={Kang, Minsoo and Kim, Suhyun},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={37},
+  number={1},
+  pages={1096--1104},
+  year={2023}
+}
+
+@inproceedings{yun2019cutmix,
+  title={CutMix: Regularization strategy to train strong classifiers with localizable features},
+  author={Yun, Sangdoo and Han, Dongyoon and Oh, Seong Joon and Chun, Sanghyuk and Choe, Junsuk and Yoo, Youngjoon},
+  booktitle={International Conference on Computer Vision (ICCV)},
+  year={2019}
+}
+
+@inproceedings{hendrycks2020augmix,
+  title={AugMix: A simple data processing method to improve robustness and uncertainty},
+  author={Hendrycks, Dan and Mu, Norman and Cubuk, Ekin D and Zoph, Barret and Gilmer, Justin and Lakshminarayanan, Balaji},
+  booktitle={International Conference on Learning Representations (ICLR)},
+  year={2020}
+}
+
+@article{qin2020resizemix,
+  title={Resizemix: Mixing data with preserved object information and true labels},
+  author={Qin, Jie and Fang, Jiemin and Zhang, Qian and Liu, Wenyu and Wang, Xingang and Wang, Xinggang},
+  journal={arXiv preprint arXiv:2012.11101},
+  year={2020}
+}
+@inproceedings{zagoruyko2016wide,
+  title={Wide Residual Networks},
+  author={Zagoruyko, Sergey and Komodakis, Nikos},
+  booktitle={British Machine Vision Conference 2016},
+  year={2016},
+  organization={British Machine Vision Association}
+}
+@article{islam2024genmix,
+  title={GenMix: Effective Data Augmentation with Generative Diffusion Model Image Editing},
+  author={Islam, Khawar and Zaheer, Muhammad Zaigham and Mahmood, Arif and Nandakumar, Karthik and Akhtar, Naveed},
+  journal={arXiv preprint arXiv:2412.02366},
+  year={2024}
+}
+@article{zhao2020maximum,
+  title={Maximum-entropy adversarial data augmentation for improved generalization and robustness},
+  author={Zhao, Long and Liu, Ting and Peng, Xi and Metaxas, Dimitris},
+  journal={Advances in Neural Information Processing Systems},
+  volume={33},
+  pages={14435--14447},
+  year={2020}
+}
+@article{antoniou2017data,
+  title={Data augmentation generative adversarial networks},
+  author={Antoniou, Antreas and Storkey, Amos and Edwards, Harrison},
+  journal={arXiv preprint arXiv:1711.04340},
+  year={2017}
+}
+@inproceedings{liu2022convnet,
+  title={A convnet for the 2020s},
+  author={Liu, Zhuang and Mao, Hanzi and Wu, Chao-Yuan and Feichtenhofer, Christoph and Darrell, Trevor and Xie, Saining},
+  booktitle={Proceedings of the IEEE/CVF conference on computer vision and pattern recognition},
+  pages={11976--11986},
+  year={2022}
+}
+@inproceedings{islam2025context,
+  title={Context-Guided Responsible Data Augmentation with Diffusion Models},
+  author={Islam, Khawar and AKHTAR, NAVEED},
+  booktitle={ICLR 2025 Workshop on Navigating and Addressing Data Problems for Foundation Models},
+  year={2025}
+}
+@inproceedings{woo2023convnext,
+  title={Convnext v2: Co-designing and scaling convnets with masked autoencoders},
+  author={Woo, Sanghyun and Debnath, Shoubhik and Hu, Ronghang and Chen, Xinlei and Liu, Zhuang and Kweon, In So and Xie, Saining},
+  booktitle={Proceedings of the IEEE/CVF conference on computer vision and pattern recognition},
+  pages={16133--16142},
+  year={2023}
+}
+
+@inproceedings{liu2016ssd,
+  title={Ssd: Single shot multibox detector},
+  author={Liu, Wei and Anguelov, Dragomir and Erhan, Dumitru and Szegedy, Christian and Reed, Scott and Fu, Cheng-Yang and Berg, Alexander C},
+  booktitle={Computer Vision--ECCV 2016: 14th European Conference, Amsterdam, The Netherlands, October 11--14, 2016, Proceedings, Part I 14},
+  pages={21--37},
+  year={2016},
+  organization={Springer}
+}
+
+@article{everingham2010pascal,
+  title={The pascal visual object classes (voc) challenge},
+  author={Everingham, Mark and Van Gool, Luc and Williams, Christopher KI and Winn, John and Zisserman, Andrew},
+  journal={International journal of computer vision},
+  volume={88},
+  pages={303--338},
+  year={2010},
+  publisher={Springer}
+}
+
+@inproceedings{girshick2015fast,
+  title={Fast r-cnn},
+  author={Girshick, Ross},
+  booktitle={Proceedings of the IEEE international conference on computer vision},
+  pages={1440--1448},
+  year={2015}
+}
+
+@inproceedings{liu2021swin,
+  title={Swin transformer: Hierarchical vision transformer using shifted windows},
+  author={Liu, Ze and Lin, Yutong and Cao, Yue and Hu, Han and Wei, Yixuan and Zhang, Zheng and Lin, Stephen and Guo, Baining},
+  booktitle={Proceedings of the IEEE/CVF international conference on computer vision},
+  pages={10012--10022},
+  year={2021}
+}
+@inproceedings{xie2017aggregated,
+  title={Aggregated residual transformations for deep neural networks},
+  author={Xie, Saining and Girshick, Ross and Doll{\'a}r, Piotr and Tu, Zhuowen and He, Kaiming},
+  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
+  pages={1492--1500},
+  year={2017}
+}
+
+@article{van2008visualizing,
+  title={Visualizing data using t-SNE.},
+  author={Van der Maaten, Laurens and Hinton, Geoffrey},
+  journal={Journal of machine learning research},
+  volume={9},
+  number={11},
+  year={2008}
+}
+
+@inproceedings{ghiasi2021simple,
+  title={Simple copy-paste is a strong data augmentation method for instance segmentation},
+  author={Ghiasi, Golnaz and Cui, Yin and Srinivas, Aravind and Qian, Rui and Lin, Tsung-Yi and Cubuk, Ekin D and Le, Quoc V and Zoph, Barret},
+  booktitle={Proceedings of the IEEE/CVF conference on computer vision and pattern recognition},
+  pages={2918--2928},
+  year={2021}
+}
+
+
+@inproceedings{zoph2020learning,
+  title={Learning data augmentation strategies for object detection},
+  author={Zoph, Barret and Cubuk, Ekin D and Ghiasi, Golnaz and Lin, Tsung-Yi and Shlens, Jonathon and Le, Quoc V},
+  booktitle={Computer Vision--ECCV 2020: 16th European Conference, Glasgow, UK, August 23--28, 2020, Proceedings, Part XXVII 16},
+  pages={566--583},
+  year={2020},
+  organization={Springer}
+}
+
+@inproceedings{shivashankar2023semantic,
+  title={Semantic data augmentation with generative models},
+  author={Shivashankar, C and Miller, Shane},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={863--873},
+  year={2023}
+}
+
+@inproceedings{fang2024data,
+  title={Data augmentation for object detection via controllable diffusion models},
+  author={Fang, Haoyang and Han, Boran and Zhang, Shuai and Zhou, Su and Hu, Cuixiong and Ye, Wen-Ming},
+  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},
+  pages={1257--1266},
+  year={2024}
+}
+
+@inproceedings{qin2025sumix,
+  title={Sumix: Mixup with semantic and uncertain information},
+  author={Qin, Huafeng and Jin, Xin and Zhu, Hongyu and Liao, Hongchao and El-Yacoubi, Moun{\^\i}m A and Gao, Xinbo},
+  booktitle={European Conference on Computer Vision},
+  pages={70--88},
+  year={2025},
+  organization={Springer}
+}
+@article{wang2024comprehensive,
+  title={A Comprehensive Survey on Data Augmentation},
+  author={Wang, Zaitian and Wang, Pengfei and Liu, Kunpeng and Wang, Pengyang and Fu, Yanjie and Lu, Chang-Tien and Aggarwal, Charu C and Pei, Jian and Zhou, Yuanchun},
+  journal={arXiv preprint arXiv:2405.09591},
+  year={2024}
+}
+@inproceedings{wang2024enhance,
+  title={Enhance Image Classification via Inter-Class Image Mixup with Diffusion Model},
+  author={Wang, Zhicai and Wei, Longhui and Wang, Tan and Chen, Heyu and Hao, Yanbin and Wang, Xiang and He, Xiangnan and Tian, Qi},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={17223--17233},
+  year={2024}
+}
+
+@article{han2022cropmix,
+  title={Cropmix: Sampling a rich input distribution via multi-scale cropping},
+  author={Han, Junlin and Petersson, Lars and Li, Hongdong and Reid, Ian},
+  journal={arXiv preprint arXiv:2205.15955},
+  year={2022}
+}
+@article{jin2024survey,
+  title={A Survey on Mixup Augmentations and Beyond},
+  author={Jin, Xin and Zhu, Hongyu and Li, Siyuan and Wang, Zedong and Liu, Zicheng and Yu, Chang and Qin, Huafeng and Li, Stan Z},
+  journal={arXiv preprint arXiv:2409.05202},
+  year={2024}
+}
+
+@article{cao2024survey,
+  title={A survey of mix-based data augmentation: Taxonomy, methods, applications, and explainability},
+  author={Cao, Chengtai and Zhou, Fan and Dai, Yurou and Wang, Jianping and Zhang, Kunpeng},
+  journal={ACM Computing Surveys},
+  volume={57},
+  number={2},
+  pages={1--38},
+  year={2024},
+  publisher={ACM New York, NY}
+}
+
+@article{li2022openmixup,
+  title={Openmixup: A comprehensive mixup benchmark for visual classification},
+  author={Li, Siyuan and Wang, Zedong and Liu, Zicheng and Wu, Di and Tan, Cheng and Jin, Weiyang and Li, Stan Z},
+  year={2022}
+}
+@inproceedings{trabucco2023effective,
+  title={Effective Data Augmentation With Diffusion Models},
+  author={Trabucco, Brandon and Doherty, Kyle and Gurinas, Max and Salakhutdinov, Ruslan},
+  booktitle={The Twelfth International Conference on Learning Representations},
+  year={2024}
+}
+
+@inproceedings{qinadversarial,
+  title={Adversarial AutoMixup},
+  author={Qin, Huafeng and Jin, Xin and Jiang, Yun and El-Yacoubi, Moun{\^\i}m and Gao, Xinbo},
+  booktitle={The Twelfth International Conference on Learning Representations},
+pages={OpenReview, Spotlight},
+ year={2024}
+}
+
+@inproceedings{imagenet,
+	author    = {Jia Deng and
+	Wei Dong and
+	Richard Socher and
+	Li{-}Jia Li and
+	Kai Li and
+	Fei{-}Fei Li},
+	title     = {ImageNet: {A} large-scale hierarchical image database},
+	booktitle = CVPR,
+	year      = {2009},
+}
+@inproceedings{chen2021exploring,
+  title={Exploring simple siamese representation learning},
+  author={Chen, Xinlei and He, Kaiming},
+  booktitle={Proceedings of the IEEE/CVF conference on computer vision and pattern recognition},
+  pages={15750--15758},
+  year={2021}
+}
+@article{chen2020improved,
+  title={Improved baselines with momentum contrastive learning},
+  author={Chen, Xinlei and Fan, Haoqi and Girshick, Ross and He, Kaiming},
+  journal={arXiv preprint arXiv:2003.04297},
+  year={2020}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% reference %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@inproceedings{zhou2016learning,
+  title={Learning deep features for discriminative localization},
+  author={Zhou, Bolei and Khosla, Aditya and Lapedriza, Agata and Oliva, Aude and Torralba, Antonio},
+  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
+  pages={2921--2929},
+  year={2016}
+} % CAM
+
+
+@inproceedings{guo2019mixup,
+  title={MixUp as Locally Linear Out-of-Manifold Regularization},
+  author={Guo, Hongyu and Mao, Yongyi and Zhang, Richong},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={33},
+  pages={3714--3722},
+  year={2019}
+} % adamixup
+  % number={01},
+
+@inproceedings{kim2020co, 
+  title={Co-Mixup: Saliency Guided Joint Mixup with Supermodular Diversity},
+  author={Kim, JangHyun and Choo, Wonho and Jeong, Hosan and Song, Hyun Oh},
+  booktitle={International Conference on Learning Representations},
+  year={2020}
+} % co-mixup
+
+
+
+@inproceedings{huang2017densely,
+  title={Densely Connected Convolutional Networks},
+  author={Huang, Gao and Liu, Zhuang and Van Der Maaten, Laurens and Weinberger, Kilian Q},
+  booktitle={2017 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+  pages={2261--2269},
+  year={2017},
+  organization={IEEE}
+} %densenet
+
+@inproceedings{islam2024diffusemix,
+  title={DiffuseMix: Label-Preserving Data Augmentation with Diffusion Models},
+  author={Islam, Khawar and Zaheer, Muhammad Zaigham and Mahmood, Arif and Nandakumar, Karthik},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={27621--27630},
+  year={2024}
+}
+@article{huang2023ipmix,
+  title={Ipmix: Label-preserving data augmentation method for training robust classifiers},
+  author={Huang, Zhenglin and Bao, Xiaoan and Zhang, Na and Zhang, Qingqi and Tu, Xiao and Wu, Biao and Yang, Xi},
+  journal={Advances in Neural Information Processing Systems},
+  volume={36},
+  pages={63660--63673},
+  year={2023}
+}
+
+@inproceedings{kim2020puzzle,
+  title={Puzzle mix: Exploiting saliency and local statistics for optimal mixup},
+  author={Kim, Jang-Hyun and Choo, Wonho and Song, Hyun Oh},
+  booktitle={International Conference on Machine Learning},
+  pages={5275--5285},
+  year={2020},
+  organization={PMLR}
+}
+
+@inproceedings{he2016identity,
+  title={Identity mappings in deep residual networks},
+  author={He, Kaiming and Zhang, Xiangyu and Ren, Shaoqing and Sun, Jian},
+  booktitle={European conference on computer vision},
+  pages={630--645},
+  year={2016},
+  organization={Springer}
+} % preact
+
+@inproceedings{huang2021snapmix,
+  title={SnapMix: Semantically Proportional Mixing for Augmenting Fine-grained Data},
+  author={Huang, Shaoli and Wang, Xinchao and Tao, Dacheng},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  year={2021}
+} % snapmix
+
+@inproceedings{uddin2020saliencymix,
+  title={SaliencyMix: A Saliency Guided Data Augmentation Strategy for Better Regularization},
+  author={Uddin, AFM Shahab and Monira, Mst Sirazam and Shin, Wheemyung and Chung, TaeChoong and Bae, Sung-Ho},
+  booktitle={International Conference on Learning Representations},
+  year={2020}
+} % saliencymix
+
+@inproceedings{dabouei2021supermix,
+  title={Supermix: Supervising the mixing data augmentation},
+  author={Dabouei, Ali and Soleymani, Sobhan and Taherkhani, Fariborz and Nasrabadi, Nasser M},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={13794--13803},
+  year={2021}
+} % supermix
+
+@inproceedings{verma2019manifold,
+  title={Manifold mixup: Better representations by interpolating hidden states},
+  author={Verma, Vikas and Lamb, Alex and Beckham, Christopher and Najafi, Amir and Mitliagkas, Ioannis and Lopez-Paz, David and Bengio, Yoshua},
+  booktitle={International Conference on Machine Learning},
+  pages={6438--6447},
+  year={2019},
+  organization={PMLR}
+} % manifold mixup
+
+@inproceedings{walawalkar2020attentive,
+  title={Attentive Cutmix: An Enhanced Data Augmentation Approach for Deep Learning Based Image Classification},
+  author={Walawalkar, Devesh and Shen, Zhiqiang and Liu, Zechun and Savvides, Marios},
+  booktitle={ICASSP 2020-2020 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  pages={3642--3646},
+  year={2020},
+  organization={IEEE}
+} % attentive cutmix
+
+@article{bishop1995training,
+  title={Training with noise is equivalent to Tikhonov regularization},
+  author={Bishop, Chris M},
+  journal={Neural computation},
+  volume={7},
+  number={1},
+  pages={108--116},
+  year={1995},
+  publisher={MIT Press}
+} % bishop add noise
+
+@article{cubuk2018autoaugment,
+  title={Autoaugment: Learning augmentation policies from data},
+  author={Cubuk, Ekin D and Zoph, Barret and Mane, Dandelion and Vasudevan, Vijay and Le, Quoc V},
+  journal={arXiv preprint arXiv:1805.09501},
+  year={2018}
+} % autoaugment
+
+@inproceedings{lee2020smoothmix,
+  title={Smoothmix: a simple yet effective data augmentation to train robust classifiers},
+  author={Lee, Jin-Ha and Zaheer, Muhammad Zaigham and Astrid, Marcella and Lee, Seung-Ik},
+  booktitle={Proceedings of the IEEE/CVF conference on computer vision and pattern recognition workshops},
+  pages={756--757},
+  year={2020}
+}
+
+@article{harris2020fmix,
+  title={Fmix: Enhancing mixed sample data augmentation},
+  author={Harris, Ethan and Marcu, Antonia and Painter, Matthew and Niranjan, Mahesan and Pr{\"u}gel-Bennett, Adam and Hare, Jonathon},
+  journal={arXiv preprint arXiv:2002.12047},
+  year={2020}
+}
+
+@article{baek2021gridmix,
+  title={GridMix: Strong regularization through local context mapping},
+  author={Baek, Kyungjune and Bang, Duhyeon and Shim, Hyunjung},
+  journal={Pattern Recognition},
+  volume={109},
+  pages={107594},
+  year={2021},
+  publisher={Elsevier}
+}
+
+@inproceedings{hong2021stylemix,
+  title={Stylemix: Separating content and style for enhanced data augmentation},
+  author={Hong, Minui and Choi, Jinwoo and Kim, Gunhee},
+  booktitle={Proceedings of the IEEE/CVF conference on computer vision and pattern recognition},
+  pages={14862--14870},
+  year={2021}
+}
+
+@article{yang2022recursivemix,
+  title={Recursivemix: Mixed learning with history},
+  author={Yang, Lingfeng and Li, Xiang and Zhao, Borui and Song, Renjie and Yang, Jian},
+  journal={Advances in Neural Information Processing Systems},
+  volume={35},
+  pages={8427--8440},
+  year={2022}
+}
+@inproceedings{cubuk2020randaugment,
+  title={Randaugment: Practical automated data augmentation with a reduced search space},
+  author={Cubuk, Ekin D and Zoph, Barret and Shlens, Jonathon and Le, Quoc V},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops},
+  pages={702--703},
+  year={2020}
+} % randaugment
+
+@article{lemley2017smart,
+  title={Smart augmentation learning an optimal data augmentation strategy},
+  author={Lemley, Joseph and Bazrafkan, Shabab and Corcoran, Peter},
+  journal={Ieee Access},
+  volume={5},
+  pages={5858--5869},
+  year={2017},
+  publisher={IEEE}
+} % smart augmetation
+
+@article{qin2019rethinking,
+  title={Rethinking softmax with cross-entropy: Neural network classifier as mutual information estimator},
+  author={Qin, Zhenyue and Kim, Dongwoo and Gedeon, Tom},
+  journal={arXiv preprint arXiv:1911.10688},
+  year={2019}
+} % infocam
+
+@inproceedings{guo2017calibration,
+  title={On calibration of modern neural networks},
+  author={Guo, Chuan and Pleiss, Geoff and Sun, Yu and Weinberger, Kilian Q},
+  booktitle={International Conference on Machine Learning},
+  pages={1321--1330},
+  year={2017},
+  organization={PMLR}
+} % ece calibration
+
+@article{gontijo2020affinity,
+  title={Affinity and diversity: Quantifying mechanisms of data augmentation},
+  author={Gontijo-Lopes, Raphael and Smullin, Sylvia J and Cubuk, Ekin D and Dyer, Ethan},
+  journal={arXiv preprint arXiv:2002.08973},
+  year={2020}
+} % affinity and diversity
+
+@article{hendrycks2019robustness,
+  title={Benchmarking Neural Network Robustness to Common Corruptions and Perturbations},
+  author={Dan Hendrycks and Thomas Dietterich},
+  journal={Proceedings of the International Conference on Learning Representations},
+  year={2019}
+} % imagenet-c
+
+@inproceedings{yuan2021tokens,
+  title={Tokens-to-token vit: Training vision transformers from scratch on imagenet},
+  author={Yuan, Li and Chen, Yunpeng and Wang, Tao and Yu, Weihao and Shi, Yujun and Jiang, Zi-Hang and Tay, Francis EH and Feng, Jiashi and Yan, Shuicheng},
+  booktitle={Proceedings of the IEEE/CVF international conference on computer vision},
+  pages={558--567},
+  year={2021}
+}
+@inproceedings{zhang2020gradient,
+  title={Gradient-induced co-saliency detection},
+  author={Zhang, Zhao and Jin, Wenda and Xu, Jun and Cheng, Ming-Ming},
+  booktitle={European Conference on Computer Vision},
+  pages={455--472},
+  year={2020},
+  organization={Springer}
+}
+@inproceedings{bai2022improving,
+  title={Improving vision transformers by revisiting high-frequency components},
+  author={Bai, Jiawang and Yuan, Li and Xia, Shu-Tao and Yan, Shuicheng and Li, Zhifeng and Liu, Wei},
+  booktitle={European Conference on Computer Vision},
+  pages={1--18},
+  year={2022},
+  organization={Springer}
+}
+@inproceedings{hou2007saliency,
+  title={Saliency detection: A spectral residual approach},
+  author={Hou, Xiaodi and Zhang, Liqing},
+  booktitle={2007 IEEE Conference on computer vision and pattern recognition},
+  pages={1--8},
+  year={2007},
+  organization={Ieee}
+} % Spectral residual
+
+@ARTICLE{730558,
+  author={Itti, L. and Koch, C. and Niebur, E.},
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence}, 
+  title={A model of saliency-based visual attention for rapid scene analysis}, 
+  year={1998},
+  volume={20},
+  number={11},
+  pages={1254-1259},
+  doi={10.1109/34.730558}
+} % First Saliency Detection
+
+@article{krizhevsky2012imagenet,
+  title={Imagenet classification with deep convolutional neural networks},
+  author={Krizhevsky, Alex and Sutskever, Ilya and Hinton, Geoffrey E},
+  journal={Advances in neural information processing systems},
+  volume={25},
+  year={2012}
+} % dataaugmentation
+
+@article{Krizhevsky09learningmultiple,
+  title={Learning Multiple Layers of Features from Tiny Images},
+  author={Krizhevsky, A},
+  journal={Master's thesis, University of Tront},
+  year={2009}
+} % cifar100
+
+@article{cutout,  
+  title={Improved Regularization of Convolutional Neural Networks with Cutout},  
+  author={DeVries, Terrance and Taylor, Graham W},  
+  journal={arXiv preprint arXiv:1708.04552},  
+  year={2017}  
+}%cutout
+
+@book{bishop2006pattern,
+  title={Pattern recognition and machine learning},
+  author={Bishop, Christopher M and Nasrabadi, Nasser M},
+  volume={4},
+  year={2006},
+  publisher={Springer}
+}%bishop prml
+
+@article{JMLR:v15:srivastava14a_dropout,
+  author  = {Nitish Srivastava and Geoffrey Hinton and Alex Krizhevsky and Ilya Sutskever and Ruslan Salakhutdinov},
+  title   = {Dropout: A Simple Way to Prevent Neural Networks from Overfitting},
+  journal = {Journal of Machine Learning Research},
+  year    = {2014},
+  volume  = {15},
+  number  = {56},
+  pages   = {1929-1958},
+  url     = {http://jmlr.org/papers/v15/srivastava14a.html}
+} % dropout
+
+@article{selvaraju2020grad,
+  title={Grad-CAM: visual explanations from deep networks via gradient-based localization},
+  author={Selvaraju, Ramprasaath R and Cogswell, Michael and Das, Abhishek and Vedantam, Ramakrishna and Parikh, Devi and Batra, Dhruv},
+  journal={International journal of computer vision},
+  volume={128},
+  pages={336--359},
+  year={2020},
+  publisher={Springer}
+}
+@inproceedings{huang2016deep,
+  title={Deep networks with stochastic depth},
+  author={Huang, Gao and Sun, Yu and Liu, Zhuang and Sedra, Daniel and Weinberger, Kilian Q},
+  booktitle={European conference on computer vision},
+  pages={646--661},
+  year={2016},
+  organization={Springer}
+} % stochastic depth
+
+@article{simonyan2013deep,
+  title={Deep inside convolutional networks: Visualising image classification models and saliency maps},
+  author={Simonyan, Karen and Vedaldi, Andrea and Zisserman, Andrew},
+  journal={arXiv preprint arXiv:1312.6034},
+  year={2013}
+} %gradient saliency
+
+@inproceedings{achanta2009frequency,
+  title={Frequency-tuned salient region detection},
+  author={Achanta, Radhakrishna and Hemami, Sheila and Estrada, Francisco and Susstrunk, Sabine},
+  booktitle={2009 IEEE conference on computer vision and pattern recognition},
+  pages={1597--1604},
+  year={2009},
+  organization={IEEE}
+}%frequency-tuned saliency
+
+@inproceedings{zhao2015saliency,
+  title={Saliency detection by multi-context deep learning},
+  author={Zhao, Rui and Ouyang, Wanli and Li, Hongsheng and Wang, Xiaogang},
+  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
+  pages={1265--1274},
+  year={2015}
+}%neural network saliency
+
+@article{chrabaszcz2017downsampled,
+  title={A downsampled variant of imagenet as an alternative to the cifar datasets},
+  author={Chrabaszcz, Patryk and Loshchilov, Ilya and Hutter, Frank},
+  journal={arXiv preprint arXiv:1707.08819},
+  year={2017}
+} % Tiny-imagenet
+
+@inproceedings{deng2009imagenet,
+  title={Imagenet: A large-scale hierarchical image database},
+  author={Deng, Jia and Dong, Wei and Socher, Richard and Li, Li-Jia and Li, Kai and Fei-Fei, Li},
+  booktitle={2009 IEEE conference on computer vision and pattern recognition},
+  pages={248--255},
+  year={2009},
+  organization={Ieee}
+} % imagenet
+
+@techreport{WahCUB_200_2011,
+	Title = {{The Caltech-UCSD Birds-200-2011 Dataset}},
+	Author = {Wah, C. and Branson, S. and Welinder, P. and Perona, P. and Belongie, S.},
+	Year = {2011},
+	Institution = {California Institute of Technology},
+	Number = {CNS-TR-2011-001}
+}%cub200-2011
+
+@article{maji2013fine,
+  title={Fine-grained visual classification of aircraft},
+  author={Maji, Subhransu and Rahtu, Esa and Kannala, Juho and Blaschko, Matthew and Vedaldi, Andrea},
+  journal={arXiv preprint arXiv:1306.5151},
+  year={2013}
+} %aircraft100
+
+@article{fei2006one,
+  title={One-shot learning of object categories},
+  author={Fei-Fei, Li and Fergus, Rob and Perona, Pietro},
+  journal={IEEE transactions on pattern analysis and machine intelligence},
+  volume={28},
+  number={4},
+  pages={594--611},
+  year={2006},
+  publisher={IEEE}
+} %caltech101
+
+@ARTICLE{7738348,
+  author={Crouse, David F.},
+  journal={IEEE Transactions on Aerospace and Electronic Systems}, 
+  title={On implementing 2D rectangular assignment algorithms}, 
+  year={2016},
+  volume={52},
+  number={4},
+  pages={1679-1696},
+  doi={10.1109/TAES.2016.140952}
+} % jonker-volgenant algorithm
+  
+@article{jonker1987shortest,
+  title={A shortest augmenting path algorithm for dense and sparse linear assignment problems},
+  author={Jonker, Roy and Volgenant, Anton},
+  journal={Computing},
+  volume={38},
+  number={4},
+  pages={325--340},
+  year={1987},
+  publisher={Springer}
+} % jonker-volgenant algorithm original
+
+@inproceedings{ridnik1imagenet,
+  title={ImageNet-21K Pretraining for the Masses},
+  author={Ridnik, Tal and Ben-Baruch, Emanuel and Noy, Asaf and Zelnik-Manor, Lihi},
+  booktitle={Thirty-fifth Conference on Neural Information Processing Systems Datasets and Benchmarks Track (Round 1)},
+  year={2021}
+}
+
+@inproceedings{he2019rethinking,
+  title={Rethinking imagenet pre-training},
+  author={He, Kaiming and Girshick, Ross and Doll{\'a}r, Piotr},
+  booktitle={Proceedings of the IEEE/CVF international conference on computer vision},
+  pages={4918--4927},
+  year={2019}
+}
+
+@article{wang2024improving,
+  title={Improving diffusion-based data augmentation with inversion spherical interpolation},
+  author={Wang, Yanghao and Chen, Long},
+  journal={arXiv preprint arXiv:2408.16266},
+  year={2024}
+}
+
+@article{liu2024harnessing,
+  title={Harnessing hard mixed samples with decoupled regularizer},
+  author={Liu, Zicheng and Li, Siyuan and Wang, Ge and Wu, Lirong and Tan, Cheng and Li, Stan Z},
+  journal={Advances in Neural Information Processing Systems},
+  volume={36},
+  year={2024}
+}
+
+@article{goodfellow2014explaining,
+  title={Explaining and harnessing adversarial examples},
+  author={Goodfellow, Ian J and Shlens, Jonathon and Szegedy, Christian},
+  journal={arXiv preprint arXiv:1412.6572},
+  year={2014}
+} %FGSM
+@inproceedings{suzuki2022teachaugment,
+  title={Teachaugment: Data augmentation optimization using teacher knowledge},
+  author={Suzuki, Teppei},
+  booktitle={Proceedings of the IEEE/CVF conference on computer vision and pattern recognition},
+  pages={10904--10914},
+  year={2022}
+}
+@inproceedings{li2020differentiable,
+  title={Differentiable automatic data augmentation},
+  author={Li, Yonggang and Hu, Guosheng and Wang, Yongtao and Hospedales, Timothy and Robertson, Neil M and Yang, Yongxin},
+  booktitle={Computer Vision--ECCV 2020: 16th European Conference, Glasgow, UK, August 23--28, 2020, Proceedings, Part XXII 16},
+  pages={580--595},
+  year={2020},
+  organization={Springer}
+}
+
+@inproceedings{hataya2020faster,
+  title={Faster autoaugment: Learning augmentation strategies using backpropagation},
+  author={Hataya, Ryuichiro and Zdenek, Jan and Yoshizoe, Kazuki and Nakayama, Hideki},
+  booktitle={Computer Vision--ECCV 2020: 16th European Conference, Glasgow, UK, August 23--28, 2020, Proceedings, Part XXV 16},
+  pages={1--16},
+  year={2020},
+  organization={Springer}
+}
+
+@inproceedings{wong2019fast,
+  title={Fast is better than free: Revisiting adversarial training},
+  author={Wong, Eric and Rice, Leslie and Kolter, J Zico},
+  booktitle={International Conference on Learning Representations},
+  year={2019}
+} % fast adversarial training
+
+@article{stanton2021does,
+  title={Does Knowledge Distillation Really Work?},
+  author={Stanton, Samuel and Izmailov, Pavel and Kirichenko, Polina and Alemi, Alexander A and Wilson, Andrew Gordon},
+  journal={arXiv preprint arXiv:2106.05945},
+  year={2021}
+} % for calibration
+
+@article{Tutte1954ASP,
+  title={A Short Proof of the Factor Theorem for Finite Graphs},
+  author={William T. Tutte},
+  journal={Canadian Journal of Mathematics},
+  year={1954},
+  volume={6},
+  pages={347 - 352}
+} % reduction
+
+@inproceedings{lee2020network,
+  title={Network Randomization: A Simple Technique for Generalization in Deep Reinforcement Learning},
+  author={LEE, KIMIN and Lee, Kibok and Shin, Jinwoo and Lee, Honglak},
+  booktitle={Eighth International Conference on Learning Representations, ICLR 2020},
+  year={2020},
+  organization={International Conference on Learning Representations}
+} % robustness with generalization
+
+@article{Edmonds1965MaximumMA,
+  title={Maximum matching and a polyhedron with 0,1-vertices},
+  author={Jack Edmonds},
+  journal={Journal of Research of the National Bureau of Standards Section B Mathematics and Mathematical Physics},
+  year={1965},
+  pages={125}
+} % maximum matching
+
+
+@inproceedings{xiao2023token,
+  title={Token-label alignment for vision transformers},
+  author={Xiao, Han and Zheng, Wenzhao and Zhu, Zheng and Zhou, Jie and Lu, Jiwen},
+  booktitle={Proceedings of the IEEE/CVF international conference on computer vision},
+  pages={5495--5504},
+  year={2023}
+}
+
+@inproceedings{KrauseStarkDengFei-Fei_3DRR2013,
+  title = {3D Object Representations for Fine-Grained Categorization},
+  booktitle = {4th International IEEE Workshop on  3D Representation and Recognition (3dRR-13)},
+  year = {2013},
+  address = {Sydney, Australia},
+  author = {Jonathan Krause and Michael Stark and Jia Deng and Li Fei-Fei}
+}%stanford cars
+
+@inproceedings{chen2022transmix,
+  title={Transmix: Attend to mix for vision transformers},
+  author={Chen, Jie-Neng and Sun, Shuyang and He, Ju and Torr, Philip HS and Yuille, Alan and Bai, Song},
+  booktitle={Proceedings of the IEEE/CVF conference on computer vision and pattern recognition},
+  pages={12135--12144},
+  year={2022}
+}
+
+@article{wightman2021resnet,
+  title={Resnet strikes back: An improved training procedure in timm},
+  author={Wightman, Ross and Touvron, Hugo and J{\'e}gou, Herv{\'e}},
+  journal={arXiv preprint arXiv:2110.00476},
+  year={2021}
+} % augmentation simultaneously
+
+@inproceedings{touvron2021training,
+  title={Training data-efficient image transformers \& distillation through attention},
+  author={Touvron, Hugo and Cord, Matthieu and Douze, Matthijs and Massa, Francisco and Sablayrolles, Alexandre and J{\'e}gou, Herv{\'e}},
+  booktitle={International Conference on Machine Learning},
+  pages={10347--10357},
+  year={2021},
+  organization={PMLR}
+} % deit
+
+@article{shorten2019survey,
+  title={A survey on image data augmentation for deep learning},
+  author={Shorten, Connor and Khoshgoftaar, Taghi M},
+  journal={Journal of big data},
+  volume={6},
+  number={1},
+  pages={1--48},
+  year={2019},
+  publisher={Springer}
+}
+@inproceedings{han2022you,
+  title={You only cut once: Boosting data augmentation with a single cut},
+  author={Han, Junlin and Fang, Pengfei and Li, Weihao and Hong, Jie and Armin, Mohammad Ali and Reid, Ian and Petersson, Lars and Li, Hongdong},
+  booktitle={International Conference on Machine Learning},
+  pages={8196--8212},
+  year={2022},
+  organization={PMLR}
+}
+@article{park2021saliency,
+  title={Saliency Grafting: Innocuous Attribution-Guided Mixup with Calibrated Label Mixing},
+  author={Park, Joonhyung and Yang, June Yong and Shin, Jinwoo and Hwang, Sung Ju and Yang, Eunho},
+  journal={arXiv preprint arXiv:2112.08796},
+  year={2021}
+} % saliency grafting
+@inproceedings{liu2022automix,
+  title={Automix: Unveiling the power of mixup for stronger classifiers},
+  author={Liu, Zicheng and Li, Siyuan and Wu, Di and Liu, Zihan and Chen, Zhiyuan and Wu, Lirong and Li, Stan Z},
+  booktitle={European Conference on Computer Vision},
+  pages={441--458},
+  year={2022},
+  organization={Springer}
+}
+
+@article{li2021boosting,
+  title={Boosting discriminative visual representation learning with scenario-agnostic mixup},
+  author={Li, Siyuan and Liu, Zicheng and Wang, Zedong and Wu, Di and Liu, Zihan and Li, Stan Z},
+  journal={arXiv preprint arXiv:2111.15454},
+  year={2021}
+}
+
+
+@inproceedings{nilsback2008automated,
+  title={Automated flower classification over a large number of classes},
+  author={Nilsback, Maria-Elena and Zisserman, Andrew},
+  booktitle={2008 Sixth Indian Conference on Computer Vision, Graphics \& Image Processing},
+  pages={722--729},
+  year={2008},
+  organization={IEEE}
+} % flowrs102
+
+@article{Buda_2018,
+	doi = {10.1016/j.neunet.2018.07.011},
+	url = {https://doi.org/10.1016%2Fj.neunet.2018.07.011},
+	year = 2018,
+	month = {oct},
+	publisher = {Elsevier {BV}},
+	volume = {106},
+	pages = {249--259},
+	author = {Mateusz Buda and Atsuto Maki and Maciej A. Mazurowski},
+	title = {A systematic study of the class imbalance problem in convolutional neural networks},
+	journal = {Neural Networks}
+}% class imbalance
+
+@misc{deeplongtail,
+  doi = {10.48550/ARXIV.2110.04596},
+  url = {https://arxiv.org/abs/2110.04596},
+  author = {Zhang, Yifan and Kang, Bingyi and Hooi, Bryan and Yan, Shuicheng and Feng, Jiashi},
+  keywords = {Computer Vision and Pattern Recognition (cs.CV), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  title = {Deep Long-Tailed Learning: A Survey},
+  publisher = {arXiv},
+  year = {2021},
+  copyright = {arXiv.org perpetual, non-exclusive license}
+} % deep long tail
+
+@inproceedings{LTRweightbalancing,
+  title={Long-Tailed Recognition via Weight Balancing},
+  author={Alshammari, Shaden and Wang, Yuxiong and Ramanan, Deva and Kong, Shu},
+  booktitle={CVPR},
+  year={2022}
+}
+
+
+
+@inproceedings{kim2021co,
+  title={Co-Mixup: Saliency-guided joint mixup with supermodular diversity},
+  author={Kim, Jang-Hyun and Park, Junghoon and Hwang, Seunghoon},
+  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
+  year={2021}
+}
+
+@inproceedings{parast2025ddb,
+  title={DDB: Diffusion Driven Balancing to Address Spurious Correlations},
+  author={Parast, Aryan Yazdan and Azam, Basim and Akhtar, Naveed},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  pages={17526--17535},
+  year={2025}
+}
+@article{parast2025ghost,
+  title={GHOST: Hallucination-Inducing Image Generation for Multimodal LLMs},
+  author={Parast, Aryan Yazdan and Hosseini, Parsa and Asadollahzadeh, Hesam and Moakhar, Arshia Soltani and Azam, Basim and Feizi, Soheil and Akhtar, Naveed},
+  journal={arXiv preprint arXiv:2509.25178},
+  year={2025}
+}
+
+@inproceedings{zhang2020saliencymix,
+  title={SaliencyMix: A saliency guided data augmentation strategy for better regularization},
+  author={Zhang, Yang and Wang, Zhaoyang and Cai, Jianfei},
+  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)},
+  year={2020}
+}
+
+
+@article{shorten2019augmentation,
+  title={A survey on image data augmentation for deep learning},
+  author={Shorten, Connor and Khoshgoftaar, Taghi M},
+  journal={booktitle of Big Data},
+  volume={6},
+  number={1},
+  pages={1--48},
+  year={2019},
+  
+}
+
+@article{ben2010theory,
+  title={A theory of learning from different domains},
+  author={Ben-David, Shai and Blitzer, John and Crammer, Koby and Kulesza, Alex and Pereira, Fernando and Vaughan, Jennifer Wortman},
+  journal={Machine learning},
+  volume={79},
+  number={1},
+  pages={151--175},
+  year={2010},
+  
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% CNN & ViT backbones %%%%%%%%%%%%%%%%%%%%%%%%%%
+@inproceedings{he2016deep,
+  title={Deep residual learning for image recognition},
+  author={He, Kaiming and Zhang, Xiangyu and Ren, Shaoqing and Sun, Jian},
+  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={770--778},
+  year={2016}
+}
+
+
+@inproceedings{bmvc2016wrn,
+  title={Wide Residual Networks},
+  author={Zagoruyko, Sergey and Komodakis, Nikos},
+  booktitle={British Machine Vision Conference 2016},
+  year={2016},
+}
+
+@inproceedings{xie2017resnext,
+  title={Aggregated residual transformations for deep neural networks},
+  author={Xie, Saining and Girshick, Ross and Doll{\'a}r, Piotr and Tu, Zhuowen and He, Kaiming},
+  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={1492--1500},
+  year={2017}
+}
+
+@inproceedings{he2017maskrcnn,
+  title={Mask r-cnn},
+  author={He, Kaiming and Gkioxari, Georgia and Doll{\'a}r, Piotr and Girshick, Ross},
+  booktitle={International Conference on Computer Vision},
+  year={2017}
+}
+
+@article{2020yOlOv4,
+  title={YOLOv4: Optimal Speed and Accuracy of Object Detection},
+  author={Alexey Bochkovskiy and Chien-Yao Wang and Hong-Yuan Mark Liao},
+  journal={ArXiv},
+  year={2020},
+  volume={abs/2004.10934}
+}
+
+@article{ren2015fasterrcnn,
+  title={Faster r-cnn: Towards real-time object detection with region proposal networks},
+  author={Ren, Shaoqing and He, Kaiming and Girshick, Ross and Sun, Jian},
+  journal={arXiv preprint arXiv:1506.01497},
+  year={2015}
+}
+
+@inproceedings{qi2017pointnet++,
+  title={Pointnet++: Deep hierarchical feature learning on point sets in a metric space},
+  author={Qi, Charles Ruizhongtai and Yi, Li and Su, Hao and Guibas, Leonidas J},
+  booktitle={Neural Information Processing Systems},
+  volume={30},
+  year={2017}
+}
+
+@inproceedings{liu2019rs-cnn,
+  title={Relation-shape convolutional neural network for point cloud analysis},
+  author={Liu, Yongcheng and Fan, Bin and Xiang, Shiming and Pan, Chunhong},
+  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={8895--8904},
+  year={2019}
+}
+
+@inproceedings{ronneberger2015unet,
+  title={U-net: Convolutional networks for biomedical image segmentation},
+  author={Ronneberger, Olaf and Fischer, Philipp and Brox, Thomas},
+  booktitle={International Conference on Medical image computing and computer-assisted intervention},
+  pages={234--241},
+  year={2015}
+}
+
+@article{devlin2018bert,
+  title={Bert: Pre-training of deep bidirectional transformers for language understanding},
+  author={Devlin, Jacob and Chang, Ming-Wei and Lee, Kenton and Toutanova, Kristina},
+  journal={arXiv preprint arXiv:1810.04805},
+  year={2018}
+}
+
+@inproceedings{cvpr2018mobilenetv2,
+    author = {Sandler, Mark and Howard, Andrew and Zhu, Menglong and Zhmoginov, Andrey and Chen, Liang-Chieh},
+    title = {MobileNetV2: Inverted Residuals and Linear Bottlenecks},
+    booktitle = {IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+    year = {2018}
+}
+
+@inproceedings{icml2019efficientnet,
+    title={EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks}, 
+    author={Mingxing Tan and Quoc V. Le},
+    booktitle = {International Conference on Machine Learning},
+    year = {2019},
+}
+
+@inproceedings{iclr2021vit,
+    title={An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale},
+    author={Dosovitskiy, Alexey and Beyer, Lucas and Kolesnikov, Alexander and Weissenborn, Dirk and Zhai, Xiaohua and Unterthiner, Thomas and Dehghani, Mostafa and Minderer, Matthias and Heigold, Georg and Gelly, Sylvain and Uszkoreit, Jakob and Houlsby, Neil},
+    booktitle={International Conference on Learning Representations},
+    year={2021},
+}
+
+@inproceedings{radford2021clip,
+  title={Learning transferable visual models from natural language supervision},
+  author={Radford, Alec and Kim, Jong Wook and Hallacy, Chris and Ramesh, Aditya and Goh, Gabriel and Agarwal, Sandhini and Sastry, Girish and Askell, Amanda and Mishkin, Pamela and Clark, Jack and others},
+  booktitle={International Conference on Machine Learning},
+  pages={8748--8763},
+  year={2021}
+}
+
+@inproceedings{icml2021deit,
+    title = {Training data-efficient image transformers \& distillation through attention},
+    author = {Touvron, Hugo and Cord, Matthieu and Douze, Matthijs and Massa, Francisco and Sablayrolles, Alexandre and Jegou, Herve},
+    booktitle = {International Conference on Machine Learning},
+    pages = {10347--10357},
+    year = {2021},
+}
+
+@inproceedings{iccv2021swin,
+    title={Swin Transformer: Hierarchical Vision Transformer using Shifted Windows},
+    author={Liu, Ze and Lin, Yutong and Cao, Yue and Hu, Han and Wei, Yixuan and Zhang, Zheng and Lin, Stephen and Guo, Baining},
+    booktitle={International Conference on Computer Vision},
+    year={2021}
+}
+
+@inproceedings{wang2021pvt,
+  title={Pyramid vision transformer: A versatile backbone for dense prediction without convolutions},
+  author={Wang, Wenhai and Xie, Enze and Li, Xiang and Fan, Deng-Ping and Song, Kaitao and Liang, Ding and Lu, Tong and Luo, Ping and Shao, Ling},
+  booktitle={International Conference on Computer Vision},
+  pages={568--578},
+  year={2021}
+}
+
+@article{kingma2013vae,
+  title={Auto-encoding variational bayes},
+  author={Kingma, Diederik P and Welling, Max},
+  journal={arXiv preprint arXiv:1312.6114},
+  year={2013}
+}
+
+@inproceedings{2022convnet,
+  title={A convnet for the 2020s},
+  author={Liu, Zhuang and Mao, Hanzi and Wu, Chao-Yuan and Feichtenhofer, Christoph and Darrell, Trevor and Xie, Saining},
+  booktitle={IEEE/CVF conference on computer vision and pattern recognition},
+  pages={11976--11986},
+  year={2022}
+}
+
+@inproceedings{he2016preactresnet,
+  title={Identity mappings in deep residual networks},
+  author={He, Kaiming and Zhang, Xiangyu and Ren, Shaoqing and Sun, Jian},
+  booktitle={European Conference on Computer Vision},
+  pages={630--645},
+  year={2016}
+}
+
+@inproceedings{lin2021corssattn,
+  title={CAT: Cross Attention in Vision Transformer},
+  author={Hezheng Lin and Xingyi Cheng and Xiangyu Wu and Fan Yang and Dong Shen and Zhongyuan Wang and Qing Song and Wei Yuan},
+  booktitle={IEEE International Conference on Multimedia and Expo},
+  year={2021},
+  pages={1-6},
+}
+
+@inproceedings{vaswani2017attention,
+  title={Attention is All you Need},
+  author={Ashish Vaswani and Noam M. Shazeer and Niki Parmar and Jakob Uszkoreit and Llion Jones and Aidan N. Gomez and Lukasz Kaiser and Illia Polosukhin},
+  booktitle={NIPS},
+  year={2017},
+}
+
+@inproceedings{iclr2024semireward,
+  title={SemiReward: A General Reward Model for Semi-supervised Learning},
+  author={Siyuan Li and Weiyang Jin and Zedong Wang and Fang Wu and Zicheng Liu and Cheng Tan and Stan Z. Li},
+  booktitle={International Conference on Learning Representations},
+  year={2024}
+}
+
+@inproceedings{li2022a2amim,
+  title={Architecture-agnostic masked image modeling—from ViT back to CNN},
+  author={Li, Siyuan and Wu, Di and Wu, Fang and Zang, Zelin and Li, Stan Z},
+  booktitle={International Conference on Machine Learning},
+  pages={20149--20167},
+  year={2023}
+}
+
+@article{li2022moganet,
+  title={Efficient Multi-order Gated Aggregation Network},
+  author={Siyuan Li and Zedong Wang and Zicheng Liu and Cheng Tan and Haitao Lin and Di Wu and Zhiyuan Chen and Jiangbin Zheng and Stan Z. Li},
+  journal={ArXiv},
+  year={2022},
+}
+
+@inproceedings{he2022mae,
+  title={Masked autoencoders are scalable vision learners},
+  author={He, Kaiming and Chen, Xinlei and Xie, Saining and Li, Yanghao and Doll{\'a}r, Piotr and Girshick, Ross},
+  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={16000--16009},
+  year={2022}
+}
+
+@inproceedings{xie2022simmim,
+  title={Simmim: A simple framework for masked image modeling},
+  author={Xie, Zhenda and Zhang, Zheng and Cao, Yue and Lin, Yutong and Bao, Jianmin and Yao, Zhuliang and Dai, Qi and Hu, Han},
+  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={9653--9663},
+  year={2022}
+}
+
+@article{kang2018cvae,
+  title={Conditional molecular design with deep generative models},
+  author={Kang, Seokho and Cho, Kyunghyun},
+  journal={booktitle of chemical information and modeling},
+  volume={59},
+  number={1},
+  pages={43--52},
+  year={2018},
+  publisher={ACS Publications}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%% Mixup for Supervised Learning Sample %%%%%%%%%%%%%%%%%%%%%%%%
+@inproceedings{zhang2018mixup,
+  title={mixup: Beyond Empirical Risk Minimization},
+  author={Zhang, Hongyi and Cisse, Moustapha and Dauphin, Yann N and Lopez-Paz, David},
+  booktitle={International Conference on Learning Representations},
+  year={2018}
+}
+
+@inproceedings{cvpr2018bc,
+title={Between-Class Learning for Image Classification},
+author={Yuji Tokozume and Y. Ushiku and Tatsuya Harada},
+booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+year={2018}
+}
+
+@article{baena2022localmixup,
+  title={Preventing Manifold Intrusion with Locality: Local Mixup},
+  author={Raphael Baena and Lucas Drumetz and Vincent Gripon},
+  journal={ArXiv},
+  year={2022},
+  volume={abs/2201.04368}
+}
+
+@inproceedings{hendrycks2019augmix,
+  title={AugMix: A Simple Data Processing Method to Improve Robustness and Uncertainty},
+  author={Hendrycks, Dan and Mu, Norman and Cubuk, Ekin Dogus and Zoph, Barret and Gilmer, Justin and Lakshminarayanan, Balaji},
+  booktitle={International Conference on Learning Representations},
+  year={2020}
+}
+
+@inproceedings{hendrycks2022pixmix,
+  title={Pixmix: Dreamlike pictures comprehensively improve safety measures},
+  author={Hendrycks, Dan and Zou, Andy and Mazeika, Mantas and Tang, Leonard and Li, Bo and Song, Dawn and Steinhardt, Jacob},
+  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={16783--16792},
+  year={2022}
+}
+
+@inproceedings{huang2024ipmix,
+  title={IPMix: label-preserving data augmentation method for training robust classifiers},
+  author={Huang, Zhenglin and Bao, Xiaoan and Zhang, Na and Zhang, Qingqi and Tu, Xiao and Wu, Biao and Yang, Xi},
+  booktitle={Neural Information Processing Systems},
+  volume={36},
+  year={2024}
+}
+
+%%%%%%%%%% feature-based %%%%%%%%%%
+@inproceedings{verma2019manifold,
+  title={Manifold mixup: Better representations by interpolating hidden states},
+  author={Verma, Vikas and Lamb, Alex and Beckham, Christopher and Najafi, Amir and Mitliagkas, Ioannis and Lopez-Paz, David and Bengio, Yoshua},
+  booktitle={International Conference on Machine Learning},
+  pages={6438--6447},
+  year={2019},
+}
+
+@inproceedings{faramarzi2020patchup,
+  title={Patchup: A feature-space block-level regularization technique for convolutional neural networks},
+  author={Faramarzi, Mojtaba and Amini, Mohammad and Badrinaaraayanan, Akilesh and Verma, Vikas and Chandar, Sarath},
+  booktitle={AAAI Conference on Artificial Intelligence},
+  volume={36},
+  number={1},
+  pages={589--597},
+  year={2022}
+}
+
+@inproceedings{kang2024catchupmix,
+  title={Catch-up Mix: Catch-up class for struggling filters in CNN},
+  author={Kang, Minsoo and Kang, Minkoo and Kim, Suhyun},
+  booktitle={AAAI Conference on Artificial Intelligence},
+  volume={38},
+  number={3},
+  pages={2705--2713},
+  year={2024}
+}
+
+%%%%%%%%%% cutting-based %%%%%%%%%%
+@inproceedings{yun2019cutmix,
+  title={Cutmix: Regularization strategy to train strong classifiers with localizable features},
+  author={Yun, Sangdoo and Han, Dongyoon and Oh, Seong Joon and Chun, Sanghyuk and Choe, Junsuk and Yoo, Youngjoon},
+  booktitle={International Conference on Computer Vision},
+  pages={6023--6032},
+  year={2019}
+}
+
+@inproceedings{summers2019mixedexamples,
+  title={Improved mixed-example data augmentation},
+  author={Summers, Cecilia and Dinneen, Michael J},
+  booktitle={IEEE Winter Conference on Applications of Computer Vision},
+  pages={1262--1270},
+  year={2019},
+  
+}
+
+@inproceedings{sun2024panimixup,
+  title={Patch-level neighborhood interpolation: A general and effective graph-based regularization strategy},
+  author={Sun, Ke and Yu, Bing and Lin, Zhouchen and Zhu, Zhanxing},
+  booktitle={Asian Conference on Machine Learning},
+  pages={1276--1291},
+  year={2024}
+}
+
+@article{Baek2021gridmix,
+  title={GridMix: Strong regularization through local context mapping},
+  author={Baek, Kyungjune and Bang, Duhyeon and Shim, Hyunjung},
+  journal={Pattern Recognition},
+  volume={109},
+  pages={107594},
+  year={2021},
+  publisher={Elsevier}
+}
+
+@inproceedings{lee2020smoothmix,
+  title={Smoothmix: a simple yet effective data augmentation to train robust classifiers},
+  author={Lee, Jin-Ha and Zaheer, Muhammad Zaigham and Astrid, Marcella and Lee, Seung-Ik},
+  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition workshops},
+  pages={756--757},
+  year={2020}
+}
+
+@inproceedings{chen2022stackmix,
+  title={StackMix: A complementary Mix algorithm},
+  author={Chen, John and Sinha, Samarth and Kyrillidis, Anastasios},
+  booktitle={Uncertainty in Artificial Intelligence},
+  pages={326--335},
+  year={2022},
+  
+}
+
+@article{hammoudi2022superpixelgridcut,
+  title={SuperpixelGridCut, SuperpixelGridMean and SuperpixelGridMix Data Augmentation},
+  author={Hammoudi, Karim and Cabani, Adnane and Slika, Bouthaina and Benhabiles, Halim and Dornaika, Fadi and Melkemi, Mahmoud},
+  journal={arXiv preprint arXiv:2204.08458},
+  year={2022}
+}
+
+@inproceedings{park2022msda,
+  title={A unified analysis of mixed sample data augmentation: A loss function perspective},
+  author={Park, Chanwoo and Yun, Sangdoo and Chun, Sanghyuk},
+  booktitle={Neural Information Processing Systems},
+  volume={35},
+  pages={35504--35518},
+  year={2022}
+}
+
+@article{harris2020fmix,
+  title={Fmix: Enhancing mixed sample data augmentation},
+  author={Harris, Ethan and Marcu, Antonia and Painter, Matthew and Niranjan, Mahesan and Hare, Adam Pr{\"u}gel-Bennett Jonathon},
+  journal={arXiv preprint arXiv:2002.12047},
+  volume={2},
+  number={3},
+  pages={4},
+  year={2020}
+}
+
+@article{qin2020resizemix,
+  title={ResizeMix: Mixing Data with Preserved Object Information and True Labels},
+  author={Qin, Jie and Fang, Jiemin and Zhang, Qian and Liu, Wenyu and Wang, Xingang and Wang, Xinggang},
+  journal={arXiv preprint arXiv:2012.11101},
+  year={2020}
+}
+
+@inproceedings{han2022yoco,
+  title={You only cut once: Boosting data augmentation with a single cut},
+  author={Han, Junlin and Fang, Pengfei and Li, Weihao and Hong, Jie and Armin, Mohammad Ali and Reid, Ian and Petersson, Lars and Li, Hongdong},
+  booktitle={International Conference on Machine Learning},
+  pages={8196--8212},
+  year={2022},
+  
+}
+
+@article{jin2024starlknet,
+  title={StarLKNet: Star Mixup with Large Kernel Networks for Palm Vein Identification},
+  author={Jin, Xin and Zhu, Hongyu and Yacoubi, Moun{\^\i}m A El and Liao, Hongchao and Qin, Huafeng and Jiang, Yun},
+  journal={arXiv preprint arXiv:2405.12721},
+  year={2024}
+}
+
+%%%%%%%%%% k samples mixup %%%%%%%%%%
+
+@inproceedings{redmon2016yolo,
+  title={You only look once: Unified, real-time object detection},
+  author={Redmon, Joseph and Divvala, Santosh and Girshick, Ross and Farhadi, Ali},
+  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
+  pages={779--788},
+  year={2016}
+}
+
+@article{takahashi2019ricap,
+  title={Data augmentation using random image cropping and patching for deep CNNs},
+  author={Takahashi, Ryo and Matsubara, Takashi and Uehara, Kuniaki},
+  journal={IEEE Transactions on Circuits and Systems for Video Technology},
+  volume={30},
+  number={9},
+  pages={2917--2931},
+  year={2019},
+  publisher={IEEE}
+}
+
+@article{greenewald2021kmixup,
+  title={k-Mixup Regularization for Deep Learning via Optimal Transport},
+  author={Greenewald, Kristjan and Gu, Anming and Yurochkin, Mikhail and Solomon, Justin and Chien, Edward},
+  journal={Transactions on Machine Learning Research},
+  year={2023}
+}
+
+@article{jeong2021dcutmix,
+  title={Observations on K-image expansion of image-mixing augmentation},
+  author={Jeong, Joonhyun and Cha, Sungmin and Choi, Jongwon and Yun, Sangdoo and Moon, Taesup and Yoo, Youngjoon},
+  journal={IEEE Access},
+  volume={11},
+  pages={16631--16643},
+  year={2023},
+  publisher={IEEE}
+}
+
+@inproceedings{rame2021mixmo,
+  title={Mixmo: Mixing multiple inputs for multiple outputs via deep subnetworks},
+  author={Ram{\'e}, Alexandre and Sun, R{\'e}my and Cord, Matthieu},
+  booktitle={International Conference on Computer Vision},
+  pages={823--833},
+  year={2021}
+}
+
+@inproceedings{xie2021Cut-thumbnail,
+  title={Cut-thumbnail: A novel data augmentation for convolutional neural network},
+  author={Xie, Tianshu and Cheng, Xuan and Wang, Xiaomin and Liu, Minghui and Deng, Jiali and Zhou, Tao and Liu, Ming},
+  booktitle={ACM International Conference on Multimedia},
+  pages={1627--1635},
+  year={2021}
+}
+
+
+
+%%%%%%%%%% random polices %%%%%%%%%%
+@article{liu2024randomix,
+  title={RandoMix: a mixed sample data augmentation method with multiple mixed modes},
+  author={Liu, Xiaoliang and Shen, Furao and Zhao, Jian and Nie, Changhai},
+  journal={Multimedia Tools and Applications},
+  pages={1--17},
+  year={2024},
+  
+}
+
+@inproceedings{liu2022augrmixat,
+  title={AugRmixAT: A Data Processing and Training Method for Improving Multiple Robustness and Generalization Performance},
+  author={Liu, Xiaoliang and Shen, Furao and Zhao, Jian and Nie, Changhai},
+  booktitle={IEEE International Conference on Multimedia and Expo},
+  pages={1--6},
+  year={2022}
+}
+
+@article{kim2024contextmix,
+  title={ContextMix: A context-aware data augmentation method for industrial visual inspection systems},
+  author={Kim, Hyungmin and Kim, Donghun and Ahn, Pyunghwan and Suh, Sungho and Cho, Hansang and Kim, Junmo},
+  journal={Engineering Applications of Artificial Intelligence},
+  volume={131},
+  pages={107842},
+  year={2024}
+}
+
+%%%%%%%%%% style-based %%%%%%%%%%
+@inproceedings{cvpr2021stylemix,
+    author = {Hong, Minui and Choi, Jinwoo and Kim, Gunhee},
+    title={StyleMix: Separating Content and Style for Enhanced Data Augmentation},
+    booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+    year={2021},
+    pages={14862-14870}
+}
+
+@inproceedings{zhou2021mixstyle,
+  title={Domain Generalization with MixStyle},
+  author={Zhou, Kaiyang and Yang, Yongxin and Qiao, Yu and Xiang, Tao},
+  booktitle={International Conference on Learning Representations},
+  year={2021}
+}
+
+@inproceedings{li2021moex,
+  title={On feature normalization and data augmentation},
+  author={Li, Boyi and Wu, Felix and Lim, Ser-Nam and Belongie, Serge and Weinberger, Kilian Q},
+  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={12383--12392},
+  year={2021}
+}
+
+@inproceedings{2021alignmix,
+  title={AlignMix: Improving representation by interpolating aligned features},
+  author={Shashanka Venkataramanan and Yannis Avrithis and Ewa Kijak and Laurent Amsaleg},
+  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  year={2022}
+}
+
+@article{venkataramanan2022multimix,
+  title={Teach me how to Interpolate a Myriad of Embeddings},
+  author={Venkataramanan, Shashanka and Kijak, Ewa and Amsaleg, Laurent and Avrithis, Yannis},
+  journal={arXiv preprint arXiv:2206.14868},
+  year={2022}
+}
+
+%%%%%%%%%% saliency-based %%%%%%%%%%
+@inproceedings{uddin2020saliencymix,
+  title={SaliencyMix: A Saliency Guided Data Augmentation Strategy for Better Regularization},
+  author={Uddin, AFM Shahab and Monira, Mst Sirazam and Shin, Wheemyung and Chung, TaeChoong and Bae, Sung-Ho},
+  booktitle={International Conference on Learning Representations},
+  year={2020}
+}
+
+@inproceedings{kim2020puzzle,
+  title={Puzzle mix: Exploiting saliency and local statistics for optimal mixup},
+  author={Kim, Jang-Hyun and Choo, Wonho and Song, Hyun Oh},
+  booktitle={International Conference on Machine Learning},
+  pages={5275--5285},
+  year={2020},
+  
+}
+
+@inproceedings{kim2020co,
+  title={Co-Mixup: Saliency Guided Joint Mixup with Supermodular Diversity},
+  author={Kim, JangHyun and Choo, Wonho and Jeong, Hosan and Song, Hyun Oh},
+  booktitle={International Conference on Learning Representations},
+  year={2020}
+}
+
+@inproceedings{yang2022recursivemix,
+  title={Recursivemix: Mixed learning with history},
+  author={Yang, Lingfeng and Li, Xiang and Zhao, Borui and Song, Renjie and Yang, Jian},
+  booktitle={Neural Information Processing Systems},
+  volume={35},
+  pages={8427--8440},
+  year={2022}
+}
+
+@inproceedings{huang2020snapmix,
+  title={SnapMix: Semantically Proportional Mixing for Augmenting Fine-grained Data},
+  author={Shaoli Huang and Xinchao Wang and Dacheng Tao},
+  booktitle={AAAI Conference on Artificial Intelligence},
+  year={2020},
+}
+
+@inproceedings{li2020attributemix,
+  title={Attribute mix: Semantic data augmentation for fine grained recognition},
+  author={Li, Hao and Zhang, Xiaopeng and Tian, Qi and Xiong, Hongkai},
+  booktitle={IEEE International Conference on Visual Communications and Image Processing},
+  pages={243--246},
+  year={2020},
+  
+}
+
+@inproceedings{icassp2020attentive,
+    author={Walawalkar, Devesh and Shen, Zhiqiang and Liu, Zechun and Savvides, Marios},
+    booktitle={IEEE International Conference on Acoustics, Speech and Signal Processing},
+    title={Attentive Cutmix: An Enhanced Data Augmentation Approach for Deep Learning Based Image Classification},
+    year={2020},
+    pages={3642-3646},
+}
+
+@inproceedings{kim2020focusmix,
+  title={Where to cut and paste: Data regularization with selective features},
+  author={Kim, Jiyeon and Shin, Ik-Hee and Lee, Jong-Ryul and Lee, Yong-Ju},
+  booktitle={International Conference on Information and Communication Technology Convergence},
+  pages={1219--1221},
+  year={2020},
+  
+}
+
+@article{cheung2024transformmix,
+  title={TransformMix: Learning Transformation and Mixing Strategies from Data},
+  author={Cheung, Tsz-Him and Yeung, Dit-Yan},
+  journal={arXiv preprint arXiv:2403.12429},
+  year={2024}
+}
+
+@article{franchi2021superpixelmix,
+  title={Robust semantic segmentation with superpixel-mix},
+  author={Franchi, Gianni and Belkhir, Nacim and Ha, Mai Lan and Hu, Yufei and Bursuc, Andrei and Blanz, Volker and Yao, Angela},
+  journal={arXiv preprint arXiv:2108.00968},
+  year={2021}
+}
+
+@inproceedings{liu2022automix,
+  title={Automix: Unveiling the power of mixup for stronger classifiers},
+  author={Liu, Zicheng and Li, Siyuan and Wu, Di and Liu, Zihan and Chen, Zhiyuan and Wu, Lirong and Li, Stan Z},
+  booktitle={European Conference on Computer Vision},
+  pages={441--458},
+  year={2022}
+}
+
+
+@inproceedings{dabouei2021supermix,
+  title={Supermix: Supervising the mixing data augmentation},
+  author={Dabouei, Ali and Soleymani, Sobhan and Taherkhani, Fariborz and Nasrabadi, Nasser M},
+  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={13794--13803},
+  year={2021}
+}
+
+@inproceedings{choi2022tokenmixup,
+  title={Tokenmixup: Efficient attention-guided token-level data augmentation for transformers},
+  author={Choi, Hyeong Kyu and Choi, Joonmyung and Kim, Hyunwoo J},
+  booktitle={Neural Information Processing Systems},
+  volume={35},
+  pages={14224--14235},
+  year={2022}
+}
+
+@inproceedings{hong2023gradsalmix,
+  title={GradSalMix: Gradient Saliency-Based Mix for Image Data Augmentation},
+  author={Hong, Tao and Wang, Ya and Sun, Xingwu and Lian, Fengzong and Kang, Zhanhui and Ma, Jinwen},
+  booktitle={IEEE International Conference on Multimedia and Expo},
+  pages={1799--1804},
+  year={2023}
+}
+
+@inproceedings{zhao2023mixpro,
+    title={MixPro: Data Augmentation with MaskMix and Progressive Attention Labeling for Vision Transformer},
+    author={Qihao Zhao and Yangyu Huang and Wei Hu and Fan Zhang and Jun Liu},
+    booktitle={The Eleventh International Conference on Learning Representations },
+    year={2023},
+}
+
+@inproceedings{liu2022tokenmix,
+  title={TokenMix: Rethinking Image Mixing for Data Augmentation in Vision Transformers},
+  author={Jihao Liu and B. Liu and Hang Zhou and Hongsheng Li and Yu Liu},
+  booktitle={European Conference on Computer Vision},
+  year={2022},
+}
+
+@inproceedings{chen2023smmix,
+  title={Smmix: Self-motivated image mixing for vision transformers},
+  author={Chen, Mengzhao and Lin, Mingbao and Lin, Zhihang and Zhang, Yuxin and Chao, Fei and Ji, Rongrong},
+  booktitle={International Conference on Computer Vision},
+  pages={17260--17270},
+  year={2023}
+}
+
+@inproceedings{stegmuller2023scorenet,
+  title={Scorenet: Learning non-uniform attention and augmentation for transformer-based histopathological image classification},
+  author={Stegm{\"u}ller, Thomas and Bozorgtabar, Behzad and Spahr, Antoine and Thiran, Jean-Philippe},
+  booktitle={IEEE Winter Conference on Applications of Computer Vision},
+  pages={6170--6179},
+  year={2023}
+}
+
+@article{li2021samix,
+  title={Boosting Discriminative Visual Representation Learning with Scenario-Agnostic Mixup},
+  author={Siyuan Li and Zicheng Liu and Zedong Wang and Di Wu and Zihan Liu and Stan Z. Li},
+  journal={ArXiv},
+  year={2021},
+  volume={abs/2111.15454},
+}
+
+@inproceedings{kang2023guidedmixup,
+  title={GuidedMixup: an efficient mixup strategy guided by saliency maps},
+  author={Kang, Minsoo and Kim, Suhyun},
+  booktitle={AAAI Conference on Artificial Intelligence},
+  volume={37},
+  pages={1096--1104},
+  year={2023}
+}
+
+@article{dornaika2023lgcoamix,
+  title={LGCOAMix: Local and Global Context-and-Object-Part-Aware Superpixel-Based Data Augmentation for Deep Visual Recognition},
+  author={Dornaika, Fadi and Sun, Danyang},
+  journal={IEEE Transactions on Image Processing},
+  volume={33},
+  pages={205--215},
+  year={2023},
+  publisher={IEEE}
+}
+
+@inproceedings{qin2023adautomix,
+  title={Adversarial AutoMixup},
+  author={Qin, Huafeng and Jin, Xin and Jiang, Yun and El-Yacoubi, Moun{\^\i}m and Gao, Xinbo},
+  booktitle={The Twelfth International Conference on Learning Representations},
+  year={2023}
+}
+
+%%%%%%%%%% generating samples %%%%%%%%%%
+@inproceedings{liu2018aae,
+  title={Data augmentation via latent space interpolation for image classification},
+  author={Liu, Xiaofeng and Zou, Yang and Kong, Lingsheng and Diao, Zhihui and Yan, Junliang and Wang, Jun and Li, Site and Jia, Ping and You, Jane},
+  booktitle={2018 24th International Conference on Pattern Recognition},
+  pages={728--733},
+  year={2018},
+  
+}
+
+@inproceedings{beckham2019amr,
+  title={On adversarial mixup resynthesis},
+  author={Beckham, Christopher and Honari, Sina and Verma, Vikas and Lamb, Alex M and Ghadiri, Farnoosh and Hjelm, R Devon and Bengio, Yoshua and Pal, Chris},
+  booktitle={Neural Information Processing Systems},
+  volume={32},
+  year={2019}
+}
+
+@inproceedings{berthelot2018acai,
+  title={Understanding and Improving Interpolation in Autoencoders via an Adversarial Regularizer},
+  author={Berthelot, David and Raffel, Colin and Roy, Aurko and Goodfellow, Ian},
+  booktitle={International Conference on Learning Representations},
+  year={2019}
+}
+
+@inproceedings{zhu2020automixup,
+  title={Automix: Mixup networks for sample interpolation via cooperative barycenter learning},
+  author={Zhu, Jianchao and Shi, Liangliang and Yan, Junchi and Zha, Hongyuan},
+  booktitle={Computer Vision--ECCV 2020: 16th European Conference, Glasgow, UK, August 23--28, 2020, Proceedings, Part X 16},
+  pages={633--649},
+  year={2020},
+  
+}
+
+@article{mangla2020varmixup,
+  title={Varmixup: Exploiting the latent space for robust training and inference},
+  author={Mangla, Puneet and Singh, Vedant and Havaldar, Shreyas Jayant and Balasubramanian, Vineeth N},
+  journal={arXiv preprint arXiv:2003.06566},
+  volume={2},
+  year={2020}
+}
+
+@inproceedings{islam2024diffusemix,
+  title={DIFFUSEMIX: Label-Preserving Data Augmentation with Diffusion Models},
+  author={Khawar, Islam and Muhammad, Zaigham Zaheer and Arif, Mahmood and Karthik, Nandakumar},
+  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  year={2024}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%% Mixup for Supervised Learning Label %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% optimized calibration %%%%%%%%%%
+@inproceedings{wen2020camix,
+  title={Combining Ensembles and Data Augmentation Can Harm Your Calibration},
+  author={Wen, Yeming and Jerfel, Ghassen and Muller, Rafael and Dusenberry, Michael W and Snoek, Jasper and Lakshminarayanan, Balaji and Tran, Dustin},
+  booktitle={International Conference on Learning Representations},
+  year={2021}
+}
+
+@inproceedings{noh2023rankmixup,
+  title={RankMixup: Ranking-Based Mixup Training for Network Calibration},
+  author={Noh, Jongyoun and Park, Hyekang and Lee, Junghyup and Ham, Bumsub},
+  booktitle={International Conference on Computer Vision},
+  pages={1358--1368},
+  year={2023}
+}
+
+@inproceedings{jeong2021smoothmixup,
+  title={Smoothmix: Training confidence-calibrated smoothed classifiers for certified robustness},
+  author={Jeong, Jongheon and Park, Sejun and Kim, Minkyu and Lee, Heung-Chang and Kim, Do-Guk and Shin, Jinwoo},
+  booktitle={Neural Information Processing Systems},
+  volume={34},
+  pages={30153--30168},
+  year={2021}
+}
+
+%%%%%%%%%% area-based %%%%%%%%%%
+@inproceedings{chen2022transmix,
+  title={Transmix: Attend to mix for vision transformers},
+  author={Chen, Jie-Neng and Sun, Shuyang and He, Ju and Torr, Philip HS and Yuille, Alan and Bai, Song},
+  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={12135--12144},
+  year={2022}
+}
+
+
+%%%%%%%%%% loss object %%%%%%%%%%
+@inproceedings{liu2022decoupledmix,
+  title={Harnessing hard mixed samples with decoupled regularizer},
+  author={Liu, Zicheng and Li, Siyuan and Wang, Ge and Wu, Lirong and Tan, Cheng and Li, Stan Z},
+  booktitle={Thirty-seventh Conference on Neural Information Processing Systems},
+  year={2023}
+}
+
+@inproceedings{zou2023mixupe,
+  title={MixupE: Understanding and improving Mixup from directional derivative perspective},
+  author={Zou, Yingtian and Verma, Vikas and Mittal, Sarthak and Tang, Wai Hoh and Pham, Hieu and Kannala, Juho and Bengio, Yoshua and Solin, Arno and Kawaguchi, Kenji},
+  booktitle={Uncertainty in Artificial Intelligence},
+  pages={2597--2607},
+  year={2023},
+  
+}
+
+
+%%%%%%%%%% random polices %%%%%%%%%%
+@inproceedings{yu2021mwh,
+  title={Mixup without hesitation},
+  author={Yu, Hao and Wang, Huanyu and Wu, Jianxin},
+  booktitle={Image and Graphics: 11th International Conference, ICIG 2021, Haikou, China, August 6--8, 2021, Proceedings, Part II 11},
+  pages={143--154},
+  year={2021},
+  
+}
+
+@inproceedings{pinto2022regmixup,
+  title={Using mixup as a regularizer can surprisingly improve accuracy \& out-of-distribution robustness},
+  author={Pinto, Francesco and Yang, Harry and Lim, Ser Nam and Torr, Philip and Dokania, Puneet},
+  booktitle={Neural Information Processing Systems},
+  volume={35},
+  pages={14608--14622},
+  year={2022}
+}
+
+
+%%%%%%%%%% optimized mixing ratio %%%%%%%%%%
+@inproceedings{guo2018adamix,
+  title={Mixup as locally linear out-of-manifold regularization},
+  author={Guo, Hongyu and Mao, Yongyi and Zhang, Richong},
+  booktitle={AAAI Conference on Artificial Intelligence},
+  volume={33},
+  number={01},
+  pages={3714--3722},
+  year={2019}
+}
+
+@article{mai2021metamixup,
+  title={Metamixup: Learning adaptive interpolation policy of mixup with metalearning},
+  author={Mai, Zhijun and Hu, Guosheng and Chen, Dexiong and Shen, Fumin and Shen, Heng Tao},
+  journal={IEEE transactions on neural networks and learning systems},
+  volume={33},
+  number={7},
+  pages={3050--3064},
+  year={2021},
+  publisher={IEEE}
+}
+
+@article{sun2022lumix,
+  title={LUMix: Improving mixup by better modelling label uncertainty},
+  author={Sun, Shuyang and Chen, Jie-Neng and He, Ruifei and Yuille, Alan and Torr, Philip and Bai, Song},
+  journal={arXiv preprint arXiv:2211.15846},
+  year={2022}
+}
+
+@inproceedings{qin2024sumix,
+  title={Sumix: Mixup with semantic and uncertain information},
+  author={Qin, Huafeng and Jin, Xin and Zhu, Hongyu and Liao, Hongchao and El-Yacoubi, Moun{\^\i}m A and Gao, Xinbo},
+  booktitle={European Conference on Computer Vision},
+  pages={70--88},
+  year={2024}
+}
+
+
+%%%%%%%%%% generat label %%%%%%%%%%
+@inproceedings{sohn2022genlabel,
+  title={GenLabel: Mixup Relabeling using Generative Models},
+  author={Sohn, Jy-Yong and Shang, Liang and Chen, Hongxu and Moon, Jaekyun and Papailiopoulos, Dimitris and Lee, Kangwook},
+  booktitle={International Conference on Machine Learning},
+  pages={20278--20313},
+  year={2022},
+}
+
+%%%%%%%%%% attention score %%%%%%%%%%
+@article{jiang2021tokenlabeling,
+  title={Token Labeling: Training a 85.4\% Top-1 Accuracy Vision Transformer with 56M Parameters on ImageNet},
+  author={Zihang Jiang and Qibin Hou and Li Yuan and Daquan Zhou and Xiaojie Jin and Anran Wang and Jiashi Feng},
+  journal={ArXiv},
+  year={2021},
+  volume={abs/2104.10858},
+}
+
+@inproceedings{xiao2023tl-align,
+  title={Token-Label Alignment for Vision Transformers},
+  author={Xiao, Han and Zheng, Wenzhao and Zhu, Zheng and Zhou, Jie and Lu, Jiwen},
+  booktitle={International Conference on Computer Vision},
+  pages={5495--5504},
+  year={2023}
+}
+
+%%%%%%%%%% saliency token %%%%%%%%%%
+@inproceedings{park2021saliencygraft,
+  title={Saliency Grafting: Innocuous Attribution-Guided Mixup with Calibrated Label Mixing},
+  author={Joonhyung Park and June Yong Yang and Jinwoo Shin and Sung Ju Hwang and Eunho Yang},
+  booktitle={AAAI Conference on Artificial Intelligence},
+  year={2021},
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Mixup for SSL Learning %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%% constructive learning %%%%%%%%%%
+@inproceedings{hataya2020djmix,
+  title={DJMix: Unsupervised Task-agnostic Image Augmentation for Improving Robustness of Convolutional Neural Networks},
+  author={Ryuichiro Hataya and Hideki Nakayama},
+  booktitle={International Joint Conference on Neural Networks},
+  year={2022},
+  pages={1-8}
+}
+
+@article{kim2020mixco,
+  title={Mixco: Mix-up contrastive learning for visual representation},
+  author={Kim, Sungnyun and Lee, Gihun and Bae, Sangmin and Yun, Se-Young},
+  journal={arXiv preprint arXiv:2010.06300},
+  year={2020}
+}
+
+@inproceedings{kalantidis2020mochi,
+  title={Hard negative mixing for contrastive learning},
+  author={Kalantidis, Yannis and Sariyildiz, Mert Bulent and Pion, Noe and Weinzaepfel, Philippe and Larlus, Diane},
+  booktitle={Neural Information Processing Systems},
+  volume={33},
+  pages={21798--21809},
+  year={2020}
+}
+
+@article{chu2020bsim,
+  title={Beyond single instance multi-view unsupervised representation learning},
+  author={Chu, Xiangxiang and Zhan, Xiaohang and Wei, Xiaolin},
+  journal={arXiv preprint arXiv:2011.13356},
+  volume={2},
+  year={2020}
+}
+
+@inproceedings{verma2021dacl,
+  title={Towards domain-agnostic contrastive learning},
+  author={Verma, Vikas and Luong, Thang and Kawaguchi, Kenji and Pham, Hieu and Le, Quoc},
+  booktitle={International Conference on Machine Learning},
+  pages={10530--10541},
+  year={2021},
+  
+}
+
+@inproceedings{lee2020i-mix,
+  title={i-MIX: A DOMAIN-AGNOSTIC STRATEGY FOR CONTRASTIVE REPRESENTATION LEARNING},
+  author={Lee, Kibok and Zhu, Yian and Sohn, Kihyuk and Li, Chun Liang and Shin, Jinwoo and Lee, Honglak},
+  booktitle={International Conference on Learning Representations},
+  year={2021}
+}
+
+@inproceedings{zhang2022mixssl,
+  title={Mix-up self-supervised learning for contrast-agnostic applications},
+  author={Zhang, Yichen and Yin, Yifang and Zhang, Ying and Zimmermann, Roger},
+  booktitle={IEEE International Conference on Multimedia and Expo},
+  pages={01--06},
+  year={2022},
+  
+}
+
+@inproceedings{zhu2021ft,
+  title={Improving contrastive learning by visualizing feature transformation},
+  author={Zhu, Rui and Zhao, Bingchen and Liu, Jingen and Sun, Zhenglong and Chen, Chang Wen},
+  booktitle={International Conference on Computer Vision},
+  pages={10306--10315},
+  year={2021}
+}
+
+@inproceedings{li2020clim,
+  title={Center-wise Local Image Mixture For Contrastive Representation Learning},
+  author={Li, Hao and Zhang, Xiaopeng and Xiong, Hongkai},
+  booktitle={British Machine Vision Conference},
+  year={2021}
+}
+
+@inproceedings{liu2021pcea,
+  title={Piecing and Chipping: An effective solution for the information-erasing view generation in Self-supervised Learning},
+  author={Liu, Jingwei and Gu, Yi and Mo, Shentong and Sun, Zhun and Han, Shumin and Guo, Jiafeng and Cheng, Xueqi},
+  year={2021}
+}
+
+@article{guo2021mixsiam,
+  title={Mixsiam: a mixture-based approach to self-supervised representation learning},
+  author={Guo, Xiaoyang and Zhao, Tianhao and Lin, Yutian and Du, Bo},
+  journal={arXiv preprint arXiv:2111.02679},
+  year={2021}
+}
+
+@inproceedings{zhang2021co-tuneing,
+  title={Unleashing the power of contrastive self-supervised visual models via contrast-regularized fine-tuning},
+  author={Zhang, Yifan and Hooi, Bryan and Hu, Dapeng and Liang, Jian and Feng, Jiashi},
+  booktitle={Neural Information Processing Systems},
+  volume={34},
+  pages={29848--29860},
+  year={2021}
+}
+
+@inproceedings{sahoo2021comix,
+  title={Contrast and mix: Temporal contrastive video domain adaptation with background mixing},
+  author={Sahoo, Aadarsh and Shah, Rutav and Panda, Rameswar and Saenko, Kate and Das, Abir},
+  booktitle={Neural Information Processing Systems},
+  volume={34},
+  pages={23386--23400},
+  year={2021}
+}
+
+@inproceedings{shen2022un-mix,
+  title={Un-mix: Rethinking image mixtures for unsupervised visual representation learning},
+  author={Shen, Zhiqiang and Liu, Zechun and Liu, Zhuang and Savvides, Marios and Darrell, Trevor and Xing, Eric},
+  booktitle={AAAI Conference on Artificial Intelligence},
+  volume={36},
+  pages={2216--2224},
+  year={2022}
+}
+
+@inproceedings{zhang2021m-mix,
+  title={M-Mix: Generating Hard Negatives via Multi-sample Mixing for Contrastive Learning},
+  author={Shaofeng Zhang and Meng Liu and Junchi Yan and Hengrui Zhang and Lingxiao Huang and Xiaokang Yang and Pinyan Lu},
+  booktitle={ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
+  year={2022}
+}
+
+@inproceedings{ren2022sdmp,
+  title={A simple data mixing prior for improving self-supervised learning},
+  author={Ren, Sucheng and Wang, Huiyu and Gao, Zhengqi and He, Shengfeng and Yuille, Alan and Zhou, Yuyin and Xie, Cihang},
+  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={14595--14604},
+  year={2022}
+}
+
+@article{han2022cropmix,
+  title={Cropmix: Sampling a rich input distribution via multi-scale cropping},
+  author={Han, Junlin and Petersson, Lars and Li, Hongdong and Reid, Ian},
+  journal={arXiv preprint arXiv:2205.15955},
+  year={2022}
+}
+
+@inproceedings{xia2021progcl,
+  title={ProGCL: Rethinking Hard Negative Mining in Graph Contrastive Learning},
+  author={Xia, Jun and Wu, Lirong and Wang, Ge and Chen, Jintao and Li, Stan Z},
+  booktitle={International Conference on Machine Learning},
+  pages={24332--24346},
+  year={2022}
+}
+
+@article{wickstrom2022mcl,
+  title={Mixing up contrastive learning: Self-supervised representation learning for time series},
+  author={Wickstr{\o}m, Kristoffer and Kampffmeyer, Michael and Mikalsen, Karl {\O}yvind and Jenssen, Robert},
+  journal={Pattern Recognition Letters},
+  volume={155},
+  pages={54--61},
+  year={2022},
+  publisher={Elsevier}
+}
+
+@article{shen2023patchmix,
+  title={Inter-Instance Similarity Modeling for Contrastive Learning},
+  author={Shen, Chengchao and Liu, Dawei and Tang, Hao and Qu, Zhe and Wang, Jianxin},
+  journal={arXiv preprint arXiv:2306.12243},
+  year={2023}
+}
+
+@inproceedings{oh2024m2-mix,
+  title={Geodesic multi-modal mixup for robust fine-tuning},
+  author={Oh, Changdae and So, Junhyuk and Byun, Hoyoon and Lim, YongTaek and Shin, Minchul and Jeon, Jong-June and Song, Kyungwoo},
+  booktitle={Neural Information Processing Systems},
+  volume={36},
+  year={2024}
+}
+
+
+%%%%%%%%%% mask ae %%%%%%%%%%
+
+@inproceedings{zhang2022i-mae,
+  title={i-mae: Are latent representations in masked autoencoders linearly separable?},
+  author={Zhang, Kevin and Shen, Zhiqiang},
+  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={7740--7749},
+  year={2024}
+}
+
+@inproceedings{liu2023mixmae,
+  title={Mixmae: Mixed and masked autoencoder for efficient pretraining of hierarchical vision transformers},
+  author={Liu, Jihao and Huang, Xin and Zheng, Jinliang and Liu, Yu and Li, Hongsheng},
+  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={6252--6261},
+  year={2023}
+}
+
+@inproceedings{chen2023mixedae,
+  title={Mixed autoencoder for self-supervised visual representation learning},
+  author={Chen, Kai and Liu, Zhili and Hong, Lanqing and Xu, Hang and Li, Zhenguo and Yeung, Dit-Yan},
+  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={22742--22751},
+  year={2023}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Mixup for SemiSL Learning %%%%%%%%%%%%%%%%%%%%%%%%%%
+@inproceedings{berthelot2019mixmatch,
+  title={Mixmatch: A holistic approach to semi-supervised learning},
+  author={Berthelot, David and Carlini, Nicholas and Goodfellow, Ian and Papernot, Nicolas and Oliver, Avital and Raffel, Colin A},
+  booktitle={Neural Information Processing Systems},
+  volume={32},
+  year={2019}
+}
+@inproceedings{kurakin2020remixmatch,
+  title={ReMixMatch: Semi-Supervised Learning with Distribution Matching and Augmentation Anchoring},
+  author={David Berthelot and Nicholas Carlini and Ekin Dogus Cubuk and Alexey Kurakin and Kihyuk Sohn and Han Zhang and Colin Raffel},
+  booktitle={International Conference on Learning Representations},
+  year={2020}
+}
+@inproceedings{li2020dividemix,
+  title={DivideMix: Learning with Noisy Labels as Semi-supervised Learning},
+  author={Li, Junnan and Socher, Richard and Hoi, Steven CH},
+  booktitle={International Conference on Learning Representations},
+  year={2020}
+}
+@article{wei2020mixpul,
+  title={MixPUL: consistency-based augmentation for positive and unlabeled learning},
+  author={Wei, Tong and Shi, Feng and Wang, Hai and Li, Wei-Wei Tu Yu-Feng},
+  booktitle={arXiv preprint arXiv:2004.09388},
+  year={2020}
+}
+@article{french2020cowmask,
+  title={Milking cowmask for semi-supervised image classification},
+  author={French, Geoff and Oliver, Avital and Salimans, Tim},
+  journal={arXiv preprint arXiv:2003.12022},
+  year={2020}
+}
+@article{pisztora2022emu,
+  title={Epsilon Consistent Mixup: Structural regularization with an adaptive consistency-interpolation trade-off},
+  author={Pisztora, Vincent and Ou, Yanglan and Huang, Xiaolei and Chiaromonte, Francesca and Li, Jia},
+  journal={Stat},
+  volume={11},
+  number={1},
+  pages={e425},
+  year={2022},
+  publisher={Wiley Online Library}
+}
+@inproceedings{li2021yourp3mix,
+  title={Who is your right mixup partner in positive and unlabeled learning},
+  author={Li, Changchun and Li, Ximing and Feng, Lei and Ouyang, Jihong},
+  booktitle={International Conference on Learning Representations},
+  year={2021}
+}
+@article{verma2022ict,
+  title={Interpolation consistency training for semi-supervised learning},
+  author={Verma, Vikas and Kawaguchi, Kenji and Lamb, Alex and Kannala, Juho and Solin, Arno and Bengio, Yoshua and Lopez-Paz, David},
+  journal={Neural Networks},
+  volume={145},
+  pages={90--106},
+  year={2022},
+  publisher={Elsevier}
+}
+@inproceedings{kim2022mum,
+  title={Mum: Mix image tiles and unmix feature tiles for semi-supervised object detection},
+  author={Kim, JongMok and Jang, Jooyoung and Seo, Seunghyeon and Jeong, Jisoo and Na, Jongkeun and Kwak, Nojun},
+  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={14512--14521},
+  year={2022}
+}
+@inproceedings{fooladgar2023mixematch,
+  title={Manifold DivideMix: A semi-supervised contrastive learning framework for severe label noise},
+  author={Fooladgar, Fahimeh and To, Minh Nguyen Nhat and Mousavi, Parvin and Abolmaesumi, Purang},
+  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={4012--4021},
+  year={2024}
+}
+@article{chen2023dcpa,
+  title={Dual-Decoder Consistency via Pseudo-Labels Guided Data Augmentation for Semi-Supervised Medical Image Segmentation},
+  author={Chen, Yuanbin and Wang, Tao and Tang, Hui and Zhao, Longxuan and Zong, Ruige and Tan, Tao and Zhang, Xinlin and Tong, Tong},
+  journal={arXiv preprint arXiv:2308.16573},
+  year={2023}
+}
+@article{chen2023mixpl,
+  title={Mixed Pseudo Labels for Semi-Supervised Object Detection},
+  author={Chen, Zeming and Zhang, Wenwei and Wang, Xinjiang and Chen, Kai and Wang, Zhi},
+  journal={arXiv preprint arXiv:2312.07006},
+  year={2023}
+}
+
+@inproceedings{kong2023lasermix,
+  title={Lasermix for semi-supervised lidar semantic segmentation},
+  author={Kong, Lingdong and Ren, Jiawei and Pan, Liang and Liu, Ziwei},
+  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={21705--21715},
+  year={2023}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Mixup for Downstream task %%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% regression %%%%%%%%%%
+@article{hwang2021mixrl,
+  title={MixRL: Data Mixing Augmentation for Regression using Reinforcement Learning},
+  author={Seonghyeon Hwang and Steven Euijong Whang},
+  journal={ArXiv},
+  year={2021},
+  volume={abs/2106.03374}
+}
+@inproceedings{yao2022c-mix,
+  title={C-mixup: Improving generalization in regression},
+  author={Yao, Huaxiu and Wang, Yiping and Zhang, Linjun and Zou, James Y and Finn, Chelsea},
+  booktitle={Neural Information Processing Systems},
+  volume={35},
+  pages={3361--3376},
+  year={2022}
+}
+@inproceedings{schneider2024ada,
+  title={Anchor Data Augmentation},
+  author={Schneider, Nora and Goshtasbpour, Shirin and Perez-Cruz, Fernando},
+  booktitle={Neural Information Processing Systems},
+  volume={36},
+  year={2024}
+}
+@article{kwon2022extramix,
+  title={ExtraMix: Extrapolatable Data Augmentation for Regression using Generative Models},
+  author={Kwon, Kisoo and Jeong, Kuhwan and Park, Sanghyun and Park, Sangha and Lee, Hoshik and Kwak, Seung-Yeon and Kim, Sungmin and Cho, Kyunghyun},
+  year={2022}
+}
+@article{wu2023supermix,
+  title={Mixup Your Own Pairs},
+  author={Wu, Yilei and Dong, Zijian and Chen, Chongyao and Zhou, Wangchunshu and Zhou, Juan Helen},
+  journal={arXiv preprint arXiv:2309.16633},
+  year={2023}
+}
+
+@inproceedings{bouniot2023warpedmixup,
+  title={Tailoring Mixup to Data for Calibration},
+  author={Bouniot, Quentin and Mozharovskyi, Pavlo and d'Alch{\'e}-Buc, Florence},
+  booktitle={International Conference on Learning Representations},
+  year={2025}
+}
+
+@inproceedings{el2024umapmixup,
+  title={Augment on Manifold: Mixup Regularization with UMAP},
+  author={El-Laham, Yousef and Fons, Elizabeth and Daudert, Dillon and Vyetrenko, Svitlana},
+  booktitle={IEEE International Conference on Acoustics, Speech and Signal Processing},
+  pages={7040--7044},
+  year={2024}
+}
+
+%%%%%%%%%% long-tail %%%%%%%%%%
+@inproceedings{chou2020remix,
+  title={Remix: rebalanced mixup},
+  author={Chou, Hsin-Ping and Chang, Shih-Chieh and Pan, Jia-Yu and Wei, Wei and Juan, Da-Cheng},
+  booktitle={Computer Vision--ECCV 2020 Workshops: Glasgow, UK, August 23--28, 2020, Proceedings, Part VI 16},
+  pages={95--110},
+  year={2020},
+  
+}
+@inproceedings{xu2021unimix,
+  title={Towards calibrated model for long-tailed visual recognition from prior perspective},
+  author={Xu, Zhengzhuo and Chai, Zenghao and Yuan, Chun},
+  booktitle={Neural Information Processing Systems},
+  volume={34},
+  pages={7139--7152},
+  year={2021}
+}
+@inproceedings{zhang2022obmix,
+  title={Label-occurrence-balanced mixup for long-tailed recognition},
+  author={Zhang, Shaoyu and Chen, Chen and Zhang, Xiujuan and Peng, Silong},
+  booktitle={IEEE International Conference on Acoustics, Speech and Signal Processing},
+  pages={3224--3228},
+  year={2022}
+}
+@article{baik2024dbn-mix,
+  title={DBN-Mix: Training dual branch network using bilateral mixup augmentation for long-tailed visual recognition},
+  author={Baik, Jae Soon and Yoon, In Young and Choi, Jun Won},
+  journal={Pattern Recognition},
+  volume={147},
+  pages={110107},
+  year={2024},
+  publisher={Elsevier}
+}
+
+%%%%%%%%%% segmentation %%%%%%%%%%
+@inproceedings{olsson2021classmix,
+  title={Classmix: Segmentation-based data augmentation for semi-supervised learning},
+  author={Olsson, Viktor and Tranheden, Wilhelm and Pinto, Juliano and Svensson, Lennart},
+  booktitle={IEEE Winter Conference on Applications of Computer Vision},
+  pages={1369--1378},
+  year={2021}
+}
+@inproceedings{pereira2021chessmix,
+  title={Chessmix: spatial context data augmentation for remote sensing semantic segmentation},
+  author={Pereira, Matheus Barros and dos Santos, Jefersson Alex},
+  booktitle={SIBGRAPI Conference on Graphics, Patterns and Images},
+  pages={278--285},
+  year={2021},
+  
+}
+@inproceedings{zhang2022cyclemix,
+  title={Cyclemix: A holistic strategy for medical image segmentation from scribble supervision},
+  author={Zhang, Ke and Zhuang, Xiahai},
+  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={11656--11665},
+  year={2022}
+}
+@inproceedings{lin2022insmix,
+  title={InsMix: towards realistic generative data augmentation for nuclei instance segmentation},
+  author={Lin, Yi and Wang, Zeyu and Cheng, Kwang-Ting and Chen, Hao},
+  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
+  pages={140--149},
+  year={2022},
+  
+}
+@article{feng2024samix-net,
+  title={SA-MixNet: Structure-aware Mixup and Invariance Learning for Scribble-supervised Road Extraction in Remote Sensing Images},
+  author={Feng, Jie and Huang, Hao and Zhang, Junpeng and Dong, Weisheng and Zhang, Dingwen and Jiao, Licheng},
+  journal={IEEE Transactions on Geoscience and Remote Sensing},
+  year={2024},
+  publisher={IEEE}
+}
+
+@inproceedings{ma2024midss,
+  title={Constructing and exploring intermediate domains in mixed domain semi-supervised medical image segmentation},
+  author={Ma, Qinghe and Zhang, Jian and Qi, Lei and Yu, Qian and Shi, Yinghuan and Gao, Yang},
+  booktitle={IEEE/CVF conference on computer vision and pattern recognition},
+  pages={11642--11651},
+  year={2024}
+}
+
+@inproceedings{zhao2024unimix,
+  title={Unimix: Towards domain adaptive and generalizable lidar semantic segmentation in adverse weather},
+  author={Zhao, Haimei and Zhang, Jing and Chen, Zhuo and Zhao, Shanshan and Tao, Dacheng},
+  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={14781--14791},
+  year={2024}
+}
+
+@inproceedings{zhang2024modelmix,
+  title={Modelmix: A new model-mixup strategy to minimize vicinal risk across tasks for few-scribble based cardiac segmentation},
+  author={Zhang, Ke and Patel, Vishal M},
+  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
+  pages={456--466},
+  year={2024}
+}
+
+%%%%%%%%%% object detection %%%%%%%%%%
+
+@inproceedings{zhao2024msdert,
+  title={Ms-detr: Efficient detr training with mixed supervision},
+  author={Zhao, Chuyang and Sun, Yifan and Wang, Wenhao and Chen, Qiang and Ding, Errui and Yang, Yi and Wang, Jingdong},
+  booktitle={IEEE/CVF conference on computer vision and pattern recognition},
+  pages={17027--17036},
+  year={2024}
+}
+
+%%%%%%%%%% Federated Learning %%%%%%%%%%
+@article{shin2020xormixup,
+  title={Xor mixup: Privacy-preserving data augmentation for one-shot federated learning},
+  author={Shin, MyungJae and Hwang, Chihoon and Kim, Joongheon and Park, Jihong and Bennis, Mehdi and Kim, Seong-Lyun},
+  journal={arXiv preprint arXiv:2006.05148},
+  year={2020}
+}
+@article{yoon2021fedmix,
+  title={Fedmix: Approximation of mixup under mean augmented federated learning},
+  author={Yoon, Tehrim and Shin, Sumin and Hwang, Sung Ju and Yang, Eunho},
+  journal={arXiv preprint arXiv:2107.00233},
+  year={2021}
+
+}@article{oh2020mix2fld,
+  title={Mix2FLD: Downlink federated learning after uplink federated distillation with two-way mixup},
+  author={Oh, Seungeun and Park, Jihong and Jeong, Eunjeong and Kim, Hyesung and Bennis, Mehdi and Kim, Seong-Lyun},
+  journal={IEEE Communications Letters},
+  volume={24},
+  number={10},
+  pages={2211--2215},
+  year={2020},
+  publisher={IEEE}
+}
+@inproceedings{lewy2022statmix,
+  title={StatMix: Data augmentation method that relies on image statistics in federated learning},
+  author={Lewy, Dominik and Ma{\'n}dziuk, Jacek and Ganzha, Maria and Paprzycki, Marcin},
+  booktitle={International Conference on Neural Information Processing},
+  pages={574--585},
+  year={2022},
+  
+}
+
+%%%AdversarialTraining & Attack%%%
+@inproceedings{laugros2020m-tlat,
+  title={Addressing neural network robustness with mixup and targeted labeling adversarial training},
+  author={Laugros, Alfred and Caplier, Alice and Ospici, Matthieu},
+  booktitle={Computer Vision--ECCV 2020 Workshops: Glasgow, UK, August 23--28, 2020, Proceedings, Part V 16},
+  pages={178--195},
+  year={2020},
+  
+}
+
+@inproceedings{pang2019MI,
+  title={Mixup Inference: Better Exploiting Mixup to Defend Adversarial Attacks},
+  author={Pang, Tianyu and Xu, Kun and Zhu, Jun},
+  booktitle={International Conference on Learning Representations},
+  year={2020}
+}
+@inproceedings{lee2020avmixup,
+  title={Adversarial vertex mixup: Toward better adversarially robust generalization},
+  author={Lee, Saehyung and Lee, Hyungyu and Yoon, Sungroh},
+  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={272--281},
+  year={2020}
+}
+@inproceedings{liu2021amp,
+  title={Adversarial Mixing Policy for Relaxing Locally Linear Constraints in Mixup},
+  author={Liu, Guang and Mao, Yuzhao and Hailong, Huang and Weiguo, Gao and Xuan, Li},
+  booktitle={Conference on Empirical Methods in Natural Language Processing},
+  pages={2998--3008},
+  year={2021}
+}
+@article{bunk2021aom,
+  title={Adversarially optimized mixup for robust classification},
+  author={Bunk, Jason and Chattopadhyay, Srinjoy and Manjunath, BS and Chandrasekaran, Shivkumar},
+  journal={arXiv preprint arXiv:2103.11589},
+  year={2021}
+}
+@inproceedings{si2021amda,
+  title={Better robustness by more coverage: Adversarial and mixup data augmentation for robust finetuning},
+  author={Si, Chenglei and Zhang, Zhengyan and Qi, Fanchao and Liu, Zhiyuan and Wang, Yasheng and Liu, Qun and Sun, Maosong},
+  booktitle={Findings of the Association for Computational Linguistics},
+  pages={1569--1576},
+  year={2021}
+}
+@inproceedings{lamb2019iat,
+  title={Interpolated adversarial training: Achieving robust neural networks without sacrificing too much accuracy},
+  author={Lamb, Alex and Verma, Vikas and Kannala, Juho and Bengio, Yoshua},
+  booktitle={ACM Workshop on Artificial Intelligence and Security},
+  pages={95--103},
+  year={2019}
+}
+@inproceedings{jiao2023mixup-ssat,
+  title={Semi-supervised Semantics-guided Adversarial Training for Robust Trajectory Prediction},
+  author={Jiao, Ruochen and Liu, Xiangguo and Sato, Takami and Chen, Qi Alfred and Zhu, Qi},
+  booktitle={International Conference on Computer Vision},
+  pages={8207--8217},
+  year={2023}
+}
+
+%%%%%%%%Domain Adaption%%%%%%%%
+%MixSSL and CoMix
+@article{mao2019VMT,
+  title={Virtual mixup training for unsupervised domain adaptation},
+  author={Mao, Xudong and Ma, Yun and Yang, Zhenguo and Chen, Yangbin and Li, Qing},
+  journal={arXiv preprint arXiv:1905.04215},
+  year={2019}
+}
+@article{yan2020iimt,
+  title={Improve unsupervised domain adaptation with mixup training},
+  author={Yan, Shen and Song, Huan and Li, Nanxiang and Zou, Lincan and Ren, Liu},
+  journal={arXiv preprint arXiv:2001.00677},
+  year={2020}
+}
+@inproceedings{xu2020dm-ada,
+  title={Adversarial domain adaptation with domain mixup},
+  author={Xu, Minghao and Zhang, Jian and Ni, Bingbing and Li, Teng and Wang, Chengjie and Tian, Qi and Zhang, Wenjun},
+  booktitle={AAAI Conference on Artificial Intelligence},
+  volume={34},
+  pages={6502--6509},
+  year={2020}
+}
+@inproceedings{wu2020dmrl,
+  title={Dual mixup regularized learning for adversarial domain adaptation},
+  author={Wu, Yuan and Inkpen, Diana and El-Roby, Ahmed},
+  booktitle={Computer Vision--ECCV 2020: 16th European Conference, Glasgow, UK, August 23--28, 2020, Proceedings, Part XXIX 16},
+  pages={540--555},
+  year={2020},
+  
+}
+@inproceedings{sahoo2023slm,
+  title={Select, label, and mix: Learning discriminative invariant feature representations for partial domain adaptation},
+  author={Sahoo, Aadarsh and Panda, Rameswar and Feris, Rogerio and Saenko, Kate and Das, Abir},
+  booktitle={IEEE Winter Conference on Applications of Computer Vision},
+  pages={4210--4219},
+  year={2023}
+}
+@inproceedings{zhang2023samixup,
+  title={Spectral Adversarial MixUp for Few-Shot Unsupervised Domain Adaptation},
+  author={Zhang, Jiajin and Chao, Hanqing and Dhurandhar, Amit and Chen, Pin-Yu and Tajer, Ali and Xu, Yangyang and Yan, Pingkun},
+  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
+  pages={728--738},
+  year={2023},
+  
+}
+
+%%%%%%% Knowledge Distillation %%%%%
+@inproceedings{muhammad2021mixacm,
+  title={Mixacm: Mixup-based robustness transfer via distillation of activated channel maps},
+  author={Muhammad, Awais and Zhou, Fengwei and Xie, Chuanlong and Li, Jiawei and Bae, Sung-Ho and Li, Zhenguo},
+  booktitle={Neural Information Processing Systems},
+  volume={34},
+  pages={4555--4569},
+  year={2021}
+}
+@inproceedings{yang2022mixskd,
+  title={Mixskd: Self-knowledge distillation from mixup for image recognition},
+  author={Yang, Chuanguang and An, Zhulin and Zhou, Helong and Cai, Linhang and Zhi, Xiang and Wu},
+  booktitle={European Conference on Computer Vision},
+  pages={534--551},
+  year={2022},
+  
+}
+@inproceedings{choi2023mixkd,
+  title={Understanding the role of mixup in knowledge distillation: An empirical study},
+  author={Choi, Hongjun and Jeon, Eun Som and Shukla, Ankita and Turaga, Pavan},
+  booktitle={IEEE Winter Conference on Applications of Computer Vision},
+  pages={2319--2328},
+  year={2023}
+}
+
+%%%%%%%%%% Multi Model %%%%%%%%%%
+@inproceedings{wang2022vlmixer,
+  title={Vlmixer: Unpaired vision-language pre-training via cross-modal cutmix},
+  author={Wang, Teng and Jiang, Wenhao and Lu, Zhichao and Zheng, Feng and Cheng, Ran and Yin, Chengguo and Luo, Ping},
+  booktitle={International Conference on Machine Learning},
+  pages={22680--22690},
+  year={2022},
+  
+}
+@inproceedings{hao2023mixgen,
+  title={Mixgen: A new multi-modal data augmentation},
+  author={Hao, Xiaoshuai and Zhu, Yi and Appalaraju, Srikar and Zhang, Aston and Zhang, Wanqian and Li, Bo and Li, Mu},
+  booktitle={IEEE Winter Conference on Applications of Computer Vision},
+  pages={379--389},
+  year={2023}
+}
+@article{georgiou2023powmix,
+  title={Powmix: A versatile regularizer for multimodal sentiment analysis},
+  author={Georgiou, Efthymios and Avrithis, Yannis and Potamianos, Alexandros},
+  journal={IEEE/ACM Transactions on Audio, Speech, and Language Processing},
+  year={2024},
+  publisher={IEEE}
+}
+
+@article{gong2022vqamix,
+  title={Vqamix: Conditional triplet mixup for medical visual question answering},
+  author={Gong, Haifan and Chen, Guanqi and Mao, Mingzhi and Li, Zhen and Li, Guanbin},
+  journal={IEEE Transactions on Medical Imaging},
+  volume={41},
+  number={11},
+  pages={3332--3343},
+  year={2022},
+  publisher={IEEE}
+}
+
+@inproceedings{wang2024diffmix,
+  title={Enhance Image Classification via Inter-Class Image Mixup with Diffusion Model},
+  author={Wang, Zhicai and Wei, Longhui and Wang, Tan and Chen, Heyu and Hao, Yanbin and Wang, Xiang and He, Xiangnan and Tian, Qi},
+  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={17223--17233},
+  year={2024}
+}
+
+@inproceedings{liu2025regmix,
+  title={Regmix: Data mixture as regression for language model pre-training},
+  author={Liu, Qian and Zheng, Xiaosen and Muennighoff, Niklas and Zeng, Guangtao and Dou, Longxu and Pang, Tianyu and Jiang, Jing and Lin, Min},
+  booktitle={International Conference on Learning Representations},
+  year={2025}
+}
+
+@article{zhou2025m3,
+  title={Mixup Model Merge: Enhancing Model Merging Performance through Randomized Linear Interpolation},
+  author={Zhou, Yue and Chang, Yi and Wu, Yuan},
+  journal={arXiv preprint arXiv:2502.15434},
+  year={2025}
+}
+
+%%%%%%%%%% NLP %%%%%%%%%%
+@article{guo2019WordMixup&SenMixu,
+  title={Augmenting data with mixup for sentence classification: An empirical study},
+  author={Guo, Hongyu and Mao, Yongyi and Zhang, Richong},
+  journal={arXiv preprint arXiv:1905.08941},
+  year={2019}
+}
+@inproceedings{zhang2020seqmix,
+  title={SeqMix: Augmenting Active Sequence Labeling via Sequence Mixup},
+  author={Zhang, Rongzhi and Yu, Yue and Zhang, Chao},
+  booktitle={Conference on Empirical Methods in Natural Language Processing},
+  pages={8566--8579},
+  year={2020}
+}
+
+@inproceedings{sun2020mixup-transformer,
+  title={Mixup-Transformer: Dynamic Data Augmentation for NLP Tasks},
+  author={Sun, Lichao and Xia, Congying and Yin, Wenpeng and Liang, Tingting and Philip, S Yu and He, Lifang},
+  booktitle={International Conference on Computational Linguistics},
+  pages={3436--3440},
+  year={2020}
+}
+
+@article{kong2020clft,
+  title={Calibrated language models must hallucinate},
+  author={Kalai, Adam Tauman and Vempala, Santosh S},
+  journal={Annual ACM Symposium on Theory of Computing (STOC)},
+  pages={160--171},
+  year={2024}
+}
+@inproceedings{jindal2020EMix,
+  title={Augmenting NLP models using latent feature interpolations},
+  author={Jindal, Amit and Chowdhury, Arijit Ghosh and Didolkar, Aniket and Jin, Di and Sawhney, Ramit and Shah, Rajiv},
+  booktitle={International Conference on Computational Linguistics},
+  pages={6931--6936},
+  year={2020}
+}
+@inproceedings{chen2020mixtext,
+  title={MixText: Linguistically-Informed Interpolation of Hidden Space for Semi-Supervised Text Classification},
+  author={Chen, Jiaao and Yang, Zichao and Yang, Diyi},
+  booktitle={Annual Meeting of the Association for Computational Linguistics},
+  pages={2147--2157},
+  year={2020}
+}
+@inproceedings{guo2020seq-level-mix,
+  title={Sequence-Level Mixed Sample Data Augmentation},
+  author={Guo, Demi and Kim, Yoon and Rush, Alexander},
+  booktitle={EMNLP},
+  year={2020}
+}
+@inproceedings{cheng2020advaug,
+  title={AdvAug: Robust Adversarial Augmentation for Neural Machine Translation},
+  author={Cheng, Yong and Jiang, Lu and Macherey, Wolfgang and Eisenstein, Jacob},
+  booktitle={Annual Meeting of the Association for Computational Linguistics},
+  pages={5961--5970},
+  year={2020}
+}
+@inproceedings{chen2020ladamixup,
+  title={Local Additivity Based Data Augmentation for Semi-supervised NER},
+  author={Chen, Jiaao and Wang, Zhenghui and Tian, Ran and Yang, Zichao and Yang, Diyi},
+  booktitle={Conference on Empirical Methods in Natural Language Processing},
+  pages={1241--1251},
+  year={2020}
+}
+@inproceedings{li2021MixDiversity,
+  title={Mixup Decoding for Diverse Machine Translation},
+  author={Li, Jicheng and Gao, Pengzhi and Wu, Xuanfu and Feng, Yang and He, Zhongjun and Wu, Hua and Wang, Haifeng},
+  booktitle={Findings of Empirical Methods in Natural Language Processing},
+  year={2021}
+}
+@inproceedings{fang2022stemm,
+  title={STEMM: Self-learning with Speech-text Manifold Mixup for Speech Translation},
+  author={Fang, Qingkai and Ye, Rong and Li, Lei and Feng, Yang and Wang, Mingxuan},
+  booktitle={Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  pages={7050--7062},
+  year={2022}
+}
+@inproceedings{zhang2022treemix,
+  title={TreeMix: Compositional Constituency-based Data Augmentation for Natural Language Understanding},
+  author={Zhang, Le and Yang, Zichao and Yang, Diyi},
+  booktitle={Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies},
+  pages={5243--5258},
+  year={2022}
+}
+
+@article{jin2022admix,
+  title={AdMix: A mixed sample data augmentation method for neural machine translation},
+  author={Jin, Chang and Qiu, Shigui and Xiao, Nini and Jia, Hao},
+  journal={arXiv preprint arXiv:2205.04686},
+  year={2022}
+}
+@inproceedings{yang2022Xmixup,
+  title={Enhancing Cross-lingual Transfer by Manifold Mixup},
+  author={Yang, Huiyun and Chen, Huadong and Zhou, Hao and Li, Lei},
+  booktitle={International Conference on Learning Representations},
+  year={2022}
+}
+
+@inproceedings{cheng2022Multilingualmix,
+  title={Multilingual Mix: Example Interpolation Improves Multilingual Neural Machine Translation},
+  author={Cheng, Yong and Bapna, Ankur and Firat, Orhan and Cao, Yuan and Wang, Pidong and Macherey, Wolfgang},
+  booktitle={Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  pages={4092--4102},
+  year={2022}
+}
+
+@inproceedings{guo2020nonlinearmixup,
+  title={Nonlinear mixup: Out-of-manifold data augmentation for text classification},
+  author={Guo, Hongyu},
+  booktitle={AAAI Conference on Artificial Intelligence},
+  volume={34},
+  number={04},
+  pages={4044--4051},
+  year={2020}
+}
+
+@inproceedings{yoon2021ssmix,
+  title={SSMix: Saliency-Based Span Mixup for Text Classification},
+  author={Yoon, Soyoung and Kim, Gyuwan and Park, Kyumin},
+  booktitle={Findings of the Association for Computational Linguistics},
+  pages={3225--3234},
+  year={2021}
+}
+
+@inproceedings{sawhney2021hypmix,
+  title={HypMix: hyperbolic interpolative data augmentation},
+  author={Sawhney, Ramit and Thakkar, Megh and Agarwal, Shivam and Jin, Di and Yang, Diyi and Flek, Lucie},
+  booktitle={Conference on Empirical Methods in Natural Language Processing},
+  pages={9858--9868},
+  year={2021}
+}
+
+%%%%%%%%%% Graphic %%%%%%%%%%
+@inproceedings{xue2021NodeAug-I,
+  title={Node augmentation methods for graph neural network based object classification},
+  author={Xue, Yifan and Liao, Yixuan and Chen, Xiaoxin and Zhao, Jingwei},
+  booktitle={International Conference on Computing and Data Science},
+  pages={556--561},
+  year={2021},
+  
+}
+@inproceedings{wang2021mixgnn,
+  title={Mixup for node and graph classification},
+  author={Wang, Yiwei and Wang, Wei and Liang, Yuxuan and Cai, Yujun and Hooi, Bryan},
+  booktitle={Proceedings of the Web Conference 2021},
+  pages={3663--3674},
+  year={2021}
+}
+@article{ma2022PMRGNN,
+  title={Graph mixed random network based on pagerank},
+  author={Ma, Qianli and Fan, Zheng and Wang, Chenzhi and Tan, Hongye},
+  journal={Symmetry},
+  volume={14},
+  number={8},
+  pages={1678},
+  year={2022},
+  publisher={MDPI}
+}
+@article{zhao2022GraphSMOTE,
+  title={Synthetic over-sampling for imbalanced node classification with graph neural networks},
+  author={Zhao, Tianxiang and Zhang, Xiang and Wang, Suhang},
+  journal={arXiv preprint arXiv:2206.05335},
+  year={2022}
+}
+@inproceedings{verma2021graphmix,
+  title={Graphmix: Improved training of gnns for semi-supervised learning},
+  author={Verma, Vikas and Qu, Meng and Kawaguchi, Kenji and Lamb, Alex and Bengio, Yoshua and Kannala},
+  booktitle={AAAI Conference on Artificial Intelligence},
+  volume={35},
+  pages={10024--10032},
+  year={2021}
+}
+@inproceedings{wu2021graphmixup,
+  title={Graphmixup: Improving class-imbalanced node classification by reinforcement mixup and self-supervised context prediction},
+  author={Wu, Lirong and Xia, Jun and Gao, Zhangyang and Lin, Haitao and Tan, Cheng and Li, Stan Z},
+  booktitle={Joint European conference on machine learning and knowledge discovery in databases},
+  pages={519--535},
+  year={2022}
+}
+
+@inproceedings{park2022Graph-Transplant,
+  title={Graph transplant: Node saliency-guided graph mixup with local structure preservation},
+  author={Park, Joonhyung and Shim, Hajin and Yang, Eunho},
+  booktitle={AAAI Conference on Artificial Intelligence},
+  volume={36},
+  pages={7966--7974},
+  year={2022}
+}
+@inproceedings{han2022g-mix,
+  title={G-mixup: Graph data augmentation for graph classification},
+  author={Han, Xiaotian and Jiang, Zhimeng and Liu, Ninghao and Hu, Xia},
+  booktitle={International Conference on Machine Learning},
+  pages={8230--8248},
+  year={2022},
+  
+}
+@inproceedings{jeong2023igraphmix,
+  title={iGraphMix: Input Graph Mixup Method for Node Classification},
+  author={Jeong, Jongwon and Lee, Hoyeop and Yoon, Hyui Geon and Lee, Beomyoung and Heo, Junhee and Kim, Geonsoo and Seon, Kim Jin},
+  booktitle={International Conference on Learning Representations},
+  year={2023}
+}
+
+
+%%%%%%%%%% 3D point clouds %%%%%%%%%%
+@inproceedings{chen2020pointmixup,
+  title={Pointmixup: Augmentation for point clouds},
+  author={Chen, Yunlu and Hu, Vincent Tao and Gavves, Efstratios and Mensink, Thomas and Mettes, Pascal and Yang, Pengwan and Snoek, Cees GM},
+  booktitle={Computer Vision--ECCV 2020: 16th European Conference, Glasgow, UK, August 23--28, 2020, Proceedings, Part III 16},
+  pages={330--345},
+  year={2020},
+  
+}
+
+@article{zhang2022pointcutmix,
+  title={Pointcutmix: Regularization strategy for point cloud classification},
+  author={Zhang, Jinlai and Chen, Lyujie and Ouyang, Bo and Liu, Binbin and Zhu, Jihong and Chen, Yujin and Meng, Yanmei and Wu, Danfeng},
+  journal={Neurocomputing},
+  volume={505},
+  pages={58--67},
+  year={2022},
+  publisher={Elsevier}
+}
+
+@inproceedings{lee2021rs-mix,
+  title={Regularization strategy for point cloud via rigidly mixed sample},
+  author={Lee, Dogyoon and Lee, Jaeha and Lee, Junhyeop and Lee, Hyeongmin and Lee, Minhyeok and Woo, Sungmin and Lee, Sangyoun},
+  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={15900--15909},
+  year={2021}
+}
+
+@inproceedings{choi2021pa-aug,
+  title={Part-aware data augmentation for 3d object detection in point cloud},
+  author={Choi, Jaeseok and Song, Yeji and Kwak, Nojun},
+  booktitle={IEEE/RSJ International Conference on Intelligent Robots and Systems},
+  pages={3391--3397},
+  year={2021},
+  
+}
+
+@inproceedings{umam2022point-mixswap,
+  title={Point mixswap: Attentional point cloud mixing via swapping matched structural divisions},
+  author={Umam, Ardian and Yang, Cheng-Kun and Chuang, Yung-Yu and Chuang, Jen-Hui and Lin, Yen-Yu},
+  booktitle={European Conference on Computer Vision},
+  pages={596--611},
+  year={2022},
+  
+}
+
+%%%%%%%%%% other %%%%%%%%%%
+@inproceedings{patel2022simix,
+  title={Recall@ k surrogate loss with large batches and similarity mixup},
+  author={Patel, Yash and Tolias, Giorgos and Matas, Ji{\v{r}}{\'\i}},
+  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={7502--7511},
+  year={2022}
+}
+
+@inproceedings{zhang2022contrastive-mixup,
+  title={Contrastive-mixup learning for improved speaker verification},
+  author={Zhang, Xin and Jin, Minho and Cheng, Roger and Li, Ruirui and Han, Eunjung and Stolcke, Andreas},
+  booktitle={IEEE International Conference on Acoustics, Speech and Signal Processing},
+  pages={7652--7656},
+  year={2022}
+}
+
+@article{chang2023LLM,
+  title={Single-channel speech enhancement using learnable loss mixup},
+  author={Chang, Oscar and Tran, Dung N and Koishida, Kazuhito},
+  journal={arXiv preprint arXiv:2312.17255},
+  year={2023}
+}
+
+@inproceedings{ko2020ee,
+  title={Embedding expansion: Augmentation in embedding space for deep metric learning},
+  author={Ko, Byungsoo and Gu, Geonmo},
+  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={7255--7264},
+  year={2020}
+}
+@inproceedings{venkataramanan2021metrix,
+  title={It Takes Two to Tango: Mixup for Deep Metric Learning},
+  author={Venkataramanan, Shashanka and Psomas, Bill and Kijak, Ewa and Amsaleg, Laurent and Karantzalos, Konstantinos and Avrithis, Yannis},
+  booktitle={International Conference on Learning Representations},
+  pages={1--21},
+  year={2022}
+}
+
+@article{madaan2021lump,
+  title={Representational continuity for unsupervised continual learning},
+  author={Madaan, Divyam and Yoon, Jaehong and Li, Yuanchun and Liu, Yunxin and Hwang, Sung Ju},
+  journal={arXiv preprint arXiv:2110.06976},
+  year={2021}
+}
+
+@article{zhou2024dnabert-s,
+  title={Dnabert-s: Learning species-aware dna embedding with genome foundation models},
+  author={Zhou, Zhihan and Wu, Weimin and Ho, Harrison and Wang, Jiayi},
+  journal={arXiv preprint arXiv:2402.08777},
+  volume={2},
+  year={2024}
+}
+
+@article{hasegawa2021octave-mix,
+  title={Octave mix: Data augmentation using frequency decomposition for activity recognition},
+  author={Hasegawa, Tatsuhito},
+  journal={IEEE Access},
+  volume={9},
+  pages={53679--53686},
+  year={2021},
+  publisher={IEEE}
+}
+
+@inproceedings{teney2023selective-mix,
+  title={Selective Mixup Helps with Distribution Shifts, But Not (Only) because of Mixup},
+  author={Teney, Damien and Wang, Jindong and Abbasnejad, Ehsan},
+  booktitle={Forty-first International Conference on Machine Learning},
+  year={2024}
+}
+
+@inproceedings{yoo2020cutblur,
+  title={Rethinking data augmentation for image super-resolution: A comprehensive analysis and a new strategy},
+  author={Yoo, Jaejun and Ahn, Namhyuk and Sohn, Kyung-Ah},
+  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={8375--8384},
+  year={2020}
+}
+
+@article{tan2023sv-mix,
+  title={Selective Volume Mixup for Video Action Recognition},
+  author={Tan, Yi and Qiu, Zhaofan and Hao, Yanbin and Yao, Ting and He, Xiangnan and Mei, Tao},
+  journal={arXiv preprint arXiv:2309.09534},
+  year={2023}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Mixup analysis and theorem %%%%%%%%%%%%%%%%%%%%%%%%%%
+@inproceedings{chapelle2000vrm,
+  title={Vicinal risk minimization},
+  author={Chapelle, Olivier and Weston, Jason and Bottou, L{\'e}on and Vapnik, Vladimir},
+  booktitle={Neural Information Processing Systems},
+  volume={13},
+  year={2000}
+}
+
+@article{archambault2019UntiedMixUp,
+  title={MixUp as Directional Adversarial Training},
+  author={Guillaume P. Archambault and Yongyi Mao and Hongyu Guo and Richong Zhang},
+  journal={ArXiv},
+  year={2019},
+  volume={abs/1906.06875}
+}
+
+@inproceedings{zhang2021howdose,
+  title={How Does Mixup Help With Robustness and Generalization?},
+  author={Linjun and Deng, Zhun and Kawaguchi, Kenji and Ghorbani, Amirata and Zou, James},
+  booktitle={International Conference on Learning Representations},
+  year={2021}
+}
+
+@article{carratino2022onmixupre,
+  title={On mixup regularization},
+  author={Carratino, Luigi and Ciss{\'e}, Moustapha and Jenatton, Rodolphe and Vert, Jean-Philippe},
+  journal={booktitle of Machine Learning Research},
+  volume={23},
+  number={325},
+  pages={1--31},
+  year={2022}
+}
+
+@inproceedings{thulasidasan2019onmixup,
+  title={On mixup training: Improved calibration and predictive uncertainty for deep neural networks},
+  author={Thulasidasan, Sunil and Chennupati, Gopinath and Bilmes, Jeff A and Bhattacharya, Tanmoy and Michalak, Sarah},
+  booktitle={Neural Information Processing Systems},
+  volume={32},
+  year={2019}
+}
+
+@inproceedings{zhang2022when&how,
+  title={When and how mixup improves calibration},
+  author={Zhang, Linjun and Deng, Zhun and Kawaguchi, Kenji and Zou, James},
+  booktitle={International Conference on Machine Learning},
+  pages={26135--26160},
+  year={2022},
+  
+}
+
+@article{liang2018understanding,
+  title={Understanding mixup training methods},
+  author={Liang, Daojun and Yang, Feng and Zhang, Tian and Yang, Peter},
+  journal={IEEE Access},
+  volume={6},
+  pages={58774--58783},
+  year={2018},
+  publisher={IEEE}
+}
+
+@inproceedings{liu2023over,
+  title={Over-Training with Mixup May Hurt Generalization},
+  author={Liu, Zixuan and Wang, Ziqiao and Guo, Hongyu and Mao, Yongyi},
+  booktitle={The Eleventh International Conference on Learning Representations},
+  year={2023}
+}
+
+@inproceedings{fisher2024pushing,
+  title={Pushing Boundaries: Mixup's Influence on Neural Collapse},
+  author={Fisher, Quinn LeBlanc and Meng, Haoming and Papyan, Vardan},
+  booktitle={The Twelfth International Conference on Learning Representations},
+  year={2024}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Augmentations and Optimizers %%%%%%%%%%%%%%%%%%%%%%%%%%
+@inproceedings{wan2013regularization,
+  title={Regularization of neural networks using dropconnect},
+  author={Wan, Li and Zeiler, Matthew and Zhang, Sixin and Le Cun, Yann and Fergus, Rob},
+  booktitle={International Conference on Machine Learning},
+  pages={1058--1066},
+  year={2013},
+  
+}
+
+@article{srivastava2014dropout,
+  title={Dropout: a simple way to prevent neural networks from overfitting},
+  author={Srivastava, Nitish and Hinton, Geoffrey and Krizhevsky, Alex and Sutskever, Ilya and Salakhutdinov, Ruslan},
+  journal={The booktitle of machine learning research},
+  volume={15},
+  number={1},
+  pages={1929--1958},
+  year={2014},
+  publisher={JMLR. org}
+}
+
+@article{simonyan2014saliency,
+  title={Visualising image classification models and saliency maps},
+  author={Simonyan, Karen and Vedaldi, Andrea and Zisserman, Andrew},
+  journal={Deep Inside Convolutional Networks},
+  volume={2},
+  pages={2},
+  year={2014}
+}
+
+@inproceedings{selvaraju2017grad,
+  title={Grad-cam: Visual explanations from deep networks via gradient-based localization},
+  author={Selvaraju, Ramprasaath R and Cogswell, Michael and Das, Abhishek and Vedantam, Ramakrishna and Parikh, Devi and Batra, Dhruv},
+  booktitle={International Conference on Computer Vision},
+  pages={618--626},
+  year={2017}
+}
+
+@article{cubuk2018autoaugment,
+  title={Autoaugment: Learning augmentation policies from data},
+  author={Cubuk, Ekin D and Zoph, Barret and Mane, Dandelion and Vasudevan, Vijay and Le, Quoc V},
+  journal={arXiv preprint arXiv:1805.09501},
+  year={2018}
+}
+
+@inproceedings{hataya2020fasterda,
+  title={Faster autoaugment: Learning augmentation strategies using backpropagation},
+  author={Hataya, Ryuichiro and Zdenek, Jan and Yoshizoe, Kazuki and Nakayama, Hideki},
+  booktitle={European Conference on Computer Vision},
+  pages={1--16},
+  year={2020},
+  
+}
+
+@inproceedings{lim2019fastda,
+  title={Fast AutoAugment},
+  author={Lim, Sungbin and Kim, Ildoo and Kim, Taesup and Kim, Chiheon and Kim, Sungwoong},
+  booktitle={Neural Information Processing Systems},
+  year={2019}
+}
+
+@inproceedings{cubuk2020randaugment,
+  title={Randaugment: Practical automated data augmentation with a reduced search space},
+  author={Cubuk, Ekin D and Zoph, Barret and Shlens, Jonathon and Le, Quoc V},
+  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops},
+  pages={702--703},
+  year={2020}
+}
+
+@inproceedings{suzuki2022teachaug,
+    author={Suzuki, Teppei},
+    title={TeachAugment: Data Augmentation Optimization Using Teacher Knowledge},
+    booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+    month={June},
+    year={2022},
+    pages={10904-10914}
+}
+
+@article{chen2020gridmask,
+  title={Gridmask data augmentation},
+  author={Chen, Pengguang and Liu, Shu and Zhao, Hengshuang and Jia, Jiaya},
+  journal={arXiv preprint arXiv:2001.04086},
+  year={2020}
+}
+
+@article{devries2017cutout,
+  title={Improved regularization of convolutional neural networks with cutout},
+  author={DeVries, Terrance and Taylor, Graham W},
+  journal={arXiv preprint arXiv:1708.04552},
+  year={2017}
+}
+
+@inproceedings{zhong2020randerasing,
+  title={Random erasing data augmentation},
+  author={Zhong, Zhun and Zheng, Liang and Kang, Guoliang and Li, Shaozi and Yang, Yi},
+  booktitle={AAAI Conference on Artificial Intelligence},
+  volume={34},
+  pages={13001--13008},
+  year={2020}
+}
+
+@article{goodfellow2020gans,
+  title={Generative adversarial networks},
+  author={Goodfellow, Ian and Pouget-Abadie, Jean and Mirza, Mehdi and Xu, Bing and Warde-Farley, David and Ozair, Sherjil and Courville, Aaron and Bengio, Yoshua},
+  journal={Communications of the ACM},
+  volume={63},
+  number={11},
+  pages={139--144},
+  year={2020},
+  publisher={ACM New York, NY, USA}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Datasets and Benchmarks %%%%%%%%%%%%%%%%%%%%%%%%%%
+@article{krizhevsky2009learning,
+  title={Learning multiple layers of features from tiny images},
+  author={Krizhevsky, Alex and Hinton, Geoffrey and others},
+  year={2009},
+  publisher={Citeseer}
+}
+
+@inproceedings{krizhevsky2012imagenet,
+  title={Imagenet classification with deep convolutional neural networks},
+  author={Krizhevsky, Alex and Sutskever, Ilya and Hinton, Geoffrey E},
+  booktitle={Neural Information Processing Systems},
+  pages={1097--1105},
+  year={2012}
+}
+
+@article{2017tinyimagenet,
+  title={A downsampled variant of imagenet as an alternative to the cifar datasets},
+  author={Chrabaszcz, Patryk and Loshchilov, Ilya and Hutter, Frank},
+  journal={arXiv preprint arXiv:1707.08819},
+  year={2017}
+}
+
+@article{wah2011cub,
+  title={The caltech-ucsd birds-200-2011 dataset},
+  author={Wah, Catherine and Branson, Steve and Welinder, Peter and Perona, Pietro and Belongie, Serge},
+  year={2011},
+  publisher={California Institute of Technology}
+}
+
+@article{maji2013fgvc,
+  title={Fine-grained visual classification of aircraft},
+  author={Maji, Subhransu and Rahtu, Esa and Kannala, Juho and Blaschko, Matthew and Vedaldi, Andrea},
+  journal={arXiv preprint arXiv:1306.5151},
+  year={2013}
+}
+
+@inproceedings{jonathan2013cars,
+  title = {3D Object Representations for Fine-Grained Categorization},
+  booktitle = {4th International IEEE Workshop on 3D Representation and Recognition},
+  year = {2013},
+  author = {Jonathan Krause and Michael Stark and Jia Deng and Li Fei-Fei}
+}
+
+@article{lecun1998minist,
+  title={Gradient-based learning applied to document recognition},
+  author={LeCun, Yann and Bottou, L{\'e}on and Bengio, Yoshua and Haffner, Patrick},
+  journal={Proceedings of the IEEE},
+  volume={86},
+  number={11},
+  pages={2278--2324},
+  year={1998},
+  publisher={Ieee}
+}
+
+@article{xiao2017fashion,
+  title={Fashion-mnist: a novel image dataset for benchmarking machine learning algorithms},
+  author={Xiao, Han and Rasul, Kashif and Vollgraf, Roland},
+  journal={arXiv preprint arXiv:1708.07747},
+  year={2017}
+}
+
+@inproceedings{netzer2011svhn,
+  title={Reading digits in natural images with unsupervised feature learning},
+  author={Netzer, Yuval and Wang, Tao and Coates, Adam and Bissacco, Alessandro and Wu, Baolin and Ng, Andrew Y and others},
+  booktitle={NIPS workshop on deep learning and unsupervised feature learning},
+  volume={2011},
+  number={2},
+  pages={4},
+  year={2011}
+}
+
+@article{everingham2010pascal,
+   author = "Everingham, M. and Van~Gool, L. and Williams, C. K. I. and Winn, J. and Zisserman, A.",
+   title = "The Pascal Visual Object Classes (VOC) Challenge",
+   journal = "International booktitle of Computer Vision",
+   volume = "88",
+   year = "2010",
+   number = "2",
+   month = jun,
+   pages = "303--338",
+}
+
+@inproceedings{lin2014mscoco,
+  title={Microsoft coco: Common objects in context},
+  author={Lin, Tsung-Yi and Maire, Michael and Belongie, Serge and Hays, James and Perona, Pietro and Ramanan, Deva and Doll{\'a}r, Piotr and Zitnick, C Lawrence},
+  booktitle={Computer Vision--ECCV 2014: 13th European Conference, Zurich, Switzerland, September 6-12, 2014, Proceedings, Part V 13},
+  pages={740--755},
+  year={2014},
+  
+}
+
+@article{warden2018googlespeech,
+  title={Speech commands: A dataset for limited-vocabulary speech recognition},
+  author={Warden, Pete},
+  journal={arXiv preprint arXiv:1804.03209},
+  year={2018}
+}
+
+@inproceedings{wu2015model10,
+  title={3d shapenets: A deep representation for volumetric shapes},
+  author={Wu, Zhirong and Song, Shuran and Khosla, Aditya and Yu, Fisher and Zhang, Linguang and Tang, Xiaoou and Xiao, Jianxiong},
+  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
+  pages={1912--1920},
+  year={2015}
+}
+
+@article{hendrycks2019corruption,
+  title={Benchmarking neural network robustness to common corruptions and perturbations},
+  author={Hendrycks, Dan and Dietterich, Thomas},
+  journal={arXiv preprint arXiv:1903.12261},
+  year={2019}
+}
+
+@misc{2022openmixup,
+    title={{OpenMixup}: Open Mixup Toolbox and Benchmark for Visual Representation Learning},
+    author={Li, Siyuan and Liu, Zicheng and Wang, Zedong and Wu, Di and Stan Z. Li},
+    publisher = {GitHub},
+    booktitle = {GitHub repository},
+    howpublished = {\url{https://github.com/Westlake-AI/openmixup}},
+    year={2022}
+}
+
+@misc{dsprites17,
+    author = {Loic Matthey and Irina Higgins and Demis Hassabis and Alexander Lerchner},
+    title = {dSprites: Disentanglement testing Sprites dataset},
+    howpublished= {https://github.com/deepmind/dsprites-dataset/},
+    year = "2017",
+}
+
+@article{kaur2017food101,
+  title={Combining weakly and webly supervised learning for classifying food images},
+  author={Kaur, Parneet and Sikka, Karan and Divakaran, Ajay},
+  journal={arXiv preprint arXiv:1712.08730},
+  year={2017}
+}
+
+@article{xiao2016sun397,
+  title={Sun database: Exploring a large collection of scene categories},
+  author={Xiao, Jianxiong and Ehinger, Krista A and Hays, James and Torralba, Antonio and Oliva, Aude},
+  journal={International booktitle of Computer Vision},
+  volume={119},
+  pages={3--22},
+  year={2016},
+  
+}
+
+@inproceedings{van2018inaturalist,
+  title={The inaturalist species classification and detection dataset},
+  author={Van Horn, Grant and Mac Aodha, Oisin and Song, Yang and Cui, Yin and Sun, Chen and Shepard, Alex and Adam, Hartwig and Perona, Pietro and Belongie, Serge},
+  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
+  pages={8769--8778},
+  year={2018}
+}
+
+@inproceedings{zhou2014place205,
+  title={Learning deep features for scene recognition using places database},
+  author={Zhou, Bolei and Lapedriza, Agata and Xiao, Jianxiong and Torralba, Antonio and Oliva, Aude},
+  booktitle={Neural Information Processing Systems},
+  volume={27},
+  year={2014}
+}
+
+@inproceedings{mottaghi2014PascalContext,
+  title={The role of context for object detection and semantic segmentation in the wild},
+  author={Mottaghi, Roozbeh and Chen, Xianjie and Liu, Xiaobai and Cho, Nam-Gyu and Lee, Seong-Whan and Fidler, Sanja and Urtasun, Raquel and Yuille, Alan},
+  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
+  pages={891--898},
+  year={2014}
+}
+
+@article{li2019gtsrb,
+  title={Invisible backdoor attacks on deep neural networks via steganography and regularization},
+  author={Li, Shaofeng and Xue, Minhui and Zhao, Benjamin Zi Hao and Zhu, Haojin and Zhang, Xinpeng},
+  journal={arXiv preprint arXiv:1909.02742},
+  year={2019}
+}
+
+@article{zhou2019ade20k,
+  title={Semantic understanding of scenes through the ade20k dataset},
+  author={Zhou, Bolei and Zhao, Hang and Puig, Xavier and Xiao, Tete and Fidler, Sanja and Barriuso, Adela and Torralba, Antonio},
+  journal={International booktitle of Computer Vision},
+  volume={127},
+  pages={302--321},
+  year={2019},
+  
+}
+
+@inproceedings{coates2011stl10,
+  title={An analysis of single-layer networks in unsupervised feature learning},
+  author={Coates, Adam and Ng, Andrew and Lee, Honglak},
+  booktitle={Proceedings of the fourteenth international conference on artificial intelligence and statistics},
+  pages={215--223},
+  year={2011}
+}
+
+@article{brancati2022bracs,
+  title={Bracs: A dataset for breast carcinoma subtyping in h\&e histology images},
+  author={Brancati, Nadia and Anniciello, Anna Maria and Pati, Pushpak and Riccio, Daniel and Scognamiglio, Giosu{\`e} and Jaume, Guillaume and De Pietro, Giuseppe and Di Bonito, Maurizio and Foncubierta, Antonio and Botti, Gerardo and others},
+  journal={Database},
+  volume={2022},
+  pages={baac093},
+  year={2022},
+  publisher={Oxford University Press UK}
+}
+
+@article{aresta2019bach,
+  title={Bach: Grand challenge on breast cancer histology images},
+  author={Aresta, Guilherme and Ara{\'u}jo, Teresa and Kwok, Scotty and Chennamsetty, Sai Saketh and Safwan, Mohammed and Alex, Varghese and Marami, Bahram and Prastawa, Marcel and Chan, Monica and Donovan, Michael and others},
+  journal={Medical image analysis},
+  volume={56},
+  pages={122--139},
+  year={2019},
+  publisher={Elsevier}
+}
+
+@article{bejnordi2017CAME,
+  title={Diagnostic assessment of deep learning algorithms for detection of lymph node metastases in women with breast cancer},
+  author={Bejnordi, Babak Ehteshami and Veta, Mitko and Van Diest, Paul Johannes and Van Ginneken, Bram and Karssemeijer, Nico and Litjens, Geert and Van Der Laak, Jeroen AWM and Hermsen, Meyke and Manson, Quirine F and Balkenhol, Maschenka and others},
+  journal={Jama},
+  volume={318},
+  number={22},
+  pages={2199--2210},
+  year={2017},
+  publisher={American Medical Association}
+}
+
+@article{kermany2018chestxray,
+  title={Labeled optical coherence tomography (oct) and chest x-ray images for classification},
+  author={Kermany, Daniel and Zhang, Kang and Goldbaum, Michael and others},
+  journal={Mendeley data},
+  volume={2},
+  number={2},
+  pages={651},
+  year={2018}
+}
+
+@inproceedings{cordts2016cityscapes,
+  title={The cityscapes dataset for semantic urban scene understanding},
+  author={Cordts, Marius and Omran, Mohamed and Ramos, Sebastian and Rehfeld, Timo and Enzweiler, Markus and Benenson, Rodrigo and Franke, Uwe and Roth, Stefan and Schiele, Bernt},
+  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
+  pages={3213--3223},
+  year={2016}
+}
+
+@inproceedings{hendrycks2019StreetHazards,
+  title={Scaling Out-of-Distribution Detection for Real-World Settings},
+  author={Hendrycks, Dan and Basart, Steven and Mazeika, Mantas and Zou, Andy and Kwon, Joe and Mostajabi, Mohammadreza and Steinhardt, Jacob and Song, Dawn},
+  booktitle={ICML},
+  year={2022}
+}
+
+@article{Zhang2018tju600,
+  title={Palmprint and palmvein recognition based on DCNN and a new large-scale contactless palmvein dataset},
+  author={Zhang, Lin and Cheng, Zaixi and Shen, Ying and Wang, Dongqing},
+  journal={Symmetry},
+  volume={10},
+  number={4},
+  pages={78},
+  year={2018},
+  publisher={MDPI}
+}
+
+@inproceedings{Tome2015vera,
+  title={On the vulnerability of palm vein recognition to spoofing attacks},
+  author={Tome, Pedro and Marcel, S{\'e}bastien},
+  booktitle={2015 International Conference on Biometrics (ICB)},
+  pages={319--325},
+  year={2015},
+  
+}
+
+@inproceedings{nilsback2008oxflower,
+  title={Automated flower classification over a large number of classes},
+  author={Nilsback, Maria-Elena and Zisserman, Andrew},
+  booktitle={2008 Sixth Indian conference on computer vision, graphics \& image processing},
+  pages={722--729},
+  year={2008},
+  
+}
+
+@inproceedings{djolonga2021imagenet-a,
+  title={On robustness and transferability of convolutional neural networks},
+  author={Djolonga, Josip and Yung, Jessica and Tschannen, Michael and Romijnders, Rob and Beyer, Lucas and Kolesnikov, Alexander and Puigcerver, Joan and Minderer, Matthias and D'Amour, Alexander and Moldovan, Dan and others},
+  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={16458--16468},
+  year={2021}
+}
+
+@inproceedings{zhou2020pacs,
+  title={Deep domain-adversarial image generation for domain generalisation},
+  author={Zhou, Kaiyang and Yang, Yongxin and Hospedales, Timothy and Xiang, Tao},
+  booktitle={AAAI Conference on Artificial Intelligence},
+  volume={34},
+  number={07},
+  pages={13025--13032},
+  year={2020}
+}
+
+@inproceedings{cao2019cifar-lt,
+  title={Learning imbalanced datasets with label-distribution-aware margin loss},
+  author={Cao, Kaidi and Wei, Colin and Gaidon, Adrien and Arechiga, Nikos and Ma, Tengyu},
+  booktitle={Neural Information Processing Systems},
+  volume={32},
+  year={2019}
+}
+
+@article{soomro2012ucf101,
+  title={UCF101: A dataset of 101 human actions classes from videos in the wild},
+  author={Soomro, Khurram and Zamir, Amir Roshan and Shah, Mubarak},
+  journal={arXiv preprint arXiv:1212.0402},
+  year={2012}
+}
+
+@article{chung2018VoxCeleb2,
+  title={VoxCeleb2: Deep Speaker Recognition},
+  author={Joon Son Chung and Arsha Nagrani and Andrew Zisserman},
+  journal={Interspeech},
+  year={2018},
+}
+
+@article{fei2007caltech101,
+  title={Learning generative visual models from few training examples: An incremental Bayesian approach tested on 101 object categories},
+  author={Fei-Fei, Li and Fergus, Rob and Perona, Pietro},
+  journal={Computer vision and Image understanding},
+  volume={106},
+  number={1},
+  pages={59--70},
+  year={2007},
+  publisher={Elsevier}
+}
+
+@ONLINE{BCCD_Dataset,
+    author="Shenggan",
+    title="BCCD Dataset",
+    year="2017",
+    url="https://github.com/Shenggan/BCCD_Dataset"
+}
+
+@inproceedings{oh2016sop,
+  title={Deep metric learning via lifted structured feature embedding},
+  author={Oh Song, Hyun and Xiang, Yu and Jegelka, Stefanie and Savarese, Silvio},
+  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
+  pages={4004--4012},
+  year={2016}
+}
+
+@inproceedings{geiger2012kitti,
+  title={Are we ready for autonomous driving? the kitti vision benchmark suite},
+  author={Geiger, Andreas and Lenz, Philip and Urtasun, Raquel},
+  booktitle={2012 IEEE conference on computer vision and pattern recognition},
+  pages={3354--3361},
+  year={2012},
+  
+}
+
+@article{uy2019scanobjectnn,
+      title = {Revisiting Point Cloud Classification: A New Benchmark Dataset and Classification Model on Real-World Data},
+      author = {Mikaela Angelina Uy and Quang-Hieu Pham and Binh-Son Hua and Duc Thanh Nguyen and Sai-Kit Yeung},
+      journal = {International Conference on Computer Vision},
+      year = {2019}
+}
+
+@article{griffiths2019shapenet,
+  title={A review on deep learning techniques for 3D sensed data classification},
+  author={Griffiths, David and Boehm, Jan},
+  journal={Remote Sensing},
+  volume={11},
+  number={12},
+  pages={1499},
+  year={2019},
+  publisher={MDPI}
+}
+
+@inproceedings{TjongKimSang2003ConLL,
+  title={Introduction to the CoNLL-2003 Shared Task: Language-Independent Named Entity Recognition},
+  author={E. Tjong Kim Sang and Fien De Meulder},
+  booktitle={Conference on Computational Natural Language Learning},
+  year={2003},
+}
+
+@inproceedings{kowsari2017wos,
+  title={Hdltex: Hierarchical deep learning for text classification},
+  author={Kowsari, Kamran and Brown, Donald E and Heidarysafa, Mojtaba and Meimandi, Kiana Jafari and Gerber, Matthew S and Barnes, Laura E},
+  booktitle={IEEE International Conference on Machine Learning and Applications},
+  pages={364--371},
+  year={2017},
+  
+}
+
+@incollection{lang199520NG,
+  title={Newsweeder: Learning to filter netnews},
+  author={Lang, Ken},
+  booktitle={Machine learning proceedings 1995},
+  pages={331--339},
+  year={1995},
+  publisher={Elsevier}
+}
+
+@article{yang2016Cora,
+  title={Revisiting Semi-Supervised Learning with Graph Embeddings},
+  author={Zhilin Yang and William W. Cohen and Ruslan Salakhutdinov},
+  journal={ArXiv},
+  year={2016},
+  volume={abs/1603.08861},
+}
+
+@article{Giles1998Citeseer,
+  title={CiteSeer: an automatic citation indexing system},
+  author={C. Lee Giles and Kurt D. Bollacker and Steve Lawrence},
+  journal={Digital library},
+  year={1998},
+}
+
+@article{sen2008pubmad,
+  title={Collective Classification in Network Data},
+  author={Prithviraj Sen and Galileo Namata and Mustafa Bilgic and Lise Getoor and Brian Gallagher and Tina Eliassi-Rad},
+  journal={The AI Magazine},
+  year={2008},
+}
+
+@article{valentiniBotinhao2017VCTK,
+  title={Noisy speech database for training speech enhancement algorithms and TTS models},
+  author={Cassia Valentini-Botinhao},
+  year={2017},
+}
+
+@article{kay2017Kinetics,
+  title={The Kinetics Human Action Video Dataset},
+  author={Will Kay and Jo{\~a}o Carreira and Karen Simonyan and Brian Zhang and Chloe Hillier and Sudheendra Vijayanarasimhan and Fabio Viola and Tim Green and Trevor Back and Apostol Natsev and Mustafa Suleyman and Andrew Zisserman},
+  journal={ArXiv},
+  year={2017},
+  volume={abs/1705.06950},
+}
+
+@inproceedings{socher2013sst2,
+  title={Recursive Deep Models for Semantic Compositionality Over a Sentiment Treebank},
+  author={Richard Socher and Alex Perelygin and Jean Wu and Jason Chuang and Christopher D. Manning and A. Ng and Christopher Potts},
+  booktitle={Conference on Empirical Methods in Natural Language Processing},
+  year={2013},
+}
+
+
+@misc{thomas2014airfoil,
+  author = {Brooks Thomas and Pope D. and Marcolini Michael},
+  title = {{Airfoil Self-Noise}},
+  year = {1989},
+  howpublished = {UCI Machine Learning Repository},
+}
+
+@article{kooperberg1997no2,
+  title={StatLib: An Archive for Statistical Software, Datasets, and Information},
+  author={Charles L. Kooperberg},
+  journal={The American Statistician},
+  year={1997},
+}
+
+@inproceedings{lai2017ExR-Ele,
+  title={Modeling Long- and Short-Term Temporal Patterns with Deep Neural Networks},
+  author={Guokun Lai and Wei-Cheng Chang and Yiming Yang and Hanxiao Liu},
+  booktitle={The 41st International ACM SIGIR Conference on Research \& Development in Information Retrieval},
+  year={2017},
+}
+
+%%%%%%%%%%%%%%%%%%%%%%% Optimizer & Training settings %%%%%%%%%%%%%%%%%%%%%%%%
+@article{siam1992ema,
+    author = {Polyak, B. T. and Juditsky, A. B.},
+    title = {Acceleration of Stochastic Approximation by Averaging},
+    journal = {SIAM booktitle on Control and Optimization},
+    pages = {838-855},
+    year = {1992},
+}
+
+@article{loshchilov2016sgdr,
+  title={Sgdr: Stochastic gradient descent with warm restarts},
+  author={Loshchilov, Ilya and Hutter, Frank},
+  journal={arXiv preprint arXiv:1608.03983},
+  year={2016}
+}
+
+@inproceedings{iclr2019AdamW,
+  title={Decoupled Weight Decay Regularization}, 
+  author={Ilya Loshchilov and Frank Hutter},
+  booktitle = ICLR, 
+  year = {2019}
+}
+
+@inproceedings{nips2021occlusion,
+  title={Intriguing Properties of Vision Transformers},
+  author={Muzammal Naseer and Kanchana Ranasinghe and Salman Hameed Khan and Munawar Hayat and Fahad Shahbaz Khan and Ming-Hsuan Yang},
+  booktitle={Neural Information Processing Systems},
+  year={2021},
+}
+
+@inproceedings{szegedy2013adv,
+  title={Intriguing properties of neural networks},
+  author={Szegedy, Christian and Zaremba, Wojciech and Sutskever, Ilya and Bruna, Joan and Erhan, Dumitru and Goodfellow, Ian and Fergus, Rob},
+  booktitle={International Conference on Learning Representations},
+  year={2014}
+}
+
+@article{iclr2015fgsm,
+  title={Explaining and harnessing adversarial examples},
+  author={Goodfellow, Ian J and Shlens, Jonathon and Szegedy, Christian},
+  journal={arXiv preprint arXiv:1412.6572},
+  year={2014}
+}
+
+@inproceedings{madry2017pgd,
+  title={Towards Deep Learning Models Resistant to Adversarial Attacks},
+  author={Madry, Aleksander and Makelov, Aleksandar and Schmidt, Ludwig and Tsipras, Dimitris and Vladu, Adrian},
+  booktitle={International Conference on Learning Representations},
+  year={2018}
+}
+
+@article{rubner2000emd,
+  title={The earth mover's distance as a metric for image retrieval},
+  author={Rubner, Yossi and Tomasi, Carlo and Guibas, Leonidas J},
+  journal={International booktitle of computer vision},
+  volume={40},
+  pages={99--121},
+  year={2000},
+  
+}
+
+@inproceedings{bartlett2001rademacher,
+  title={Rademacher and Gaussian complexities: Risk bounds and structural results},
+  author={Bartlett, Peter L and Mendelson, Shahar},
+  booktitle={International Conference on Computational Learning Theory},
+  pages={224--240},
+  year={2001},
+  
+}
+
+@inproceedings{guo2017calibration,
+  title={On calibration of modern neural networks},
+  author={Guo, Chuan and Pleiss, Geoff and Sun, Yu and Weinberger, Kilian Q},
+  booktitle={International Conference on Machine Learning},
+  pages={1321--1330},
+  year={2017},
+  
+}
+
+@inproceedings{kuleshov2015ece,
+  title={Calibrated structured prediction},
+  author={Kuleshov, Volodymyr and Liang, Percy S},
+  booktitle={Neural Information Processing Systems},
+  volume={28},
+  year={2015}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% self-supervised %%%%%%%%%%%%%%%%%%%%%%%%%%
+@article{2020mocov2,
+  title={Improved Baselines with Momentum Contrastive Learning},
+  author={Chen, Xinlei and Fan, Haoqi and Girshick, Ross and He, Kaiming},
+  journal={arXiv preprint arXiv:2003.04297},
+  year={2020}
+}
+
+@article{wu2021align,
+  title={Align Yourself: Self-supervised Pre-training for Fine-grained Recognition via Saliency Alignment},
+  author={Wu, Di and Li, Siyuan and Zang, Zelin and Wang, Kai and Shang, Lei and Sun, Baigui and Li, Hao and Li, Stan Z},
+  journal={arXiv preprint arXiv:2106.15788},
+  year={2021}
+}
+
+@inproceedings{yeh2021decoupled,
+  title={Decoupled Contrastive Learning},
+  author={Yeh, Chun-Hsiao and Hong, Cheng-Yao and Hsu, Yen-Chi and Liu, Tyng-Luh and Chen, Yubei and LeCun, Yann},
+  booktitle=ECCV,
+  year={2022}
+}
+
+@article{devries2017improved,
+  title={Improved regularization of convolutional neural networks with cutout},
+  author={DeVries, Terrance and Taylor, Graham W},
+  journal={arXiv preprint arXiv:1708.04552},
+  year={2017}
+}
+
+@inproceedings{chen2021simsiam,
+  title={Exploring simple siamese representation learning},
+  author={Chen, Xinlei and He, Kaiming},
+  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={15750--15758},
+  year={2021}
+}
+
+
+##### others ############
+@inproceedings{Huang2017ArbitraryST,
+  title={Arbitrary Style Transfer in Real-Time with Adaptive Instance Normalization},
+  author={Xun Huang and Serge J. Belongie},
+  booktitle={International Conference on Computer Vision},
+  year={2017},
+  pages={1510-1519}
+}
+@article{Li2019PositionalN,
+  title={Positional Normalization},
+  author={Boyi Li and Felix Wu and Kilian Q. Weinberger and Serge J. Belongie},
+  journal={ArXiv},
+  year={2019},
+  volume={abs/1907.04312}
+}
+
+@inproceedings{brooks2023instructpix2pix,
+  title={Instructpix2pix: Learning to follow image editing instructions},
+  author={Brooks, Tim and Holynski, Aleksander and Efros, Alexei A},
+  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={18392--18402},
+  year={2023}
+}
+
+@article{knight2008sinkhorn,
+  title={The Sinkhorn--Knopp algorithm: convergence and applications},
+  author={Knight, Philip A},
+  journal={SIAM booktitle on Matrix Analysis and Applications},
+  volume={30},
+  number={1},
+  pages={261--275},
+  year={2008},
+  publisher={SIAM}
+}
+
+@inproceedings{Larsen2015VAE_GAN,
+  title={Autoencoding beyond pixels using a learned similarity metric},
+  author={Larsen, Anders Boesen Lindbo and S{\o}nderby, S{\o}ren Kaae and Larochelle, Hugo and Winther, Ole},
+  booktitle={International Conference on Machine Learning},
+  pages={1558--1566},
+  year={2016},
+  
+}
+
+@inproceedings{bengio2015scheduled,
+  title={Scheduled sampling for sequence prediction with recurrent neural networks},
+  author={Bengio, Samy and Vinyals, Oriol and Jaitly, Navdeep and Shazeer, Noam},
+  booktitle={Neural Information Processing Systems},
+  volume={28},
+  year={2015}
+}
+
+@article{chawla2002smote,
+  title={SMOTE: synthetic minority over-sampling technique},
+  author={Chawla, Nitesh V and Bowyer, Kevin W and Hall, Lawrence O and Kegelmeyer, W Philip},
+  journal={booktitle of artificial intelligence research},
+  volume={16},
+  pages={321--357},
+  year={2002}
+}
+
+@article{mikolov2013word2vec,
+  title={Efficient estimation of word representations in vector space},
+  author={Mikolov, Tomas and Chen, Kai and Corrado, Greg and Dean, Jeffrey},
+  journal={arXiv preprint arXiv:1301.3781},
+  year={2013}
+}
+
+@inproceedings{ho2020ddpm,
+  title={Denoising diffusion probabilistic models},
+  author={Ho, Jonathan and Jain, Ajay and Abbeel, Pieter},
+  booktitle={Neural Information Processing Systems},
+  volume={33},
+  pages={6840--6851},
+  year={2020}
+}
+
+@article{lewy2023mixup-survey2,
+  title={An overview of mixing augmentation methods and augmentation strategies},
+  author={Lewy, Dominik and Ma{\'n}dziuk, Jacek},
+  journal={Artificial Intelligence Review},
+  volume={56},
+  number={3},
+  pages={2111--2169},
+  year={2023},
+  
+}
+
+@article{cao2022mixup-survey1,
+  title={A survey of mix-based data augmentation: Taxonomy, methods, applications, and explainability},
+  author={Cao, Chengtai and Zhou, Fan and Dai, Yurou and Wang, Jianping and Zhang, Kunpeng},
+  journal={ACM Computing Surveys},
+  volume={57},
+  number={2},
+  pages={1--38},
+  year={2024},
+  publisher={ACM New York, NY}
+}
+
+@inproceedings{naveed2024mixup-survey3,
+  title={Survey: Image mixing and deleting for data augmentation},
+  author={Naveed, Humza and Anwar, Saeed and Hayat, Munawar and Javed, Kashif and Mian, Ajmal},
+  booktitle={Engineering Applications of Artificial Intelligence},
+  volume={131},
+  pages={107791},
+  year={2024},
+  publisher={Elsevier}
+}
+
+@inproceedings{simard1991tangentprop,
+  title     = {Tangent Prop - A Formalism for Specifying Selected Invariances in an Adaptive Network},
+  author    = {Simard, Patrice and Victorri, Bernard and LeCun, Yann and Denker, John},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {1991}
+}
+
+@inproceedings{simard1992transformation,
+  title     = {Efficient Pattern Recognition Using a New Transformation Distance},
+  author    = {Simard, Patrice and LeCun, Yann and Denker, John},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {1992}
+}
+
+@inproceedings{simard2003best,
+  title     = {Best Practices for Convolutional Neural Networks Applied to Visual Document Analysis},
+  author    = {Simard, Patrice Y. and Steinkraus, Dave and Platt, John C.},
+  booktitle = {International Conference on Document Analysis and Recognition (ICDAR)},
+  year      = {2003}
+}
+
+@inproceedings{krizhevsky2012alexnet,
+  title     = {ImageNet Classification with Deep Convolutional Neural Networks},
+  author    = {Krizhevsky, Alex and Sutskever, Ilya and Hinton, Geoffrey E.},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2012}
+}
+
+@article{devries2017cutout,
+  title   = {Improved Regularization of Convolutional Neural Networks with Cutout},
+  author  = {DeVries, Terrance and Taylor, Graham W.},
+  journal = {arXiv preprint arXiv:1708.04552},
+  year    = {2017}
+}
+
+@inproceedings{zhang2018mixup,
+  title     = {Mixup: Beyond Empirical Risk Minimization},
+  author    = {Zhang, Hongyi and Cisse, Moustapha and Dauphin, Yann N. and Lopez-Paz, David},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2018}
+}
+
+@inproceedings{cubuk2019autoaugment,
+  title     = {AutoAugment: Learning Augmentation Strategies from Data},
+  author    = {Cubuk, Ekin D. and Zoph, Barret and Mane, Dandelion and Vasudevan, Vijay and Le, Quoc V.},
+  booktitle = {IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year      = {2019}
+}
+
+@inproceedings{yun2019cutmix,
+  title     = {CutMix: Regularization Strategy to Train Strong Classifiers with Localizable Features},
+  author    = {Yun, Sangdoo and Han, Dongyoon and Chun, Sanghyuk and Oh, Seong Joon and Yoo, Youngjoon and Choe, Junsuk},
+  booktitle = {IEEE/CVF International Conference on Computer Vision (ICCV)},
+  year      = {2019}
+}
+
+@inproceedings{cubuk2020randaugment,
+  title     = {RandAugment: Practical Automated Data Augmentation with a Reduced Search Space},
+  author    = {Cubuk, Ekin D. and Zoph, Barret and Shlens, Jonathon and Le, Quoc V.},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2020}
+}
+
+@inproceedings{kim2020puzzlemix,
+  title     = {Puzzle Mix: Exploiting Saliency and Local Statistics for Optimal Mixup},
+  author    = {Kim, Jang-Hyun and Choo, Wonho and Song, Hyun Oh},
+  booktitle = {International Conference on Machine Learning (ICML)},
+  year      = {2020}
+}
+
+@inproceedings{uddin2021saliencymix,
+  title     = {SaliencyMix: A Saliency Guided Data Augmentation Strategy for Better Regularization},
+  author    = {Uddin, A. F. M. Shahab and Monira, Mst Sirazam and Shin, Wheemyung and Chung, TaeChoong and Bae, Sung-Ho},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2021}
+}
+
+@inproceedings{liu2022automix,
+  title     = {AutoMix: Unveiling the Power of Mixup for Stronger Classifiers},
+  author    = {Liu, Zicheng and Li, Siyuan and Wu, Di and Liu, Zihan and Chen, Zhiyuan and Wu, Lirong and Li, Stan Z.},
+  booktitle = {European Conference on Computer Vision (ECCV)},
+  year      = {2022}
+}
+
+@inproceedings{qin2024adautomix,
+  title     = {Adversarial AutoMixup},
+  author    = {Qin, Huafeng and Jin, Xin and Jiang, Yun and El-Yacoubi, Mounim A. and Gao, Xinbo},
+  booktitle = {International Conference on Learning Representations (ICLR), Spotlight},
+  year      = {2024}
+}
+
+@inproceedings{islam2024diffusemix,
+  title     = {DiffuseMix: Label-Preserving Data Augmentation with Diffusion Models},
+  author    = {Islam, Khawar and Zaheer, Muhammad Zaigham and Mahmood, Arif and Nandakumar, Karthik},
+  booktitle = {IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  pages     = {27621--27630},
+  year      = {2024}
+}
+
+@inproceedings{islam2026s2fracmix,
+  title     = {S2-FracMix: Rethinking Data Augmentation via Single Saliency-Guided Mixup},
+  author    = {Islam, Khawar and Mahmood, Arif and Jin, Xin and Akhtar, Naveed},
+  booktitle = {European Conference on Computer Vision (ECCV)},
+  note      = {Ours},
+  year      = {2026}
+}

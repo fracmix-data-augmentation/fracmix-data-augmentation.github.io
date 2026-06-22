@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S2-FracMix: Leveraging Self-Saliency Data Augmentation</title>
+  <meta name="description" content="S2-FracMix is an efficient data augmentation method using self-saliency mixup and fractal mixing, achieving SOTA on 7 benchmarks. ECCV 2026.">
+  <meta name="keywords" content="data augmentation, data augmentation techniques, image augmentation, mixup, mixup augmentation, cutmix, manifold mixup, puzzlemix, automix, adautomix, resizemix, fmix, saliency-guided augmentation, saliency mixup, self-saliency mixup, fractal augmentation, fractal data augmentation, S2-FracMix, S²-FracMix, deep learning, computer vision, convolutional neural networks, vision transformer, ViT, Swin Transformer, ConvNeXt, ResNet, ResNeXt, image classification, fine-grained image classification, coarse-grained classification, generalization, model generalization, regularization, robustness, corruption robustness, adversarial robustness, FGSM, model calibration, expected calibration error, transfer learning, object detection, contrastive learning, MoCo, SimSiam, label-preserving augmentation, semantic-aware mixing, scale-invariant feature learning, vicinal risk minimization, spectral residual saliency, CIFAR-100, Tiny-ImageNet, ImageNet-1K, CUB-200, Caltech Birds, FGVC-Aircraft, Stanford-Cars, OpenMixup, training augmentation strategy, computationally efficient augmentation, state-of-the-art augmentation, ECCV 2026, European Conference on Computer Vision, deep visual models, neural network training, data-efficient training, image mixing, sample mixing strategies, augmentation benchmark">
+  <meta name="author" content="Khawar Islam, Arif Mahmood, Xin Jin, Naveed Akhtar">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://fracmix-data-augmentation.github.io/">
+
+  <!-- Google Scholar discovery (Highwire Press tags — Scholar does not read JSON-LD) -->
+  <meta name="citation_title" content="S2-FracMix: Rethinking Data Augmentation via Single Saliency-Guided Mixup">
+  <meta name="citation_author" content="Islam, Khawar">
+  <meta name="citation_author_institution" content="The University of Melbourne">
+  <meta name="citation_author" content="Mahmood, Arif">
+  <meta name="citation_author_institution" content="Information Technology University">
+  <meta name="citation_author" content="Jin, Xin">
+  <meta name="citation_author_institution" content="Westlake University">
+  <meta name="citation_author" content="Akhtar, Naveed">
+  <meta name="citation_author_institution" content="The University of Melbourne">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_conference_title" content="European Conference on Computer Vision (ECCV)">
+  <meta name="citation_abstract_html_url" content="https://fracmix-data-augmentation.github.io/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="S²-FracMix: Leveraging Self-Saliency Data Augmentation">
+  <meta property="og:description" content="A computationally efficient data augmentation framework using Self-Saliency Mixup and fractal-based mixing. State-of-the-art on 7 benchmarks. ECCV 2026.">
+  <meta property="og:url" content="https://fracmix-data-augmentation.github.io/">
+  <meta property="og:image" content="https://fracmix-data-augmentation.github.io/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="S²-FracMix">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="S²-FracMix: Leveraging Self-Saliency Data Augmentation">
+  <meta name="twitter:description" content="A computationally efficient data augmentation framework achieving SOTA across 7 benchmarks. ECCV 2026.">
+  <meta name="twitter:image" content="https://fracmix-data-augmentation.github.io/images/og-image.jpg">
+
+  <!-- Performance: speed up first paint, indirectly helps Core Web Vitals / SEO ranking -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon-180.png">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css">
+
+  <!-- Structured data for search engines / Google Scholar discovery -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "S2-FracMix: Rethinking Data Augmentation via Single Saliency-Guided Mixup",
+    "name": "S2-FracMix: Rethinking Data Augmentation via Single Saliency-Guided Mixup",
+    "url": "https://fracmix-data-augmentation.github.io/",
+    "mainEntityOfPage": "https://fracmix-data-augmentation.github.io/",
+    "author": [
+      {"@type": "Person", "name": "Khawar Islam", "affiliation": {"@type": "Organization", "name": "The University of Melbourne"}, "email": "islam.k@unimelb.edu.au"},
+      {"@type": "Person", "name": "Arif Mahmood", "affiliation": {"@type": "Organization", "name": "Information Technology University"}},
+      {"@type": "Person", "name": "Xin Jin", "affiliation": {"@type": "Organization", "name": "Westlake University"}},
+      {"@type": "Person", "name": "Naveed Akhtar", "affiliation": {"@type": "Organization", "name": "The University of Melbourne"}}
+    ],
+    "datePublished": "2026",
+    "publisher": {
+      "@type": "Organization",
+      "name": "European Conference on Computer Vision (ECCV)"
+    },
+    "keywords": "data augmentation, mixup, cutmix, saliency-guided augmentation, self-saliency mixup, fractal augmentation, image classification, fine-grained classification, deep learning, computer vision, robustness, generalization, transfer learning, model calibration, object detection, vision transformer, ResNet, ImageNet, CIFAR-100",
+    "about": ["Data Augmentation", "Image Classification", "Deep Learning", "Computer Vision"],
+    "abstract": "We propose Self-Saliency (S2) Mixup and FracMix, a computationally efficient data augmentation framework that achieves state-of-the-art performance across classification, robustness, calibration, detection, and transfer learning tasks.",
+    "image": "https://fracmix-data-augmentation.github.io/images/og-image.jpg",
+    "isPartOf": {
+      "@type": "PublicationEvent",
+      "name": "European Conference on Computer Vision (ECCV) 2026"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ── Nav ── -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <span class="nav-brand">
+        <span class="brand-s2">S²</span><span class="brand-frac">-FracMix</span>
+      </span>
+      <div class="nav-links">
+        <a href="#abstract">Abstract</a>
+        <a href="#method">Method</a>
+        <a href="#results">Results</a>
+        <a href="#cite">BibTeX</a>
+        <span class="nav-btn-disabled" aria-disabled="true" title="Code release coming soon"><i class="fab fa-github"></i> Code (Soon)</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── Hero / Title ── -->
+  <header class="hero">
+    <div class="container hero-inner">
+
+      <h1 class="hero-title">
+        S²-FracMix: Leveraging Self-Saliency Data Augmentation
+      </h1>
+
+      <!-- Authors -->
+      <div class="authors-block">
+        <span class="author-item">
+          <a href="mailto:islam.k@unimelb.edu.au" class="author-link">Khawar Islam</a><sup>1★</sup>
+        </span><span class="author-sep">,&nbsp;</span><span class="author-item">
+          <span class="author-link">Arif Mahmood</span><sup>2</sup>
+        </span><span class="author-sep">,&nbsp;</span><span class="author-item">
+          <span class="author-link">Xin Jin</span><sup>3</sup>
+        </span><span class="author-sep">,&nbsp;</span><span class="author-item">
+          <span class="author-link">Naveed Akhtar</span><sup>1</sup>
+        </span>
+      </div>
+
+      <div class="affiliations">
+        <span><sup>1</sup> The University of Melbourne, Australia</span>
+        <span class="aff-sep">·</span>
+        <span><sup>2</sup> Information Technology University, Pakistan</span>
+        <span class="aff-sep">·</span>
+        <span><sup>3</sup> Westlake University, China</span>
+      </div>
+      <div class="corresponding">
+        <sup>★</sup> Corresponding Author
+      </div>
+
+      <div class="conf-badge-row">
+        <div class="conf-badge">
+          <i class="fas fa-award"></i> European Conference on Computer Vision (ECCV) 2026
+        </div>
+        <a href="history.html" class="history-btn">
+          <i class="fas fa-clock-rotate-left"></i> 100 Years of Data Augmentation <span class="history-btn-arrow"><i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+
+      <!-- Action buttons -->
+      <div class="hero-actions">
+        <span class="hbtn hbtn-primary hbtn-disabled" aria-disabled="true" title="Paper link coming soon"><i class="fas fa-file-pdf"></i>&nbsp; Paper (Soon)</span>
+        <span class="hbtn hbtn-secondary hbtn-disabled" aria-disabled="true" title="Full paper with appendix coming soon"><i class="fas fa-file-alt"></i>&nbsp; Complete Paper (Soon)</span>
+        <span class="hbtn hbtn-secondary hbtn-disabled" aria-disabled="true" title="Presentation video coming soon"><i class="fas fa-video"></i>&nbsp; Video (Soon)</span>
+        <span class="hbtn hbtn-secondary hbtn-disabled" aria-disabled="true" title="Conference poster coming soon"><i class="fas fa-image"></i>&nbsp; Poster (Soon)</span>
+        <span class="hbtn hbtn-secondary hbtn-disabled" aria-disabled="true" title="Code release coming soon"><i class="fab fa-github"></i>&nbsp; Code (Soon)</span>
+        <a href="#results" class="hbtn hbtn-secondary"><i class="fas fa-table"></i>&nbsp; Results</a>
+        <a href="#cite" class="hbtn hbtn-secondary"><i class="fas fa-quote-left"></i>&nbsp; BibTeX</a>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="main-wrap">
+
+    <!-- ── Abstract ── -->
+    <section id="abstract" class="section-block reveal">
+      <div class="container">
+        <h2 class="sec-heading">Abstract</h2>
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <p class="abstract-text">
+              Data augmentation is known to improve generalization of deep visual models.
+              Recent methods favor mixup strategies that generate interpolated samples to
+              improve model performance. However, these techniques not only incur significant
+              computational overhead, they also lead to <em>semantic disruption</em> of
+              augmentation data due to cross-sample mixing.
+            </p>
+            <p class="abstract-text">
+              We first propose <strong>Self-Saliency (S²) Mixup</strong>, which constructs
+              challenging yet label-consistent samples by extracting multi-scale salient patches
+              and reinserting them into non-salient regions of the <em>same image</em>. This
+              promotes scale-invariant feature learning while avoiding cross-sample interference.
+              To further enhance robustness, we introduce <strong>FracMix</strong>, a mixing
+              scheme that injects self-similarity patterns into salient regions using adaptive ratios.
+            </p>
+            <p class="abstract-text">
+              Collectively, <strong>S²-FracMix</strong> enables simultaneous learning from
+              fractal and non-fractal structures within a single image, yielding a targeted and
+              structurally coherent augmentation strategy — establishing state-of-the-art
+              performance across classification, robustness, calibration, detection, and
+              transfer learning.
+            </p>
+          </div>
+        </div>
+
+        <div class="kw-row-inline">
+          <span class="kw-label">Keywords:</span>
+          <span class="kw-tag">Data Augmentation</span>
+          <span class="kw-tag">Mixup</span>
+          <span class="kw-tag">CutMix</span>
+          <span class="kw-tag">Self-Saliency Mixup</span>
+          <span class="kw-tag">Saliency-Guided Augmentation</span>
+          <span class="kw-tag">Fractal Augmentation</span>
+          <span class="kw-tag">Fractal Patterns</span>
+          <span class="kw-tag">Generalization</span>
+          <span class="kw-tag">Robustness</span>
+          <span class="kw-tag">Corruption Robustness</span>
+          <span class="kw-tag">Adversarial Robustness</span>
+          <span class="kw-tag">Model Calibration</span>
+          <span class="kw-tag">Image Classification</span>
+          <span class="kw-tag">Fine-Grained Classification</span>
+          <span class="kw-tag">Transfer Learning</span>
+          <span class="kw-tag">Object Detection</span>
+          <span class="kw-tag">Contrastive Learning</span>
+          <span class="kw-tag">Deep Learning</span>
+          <span class="kw-tag">Computer Vision</span>
+          <span class="kw-tag">Vision Transformer</span>
+          <span class="kw-tag">Convolutional Neural Networks</span>
+          <span class="kw-tag">Label-Preserving Augmentation</span>
+          <span class="kw-tag">Scale-Invariant Learning</span>
+          <span class="kw-tag">Vicinal Risk Minimization</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Method ── -->
+    <section id="method" class="section-block section-alt reveal">
+      <div class="container">
+        <h2 class="sec-heading">Method</h2>
+
+        <!-- Architecture figure -->
+        <div class="figure-wrap">
+          <picture>
+            <source srcset="images/architecture.webp" type="image/webp">
+            <img src="images/architecture-optimized.png" alt="S2-FracMix data augmentation pipeline architecture diagram showing self-saliency mixup and fractal mixing for image classification" class="figure-img" loading="lazy" width="1560" height="476">
+          </picture>
+          <p class="figure-caption">
+            <strong>Figure 1.</strong> Overview of S²-FracMix. Given an input image, a saliency map is computed via spectral residual.
+            Multi-scale patches are extracted and accepted based on a saliency threshold. Accepted patches undergo fractal blending (FracMix)
+            then selective transformation — rotation in salient regions, Gaussian blur in non-salient regions. Patches are resized and
+            mixed back into the original image. A mode selector randomly applies S²-FracMix, Mixup, CutMix, or ResizeMix.
+          </p>
+        </div>
+
+        <!-- Component cards -->
+        <div class="row mt-4">
+          <div class="col-md-6 mb-4">
+            <div class="method-card method-card-s2">
+              <div class="method-card-icon"><i class="fas fa-crosshairs"></i></div>
+              <h3>Self-Saliency (S²) Mixing</h3>
+              <p>Computes a saliency map via spectral residual, extracts multi-scale patches from high-saliency regions, applies rotation and blurring, then reinserts them into non-salient areas of the <em>same image</em>.</p>
+              <ul class="method-list">
+                <li>Two patch scales: h/2×w/2 and h/4×w/4</li>
+                <li>Saliency threshold t ~ Uniform(0.5, 1.0)</li>
+                <li>Rotation θ ~ Uniform(−30°, 30°)</li>
+                <li>No cross-sample interference</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="method-card method-card-frac">
+              <div class="method-card-icon method-card-icon-frac"><i class="fas fa-snowflake"></i></div>
+              <h3>FracMix Data Augmentation</h3>
+              <p>Injects self-similar fractal patterns exclusively within the salient patches identified by S². Uses adaptive blending ratio λ=0.20 to increase structural complexity while preserving clean contextual background.</p>
+              <ul class="method-list">
+                <li>Fractal injection only in salient regions</li>
+                <li>Fixed library of pre-computed fractals</li>
+                <li>Blending factor λ=0.20 (validated)</li>
+                <li>Preserves semantic integrity</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Results ── -->
+    <section id="results" class="section-block reveal">
+      <div class="container">
+        <h2 class="sec-heading">Results</h2>
+        <p class="sec-sub">S²-FracMix consistently outperforms all baselines across 7 benchmarks.</p>
+
+        <!-- Result cards: click any card to see a comparison chart -->
+        <div class="rcard-grid">
+          <div class="rcard" tabindex="0" role="button" data-chart='{"title":"CIFAR-100 Top-1 Accuracy (%) — ResNet-18","labels":["Vanilla","MixUp","CutMix","SaliencyMix","FMix","PuzzleMix","ResizeMix","AutoMix","AdAutoMix","S²-FracMix"],"data":[78.04,79.12,78.17,79.12,79.69,81.13,80.01,82.04,82.32,82.74]}'>
+            <div class="rcard-val">82.74%</div>
+            <div class="rcard-label">CIFAR-100 · ResNet-18</div>
+            <div class="rcard-gain">+0.42% vs AdAutoMix</div>
+          </div>
+          <div class="rcard" tabindex="0" role="button" data-chart='{"title":"CIFAR-100 Top-1 Accuracy (%) — Swin-T","labels":["Vanilla","MixUp","CutMix","SaliencyMix","FMix","PuzzleMix","ResizeMix","AutoMix","AdAutoMix","S²-FracMix"],"data":[78.41,76.78,80.64,80.40,80.72,80.33,80.16,82.67,84.33,85.35]}'>
+            <div class="rcard-val">85.35%</div>
+            <div class="rcard-label">CIFAR-100 · Swin-T</div>
+            <div class="rcard-gain">+1.02% vs AdAutoMix</div>
+          </div>
+          <div class="rcard" tabindex="0" role="button" data-chart='{"title":"ImageNet-1K Top-1 Accuracy (%) — ResNet-50","labels":["Vanilla","MixUp","CutMix","SaliencyMix","FMix","PuzzleMix","ResizeMix","AutoMix","AdAutoMix","S²-FracMix"],"data":[76.83,77.12,77.17,77.14,77.19,77.54,77.42,77.91,78.04,78.54]}'>
+            <div class="rcard-val">78.54%</div>
+            <div class="rcard-label">ImageNet-1K · ResNet-50</div>
+            <div class="rcard-gain">+0.50% vs AdAutoMix</div>
+          </div>
+          <div class="rcard" tabindex="0" role="button" data-chart='{"title":"Calibration Error (%) — lower is better","note":"Table A3, safety-benchmark calibration metric","lowerBetter":true,"labels":["Mixup","CutMix","AugMix","Outlier","PixMix","S²-FracMix"],"data":[13.0,29.3,18.8,15.2,8.1,7.12]}'>
+            <div class="rcard-val">2.8%</div>
+            <div class="rcard-label">ECE · Calibration</div>
+            <div class="rcard-gain">Best calibration</div>
+          </div>
+          <div class="rcard" tabindex="0" role="button" data-chart='{"title":"CIFAR-100 Top-1 Accuracy (%) — ResNeXt-50","labels":["Vanilla","MixUp","CutMix","SaliencyMix","FMix","PuzzleMix","ResizeMix","AutoMix","AdAutoMix","S²-FracMix"],"data":[81.09,82.10,81.67,81.53,81.90,82.85,81.82,83.64,84.22,84.91]}'>
+            <div class="rcard-val">84.91%</div>
+            <div class="rcard-label">CIFAR-100 · ResNeXt-50</div>
+            <div class="rcard-gain">+0.69% vs AdAutoMix</div>
+          </div>
+          <div class="rcard" tabindex="0" role="button" data-chart='{"title":"CIFAR-100 Top-1 Accuracy (%) — ConvNeXt-T","labels":["Vanilla","MixUp","CutMix","SaliencyMix","FMix","PuzzleMix","ResizeMix","AutoMix","AdAutoMix","S²-FracMix"],"data":[78.70,81.13,82.46,82.82,81.79,82.29,82.53,83.30,83.54,84.41]}'>
+            <div class="rcard-val">84.41%</div>
+            <div class="rcard-label">CIFAR-100 · ConvNeXt-T</div>
+            <div class="rcard-gain">+0.87% vs AdAutoMix</div>
+          </div>
+          <div class="rcard" tabindex="0" role="button" data-chart='{"title":"Tiny-ImageNet Top-1 Accuracy (%) — ResNeXt-50","labels":["Vanilla","MixUp","CutMix","SaliencyMix","FMix","PuzzleMix","ResizeMix","AutoMix","AdAutoMix","S²-FracMix"],"data":[65.04,66.36,66.47,66.55,65.08,67.83,65.87,70.72,72.89,74.27]}'>
+            <div class="rcard-val">74.27%</div>
+            <div class="rcard-label">Tiny-ImageNet · ResNeXt-50</div>
+            <div class="rcard-gain">+1.38% vs AdAutoMix</div>
+          </div>
+          <div class="rcard" tabindex="0" role="button" data-chart='{"title":"ImageNet-1K Top-1 Accuracy (%) — ViT-B","labels":["Vanilla","MixUp","CutMix","S²-FracMix"],"data":[76.7,80.8,79.9,81.2]}'>
+            <div class="rcard-val">81.2%</div>
+            <div class="rcard-label">ImageNet-1K · ViT-B</div>
+            <div class="rcard-gain">+0.4% vs MixUp</div>
+          </div>
+          <div class="rcard" tabindex="0" role="button" data-chart='{"title":"CUB-200 Top-1 Accuracy (%) — ResNet-50","labels":["Vanilla","MixUp","CutMix","ManifoldMix","SaliencyMix","FMix","PuzzleMix","ResizeMix","AutoMix","AdAutoMix","S²-FracMix"],"data":[82.38,82.98,83.17,83.76,81.71,83.34,83.83,83.41,83.88,84.57,85.73]}'>
+            <div class="rcard-val">85.73%</div>
+            <div class="rcard-label">CUB-200 · ResNet-50</div>
+            <div class="rcard-gain">+1.16% vs AdAutoMix</div>
+          </div>
+          <div class="rcard" tabindex="0" role="button" data-chart='{"title":"FGVC-Aircraft Top-1 Accuracy (%) — ResNeXt-50","labels":["Vanilla","MixUp","CutMix","ManifoldMix","SaliencyMix","FMix","PuzzleMix","ResizeMix","AutoMix","AdAutoMix","S²-FracMix"],"data":[85.10,85.18,84.55,86.60,84.31,86.23,86.23,84.08,86.72,87.16,88.34]}'>
+            <div class="rcard-val">88.34%</div>
+            <div class="rcard-label">FGVC-Aircraft · ResNeXt-50</div>
+            <div class="rcard-gain">+1.18% vs AdAutoMix</div>
+          </div>
+          <div class="rcard" tabindex="0" role="button" data-chart='{"title":"Stanford-Cars Top-1 Accuracy (%) — ResNeXt-50","labels":["Vanilla","MixUp","CutMix","ManifoldMix","SaliencyMix","FMix","PuzzleMix","ResizeMix","AutoMix","AdAutoMix","S²-FracMix"],"data":[90.15,90.81,91.22,90.20,90.60,90.90,91.29,91.36,91.38,91.59,92.86]}'>
+            <div class="rcard-val">92.86%</div>
+            <div class="rcard-label">Stanford-Cars · ResNeXt-50</div>
+            <div class="rcard-gain">+1.27% vs AdAutoMix</div>
+          </div>
+          <div class="rcard" tabindex="0" role="button" data-chart='{"title":"Transfer Learning Accuracy (%) — CUB-200, ResNet-50","labels":["Vanilla","MixUp","CutMix","PuzzleMix","AutoMix","AdAutoMix","S²-FracMix"],"data":[81.76,82.79,81.67,82.59,82.93,83.36,84.42]}'>
+            <div class="rcard-val">84.42%</div>
+            <div class="rcard-label">Transfer · CUB-200 (R50)</div>
+            <div class="rcard-gain">+1.06% vs AdAutoMix</div>
+          </div>
+          <div class="rcard" tabindex="0" role="button" data-chart='{"title":"Transfer Learning Accuracy (%) — Stanford-Cars, ViT-B","labels":["Vanilla","MixUp","CutMix","PuzzleMix","AutoMix","AdAutoMix","S²-FracMix"],"data":[91.31,91.36,91.53,91.83,92.51,91.38,92.86]}'>
+            <div class="rcard-val">92.86%</div>
+            <div class="rcard-label">Transfer · Stanford-Cars (ViT-B)</div>
+            <div class="rcard-gain">+1.48% vs AdAutoMix</div>
+          </div>
+          <div class="rcard" tabindex="0" role="button" data-chart='{"title":"Corruption Accuracy (%) on CIFAR-100-C — ResNet-18","labels":["CutMix","FMix","PuzzleMix","AutoMix","AdAutoMix","S²-FracMix"],"data":[46.66,50.58,51.04,50.75,51.44,53.84]}'>
+            <div class="rcard-val">53.84%</div>
+            <div class="rcard-label">Corruption Acc · CIFAR-100-C</div>
+            <div class="rcard-gain">+2.4% vs AdAutoMix</div>
+          </div>
+          <div class="rcard" tabindex="0" role="button" data-chart='{"title":"FGSM Adversarial Error (%) — lower is better","lowerBetter":true,"labels":["CutMix","FMix","PuzzleMix","AutoMix","AdAutoMix","S²-FracMix"],"data":[88.24,88.35,80.52,82.67,75.66,72.52]}'>
+            <div class="rcard-val">72.52%</div>
+            <div class="rcard-label">FGSM Error (↓ better)</div>
+            <div class="rcard-gain">−3.14% vs AdAutoMix</div>
+          </div>
+          <div class="rcard" tabindex="0" role="button" data-chart='{"title":"FracMix Ablation — Top-1 (%) on Stanford-Cars","labels":["Baseline","w/o saliency weight","Global fractal","Local fractal (Ours)"],"data":[85.52,91.87,92.27,92.78]}'>
+            <div class="rcard-val">92.78%</div>
+            <div class="rcard-label">FracMix Ablation · Local Fractal</div>
+            <div class="rcard-gain">Best design choice</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── Citation ── -->
+    <section id="cite" class="section-block section-alt reveal">
+      <div class="container">
+        <h2 class="sec-heading">BibTeX</h2>
+        <p class="sec-sub">If you find S²-FracMix useful, please cite our paper:</p>
+        <div class="bibtex-wrap">
+          <div class="bibtex-header">
+            <span class="bibtex-lang"><i class="fas fa-code"></i>&nbsp; BibTeX</span>
+            <button class="copy-btn" id="copyBtn"><i class="far fa-copy"></i>&nbsp; Copy</button>
+          </div>
+          <pre id="bibtexCode">@inproceedings{islam2026s2fracmix,
+  title     = {S2-FracMix: Rethinking Data Augmentation via Single Saliency-Guided Mixup},
+  author    = {Islam, Khawar and Mahmood, Arif and Jin, Xin and Akhtar, Naveed},
+  booktitle = {European Conference on Computer Vision (ECCV)},
+  year      = {2026}
+}</pre>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Result Comparison Modal ── -->
+  <div class="chart-modal-overlay" id="chartModalOverlay">
+    <div class="chart-modal-box" role="dialog" aria-modal="true" aria-labelledby="chartModalTitle">
+      <button class="chart-modal-close" id="chartModalClose" aria-label="Close"><i class="fas fa-times"></i></button>
+      <h3 class="chart-modal-title" id="chartModalTitle">Comparison</h3>
+      <p class="chart-modal-note" id="chartModalNote"></p>
+      <div class="chart-modal-canvas-wrap">
+        <canvas id="chartModalCanvas"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Footer ── -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>S²-FracMix &nbsp;·&nbsp; European Conference on Computer Vision (ECCV) 2026</p>
+      <p class="footer-affils">University of Melbourne &nbsp;·&nbsp; Information Technology University &nbsp;·&nbsp; Westlake University</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="js/main.min.js"></script>
+  <script src="js/animate.min.js"></script>
+</body>
+</html>

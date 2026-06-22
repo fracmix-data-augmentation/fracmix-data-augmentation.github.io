@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fracmix-data-augmentation.github.io/sitemap.xml
