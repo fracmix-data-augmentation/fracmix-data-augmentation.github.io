@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>S2-FracMix: Leveraging Self-Saliency Data Augmentation</title>
+  <title>S2-FracMix: Label-Preserving Self-Saliency Mixup Augmentation</title>
   <meta name="description" content="S2-FracMix is an efficient data augmentation method using self-saliency mixup and fractal mixing, achieving SOTA on 7 benchmarks. ECCV 2026.">
   <meta name="keywords" content="data augmentation, data augmentation techniques, image augmentation, mixup, mixup augmentation, cutmix, manifold mixup, puzzlemix, automix, adautomix, resizemix, fmix, saliency-guided augmentation, saliency mixup, self-saliency mixup, fractal augmentation, fractal data augmentation, S2-FracMix, S²-FracMix, deep learning, computer vision, convolutional neural networks, vision transformer, ViT, Swin Transformer, ConvNeXt, ResNet, ResNeXt, image classification, fine-grained image classification, coarse-grained classification, generalization, model generalization, regularization, robustness, corruption robustness, adversarial robustness, FGSM, model calibration, expected calibration error, transfer learning, object detection, contrastive learning, MoCo, SimSiam, label-preserving augmentation, semantic-aware mixing, scale-invariant feature learning, vicinal risk minimization, spectral residual saliency, CIFAR-100, Tiny-ImageNet, ImageNet-1K, CUB-200, Caltech Birds, FGVC-Aircraft, Stanford-Cars, OpenMixup, training augmentation strategy, computationally efficient augmentation, state-of-the-art augmentation, ECCV 2026, European Conference on Computer Vision, deep visual models, neural network training, data-efficient training, image mixing, sample mixing strategies, augmentation benchmark">
   <meta name="author" content="Khawar Islam, Arif Mahmood, Xin Jin, Naveed Akhtar">
@@ -11,7 +11,8 @@
   <link rel="canonical" href="https://fracmix-data-augmentation.github.io/">
 
   <!-- Google Scholar discovery (Highwire Press tags — Scholar does not read JSON-LD) -->
-  <meta name="citation_title" content="S2-FracMix: Rethinking Data Augmentation via Single Saliency-Guided Mixup">
+  <meta name="citation_title" content="S2-FracMix: Label-Preserving Self-Saliency Mixup Augmentation">
+  <meta name="citation_arxiv_id" content="2606.25784">
   <meta name="citation_author" content="Islam, Khawar">
   <meta name="citation_author_institution" content="The University of Melbourne">
   <meta name="citation_author" content="Mahmood, Arif">
@@ -26,7 +27,7 @@
 
   <!-- Open Graph -->
   <meta property="og:type" content="article">
-  <meta property="og:title" content="S²-FracMix: Leveraging Self-Saliency Data Augmentation">
+  <meta property="og:title" content="S²-FracMix: Label-Preserving Self-Saliency Mixup Augmentation">
   <meta property="og:description" content="A computationally efficient data augmentation framework using Self-Saliency Mixup and fractal-based mixing. State-of-the-art on 7 benchmarks. ECCV 2026.">
   <meta property="og:url" content="https://fracmix-data-augmentation.github.io/">
   <meta property="og:image" content="https://fracmix-data-augmentation.github.io/images/og-image.jpg">
@@ -36,7 +37,7 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="S²-FracMix: Leveraging Self-Saliency Data Augmentation">
+  <meta name="twitter:title" content="S²-FracMix: Label-Preserving Self-Saliency Mixup Augmentation">
   <meta name="twitter:description" content="A computationally efficient data augmentation framework achieving SOTA across 7 benchmarks. ECCV 2026.">
   <meta name="twitter:image" content="https://fracmix-data-augmentation.github.io/images/og-image.jpg">
 
@@ -58,8 +59,8 @@
   {
     "@context": "https://schema.org",
     "@type": "ScholarlyArticle",
-    "headline": "S2-FracMix: Rethinking Data Augmentation via Single Saliency-Guided Mixup",
-    "name": "S2-FracMix: Rethinking Data Augmentation via Single Saliency-Guided Mixup",
+    "headline": "S2-FracMix: Label-Preserving Self-Saliency Mixup Augmentation",
+    "name": "S2-FracMix: Label-Preserving Self-Saliency Mixup Augmentation",
     "url": "https://fracmix-data-augmentation.github.io/",
     "mainEntityOfPage": "https://fracmix-data-augmentation.github.io/",
     "author": [
@@ -97,7 +98,7 @@
         <a href="#method">Method</a>
         <a href="#results">Results</a>
         <a href="#cite">BibTeX</a>
-        <span class="nav-btn-disabled" aria-disabled="true" title="Code release coming soon"><i class="fab fa-github"></i> Code (Soon)</span>
+        <a href="https://arxiv.org/abs/2606.25784" target="_blank" rel="noopener" class="nav-arxiv-btn"><i class="fas fa-file-alt"></i> arXiv</a>
       </div>
     </div>
   </nav>
@@ -107,51 +108,34 @@
     <div class="container hero-inner">
 
       <h1 class="hero-title">
-        S²-FracMix: Leveraging Self-Saliency Data Augmentation
+        S²-FracMix: Label-Preserving Self-Saliency Mixup Augmentation
       </h1>
 
       <!-- Authors -->
       <div class="authors-block">
-        <span class="author-item">
-          <a href="mailto:islam.k@unimelb.edu.au" class="author-link">Khawar Islam</a><sup>1★</sup>
-        </span><span class="author-sep">,&nbsp;</span><span class="author-item">
-          <span class="author-link">Arif Mahmood</span><sup>2</sup>
-        </span><span class="author-sep">,&nbsp;</span><span class="author-item">
-          <span class="author-link">Xin Jin</span><sup>3</sup>
-        </span><span class="author-sep">,&nbsp;</span><span class="author-item">
-          <span class="author-link">Naveed Akhtar</span><sup>1</sup>
-        </span>
+        <a href="mailto:islam.k@unimelb.edu.au" class="author-link">Khawar Islam</a><sup>★</sup>,
+        <span class="author-link">Arif Mahmood</span>,
+        <span class="author-link">Xin Jin</span>,
+        <span class="author-link">Naveed Akhtar</span>
       </div>
 
       <div class="affiliations">
-        <span><sup>1</sup> The University of Melbourne, Australia</span>
-        <span class="aff-sep">·</span>
-        <span><sup>2</sup> Information Technology University, Pakistan</span>
-        <span class="aff-sep">·</span>
-        <span><sup>3</sup> Westlake University, China</span>
-      </div>
-      <div class="corresponding">
-        <sup>★</sup> Corresponding Author
+        The University of Melbourne, Melbourne, Australia
       </div>
 
-      <div class="conf-badge-row">
-        <div class="conf-badge">
-          <i class="fas fa-award"></i> European Conference on Computer Vision (ECCV) 2026
-        </div>
-        <a href="history.html" class="history-btn">
-          <i class="fas fa-clock-rotate-left"></i> 100 Years of Data Augmentation <span class="history-btn-arrow"><i class="fas fa-arrow-right"></i></span>
-        </a>
-      </div>
+      <div class="conf-line">ECCV 2026</div>
 
       <!-- Action buttons -->
       <div class="hero-actions">
-        <span class="hbtn hbtn-primary hbtn-disabled" aria-disabled="true" title="Paper link coming soon"><i class="fas fa-file-pdf"></i>&nbsp; Paper (Soon)</span>
-        <span class="hbtn hbtn-secondary hbtn-disabled" aria-disabled="true" title="Full paper with appendix coming soon"><i class="fas fa-file-alt"></i>&nbsp; Complete Paper (Soon)</span>
-        <span class="hbtn hbtn-secondary hbtn-disabled" aria-disabled="true" title="Presentation video coming soon"><i class="fas fa-video"></i>&nbsp; Video (Soon)</span>
-        <span class="hbtn hbtn-secondary hbtn-disabled" aria-disabled="true" title="Conference poster coming soon"><i class="fas fa-image"></i>&nbsp; Poster (Soon)</span>
-        <span class="hbtn hbtn-secondary hbtn-disabled" aria-disabled="true" title="Code release coming soon"><i class="fab fa-github"></i>&nbsp; Code (Soon)</span>
-        <a href="#results" class="hbtn hbtn-secondary"><i class="fas fa-table"></i>&nbsp; Results</a>
-        <a href="#cite" class="hbtn hbtn-secondary"><i class="fas fa-quote-left"></i>&nbsp; BibTeX</a>
+        <span class="hbtn hbtn-dark hbtn-disabled" aria-disabled="true" title="Code release coming soon"><i class="fab fa-github"></i>&nbsp; Code</span>
+        <a href="https://arxiv.org/abs/2606.25784" class="hbtn hbtn-dark" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i>&nbsp; arXiv</a>
+        <span class="hbtn hbtn-dark hbtn-disabled" aria-disabled="true" title="Paper link coming soon"><i class="fas fa-file-pdf"></i>&nbsp; Paper</span>
+        <span class="hbtn hbtn-dark hbtn-disabled" aria-disabled="true" title="Presentation video coming soon"><i class="fas fa-video"></i>&nbsp; Video</span>
+        <span class="hbtn hbtn-dark hbtn-disabled" aria-disabled="true" title="Conference poster coming soon"><i class="fas fa-image"></i>&nbsp; Poster</span>
+      </div>
+
+      <div class="hero-sub-links">
+        <a href="history.html" class="sub-link"><i class="fas fa-clock-rotate-left"></i> 100 Years of Data Augmentation →</a>
       </div>
 
     </div>
@@ -374,10 +358,10 @@
             <span class="bibtex-lang"><i class="fas fa-code"></i>&nbsp; BibTeX</span>
             <button class="copy-btn" id="copyBtn"><i class="far fa-copy"></i>&nbsp; Copy</button>
           </div>
-          <pre id="bibtexCode">@inproceedings{islam2026s2fracmix,
-  title     = {S2-FracMix: Rethinking Data Augmentation via Single Saliency-Guided Mixup},
+          <pre id="bibtexCode">@article{islam2026s,
+  title     = {$S^{2}$-FracMix: Label-Preserving Self-Saliency Mixup Augmentation},
   author    = {Islam, Khawar and Mahmood, Arif and Jin, Xin and Akhtar, Naveed},
-  booktitle = {European Conference on Computer Vision (ECCV)},
+  journal   = {arXiv preprint arXiv:2606.25784},
   year      = {2026}
 }</pre>
         </div>
